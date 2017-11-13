@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="simb@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="simb">
+      <ObjectId>17176</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12373</ObjectId>
+    </database>
+    <database id="4" parent="1" name="trabalhoRAD">
+      <ObjectId>16393</ObjectId>
+    </database>
+    <database id="5" parent="1" name="estudoRad1">
+      <ObjectId>16601</ObjectId>
+    </database>
+    <database id="6" parent="1" name="p2bd2">
+      <ObjectId>16645</ObjectId>
+    </database>
+    <schema id="7" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-08-20.16:30:12.338</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1023</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="8" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="11" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="12" parent="2" name="information_schema">
+      <ObjectId>12081</ObjectId>
+    </schema>
+    <sequence id="13" parent="7" name="bovino_id_bovino_seq">
+      <ObjectId>17177</ObjectId>
+      <StateNumber>976</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="14" parent="7" name="diagnostico_gestacao_id_diag_gest_seq">
+      <ObjectId>17194</ObjectId>
+      <StateNumber>979</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="15" parent="7" name="ecc_idecc_seq">
+      <ObjectId>17202</ObjectId>
+      <StateNumber>980</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="16" parent="7" name="fazenda_id_fazenda_seq">
+      <ObjectId>17210</ObjectId>
+      <StateNumber>981</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="17" parent="7" name="ficha_matriz_id_ficha_matriz_seq">
+      <ObjectId>17221</ObjectId>
+      <StateNumber>982</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="18" parent="7" name="inseminacao_id_inseminacao_seq">
+      <ObjectId>17238</ObjectId>
+      <StateNumber>986</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="19" parent="7" name="inseminador_id_inseminador_seq">
+      <ObjectId>17246</ObjectId>
+      <StateNumber>987</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="20" parent="7" name="intervalo_parto_id_intervalo_parto_seq">
+      <ObjectId>17254</ObjectId>
+      <StateNumber>988</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="21" parent="7" name="parto_id_parto_seq">
+      <ObjectId>17262</ObjectId>
+      <StateNumber>989</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="22" parent="7" name="pelagem_id_pelagem_seq">
+      <ObjectId>17273</ObjectId>
+      <StateNumber>991</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="23" parent="7" name="peso_id_peso_seq">
+      <ObjectId>17281</ObjectId>
+      <StateNumber>992</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="24" parent="7" name="proprietario_id_proprietario_seq">
+      <ObjectId>17289</ObjectId>
+      <StateNumber>993</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="25" parent="7" name="raca_id_raca_seq">
+      <ObjectId>17297</ObjectId>
+      <StateNumber>994</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="26" parent="7" name="resultado_id_resultado_seq">
+      <ObjectId>17305</ObjectId>
+      <StateNumber>995</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="27" parent="7" name="tarefa_id_tarefa_seq">
+      <ObjectId>17313</ObjectId>
+      <StateNumber>996</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="28" parent="7" name="bovino">
+      <ObjectId>17179</ObjectId>
+      <StateNumber>1023</StateNumber>
+    </table>
+    <table id="29" parent="7" name="bovino_ecc">
+      <ObjectId>17188</ObjectId>
+      <StateNumber>1009</StateNumber>
+    </table>
+    <table id="30" parent="7" name="bovino_peso">
+      <ObjectId>17191</ObjectId>
+      <StateNumber>1011</StateNumber>
+    </table>
+    <table id="31" parent="7" name="diagnostico_gestacao">
+      <ObjectId>17196</ObjectId>
+      <StateNumber>1013</StateNumber>
+    </table>
+    <table id="32" parent="7" name="ecc">
+      <ObjectId>17204</ObjectId>
+      <StateNumber>1008</StateNumber>
+    </table>
+    <table id="33" parent="7" name="fazenda">
+      <ObjectId>17212</ObjectId>
+      <StateNumber>1003</StateNumber>
+    </table>
+    <table id="34" parent="7" name="ficha_matriz">
+      <ObjectId>17223</ObjectId>
+      <StateNumber>1018</StateNumber>
+    </table>
+    <table id="35" parent="7" name="ficha_matriz_diagnostico_gestacao">
+      <ObjectId>17229</ObjectId>
+      <StateNumber>1014</StateNumber>
+    </table>
+    <table id="36" parent="7" name="ficha_matriz_inseminacao">
+      <ObjectId>17232</ObjectId>
+      <StateNumber>1016</StateNumber>
+    </table>
+    <table id="37" parent="7" name="ficha_matriz_intervalo_parto">
+      <ObjectId>17235</ObjectId>
+      <StateNumber>1018</StateNumber>
+    </table>
+    <table id="38" parent="7" name="inseminacao">
+      <ObjectId>17240</ObjectId>
+      <StateNumber>1020</StateNumber>
+    </table>
+    <table id="39" parent="7" name="inseminador">
+      <ObjectId>17248</ObjectId>
+      <StateNumber>1019</StateNumber>
+    </table>
+    <table id="40" parent="7" name="intervalo_parto">
+      <ObjectId>17256</ObjectId>
+      <StateNumber>1017</StateNumber>
+    </table>
+    <table id="41" parent="7" name="parto">
+      <ObjectId>17264</ObjectId>
+      <StateNumber>1022</StateNumber>
+    </table>
+    <table id="42" parent="7" name="parto_bovino_parto">
+      <ObjectId>17270</ObjectId>
+      <StateNumber>1022</StateNumber>
+    </table>
+    <table id="43" parent="7" name="pelagem">
+      <ObjectId>17275</ObjectId>
+      <StateNumber>1005</StateNumber>
+    </table>
+    <table id="44" parent="7" name="peso">
+      <ObjectId>17283</ObjectId>
+      <StateNumber>1010</StateNumber>
+    </table>
+    <table id="45" parent="7" name="proprietario">
+      <ObjectId>17291</ObjectId>
+      <StateNumber>1006</StateNumber>
+    </table>
+    <table id="46" parent="7" name="raca">
+      <ObjectId>17299</ObjectId>
+      <StateNumber>1007</StateNumber>
+    </table>
+    <table id="47" parent="7" name="resultado">
+      <ObjectId>17307</ObjectId>
+      <StateNumber>1012</StateNumber>
+    </table>
+    <table id="48" parent="7" name="tarefa">
+      <ObjectId>17315</ObjectId>
+      <StateNumber>1023</StateNumber>
+    </table>
+    <column id="49" parent="28" name="id_bovino">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>976</StateNumber>
+      <SequenceName>bovino_id_bovino_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;bovino_id_bovino_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="50" parent="28" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="51" parent="28" name="data_nascimento">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="52" parent="28" name="genero">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="53" parent="28" name="mae">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="54" parent="28" name="nome_bovino">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="55" parent="28" name="pai">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="56" parent="28" name="status">
+      <Position>8</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="57" parent="28" name="tag">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="58" parent="28" name="url_foto">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="59" parent="28" name="fazenda_idfazenda">
+      <Position>11</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="60" parent="28" name="ficha_matriz_idfichamatriz">
+      <Position>12</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="61" parent="28" name="pelagem_idpelagem">
+      <Position>13</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="62" parent="28" name="proprietario_idproprietario">
+      <Position>14</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <column id="63" parent="28" name="raca_idraca">
+      <Position>15</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>976</StateNumber>
+    </column>
+    <index id="64" parent="28" name="bovino_pkey">
+      <ObjectId>17186</ObjectId>
+      <ColNames>id_bovino</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="65" parent="28" name="bovino_pkey">
+      <ObjectId>17187</ObjectId>
+      <ColNames>id_bovino</ColNames>
+      <UnderlyingIndexName>bovino_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="66" parent="28" name="fk_ffba4n363bmgiqbjc7jwshdu8">
+      <ObjectId>17333</ObjectId>
+      <ColNames>fazenda_idfazenda</ColNames>
+      <RefTableId>17212</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>fazenda</RefTableName>
+      <RefKeyName>fazenda_pkey</RefKeyName>
+      <RefColNames>id_fazenda</RefColNames>
+    </foreign-key>
+    <foreign-key id="67" parent="28" name="fk_8va8mrgqd8871kxk70v6juh8b">
+      <ObjectId>17338</ObjectId>
+      <ColNames>ficha_matriz_idfichamatriz</ColNames>
+      <RefTableId>17223</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>ficha_matriz</RefTableName>
+      <RefKeyName>ficha_matriz_pkey</RefKeyName>
+      <RefColNames>id_ficha_matriz</RefColNames>
+    </foreign-key>
+    <foreign-key id="68" parent="28" name="fk_2de20ij4alfynmkumodpx0av8">
+      <ObjectId>17343</ObjectId>
+      <ColNames>pelagem_idpelagem</ColNames>
+      <RefTableId>17275</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>pelagem</RefTableName>
+      <RefKeyName>pelagem_pkey</RefKeyName>
+      <RefColNames>id_pelagem</RefColNames>
+    </foreign-key>
+    <foreign-key id="69" parent="28" name="fk_tox0pknkjbfgynx8isx3c693k">
+      <ObjectId>17348</ObjectId>
+      <ColNames>proprietario_idproprietario</ColNames>
+      <RefTableId>17291</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>proprietario</RefTableName>
+      <RefKeyName>proprietario_pkey</RefKeyName>
+      <RefColNames>id_proprietario</RefColNames>
+    </foreign-key>
+    <foreign-key id="70" parent="28" name="fk_95tliuhe046jvb36u9fvile4t">
+      <ObjectId>17353</ObjectId>
+      <ColNames>raca_idraca</ColNames>
+      <RefTableId>17299</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>raca</RefTableName>
+      <RefKeyName>raca_pkey</RefKeyName>
+      <RefColNames>id_raca</RefColNames>
+    </foreign-key>
+    <column id="71" parent="29" name="bovino_idbovino">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>977</StateNumber>
+    </column>
+    <column id="72" parent="29" name="ecc_idecc">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>977</StateNumber>
+    </column>
+    <index id="73" parent="29" name="uk_64segsfvmj4psqf29nrb56tq9">
+      <ObjectId>17321</ObjectId>
+      <ColNames>ecc_idecc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="74" parent="29" name="uk_64segsfvmj4psqf29nrb56tq9">
+      <ObjectId>17322</ObjectId>
+      <ColNames>ecc_idecc</ColNames>
+      <UnderlyingIndexName>uk_64segsfvmj4psqf29nrb56tq9</UnderlyingIndexName>
+    </key>
+    <foreign-key id="75" parent="29" name="fk_aih7pmcvdloren9uopj34qblc">
+      <ObjectId>17363</ObjectId>
+      <ColNames>bovino_idbovino</ColNames>
+      <RefTableId>17179</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>bovino</RefTableName>
+      <RefKeyName>bovino_pkey</RefKeyName>
+      <RefColNames>id_bovino</RefColNames>
+    </foreign-key>
+    <foreign-key id="76" parent="29" name="fk_64segsfvmj4psqf29nrb56tq9">
+      <ObjectId>17358</ObjectId>
+      <ColNames>ecc_idecc</ColNames>
+      <RefTableId>17204</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>ecc</RefTableName>
+      <RefKeyName>ecc_pkey</RefKeyName>
+      <RefColNames>idecc</RefColNames>
+    </foreign-key>
+    <column id="77" parent="30" name="bovino_idbovino">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>978</StateNumber>
+    </column>
+    <column id="78" parent="30" name="peso_idpeso">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>978</StateNumber>
+    </column>
+    <index id="79" parent="30" name="uk_ikxswyrj5o4pvb4gsrc2aemcl">
+      <ObjectId>17323</ObjectId>
+      <ColNames>peso_idpeso</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="80" parent="30" name="uk_ikxswyrj5o4pvb4gsrc2aemcl">
+      <ObjectId>17324</ObjectId>
+      <ColNames>peso_idpeso</ColNames>
+      <UnderlyingIndexName>uk_ikxswyrj5o4pvb4gsrc2aemcl</UnderlyingIndexName>
+    </key>
+    <foreign-key id="81" parent="30" name="fk_nrwwpu9kri8o35rq4s0wmkt07">
+      <ObjectId>17373</ObjectId>
+      <ColNames>bovino_idbovino</ColNames>
+      <RefTableId>17179</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>bovino</RefTableName>
+      <RefKeyName>bovino_pkey</RefKeyName>
+      <RefColNames>id_bovino</RefColNames>
+    </foreign-key>
+    <foreign-key id="82" parent="30" name="fk_ikxswyrj5o4pvb4gsrc2aemcl">
+      <ObjectId>17368</ObjectId>
+      <ColNames>peso_idpeso</ColNames>
+      <RefTableId>17283</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>peso</RefTableName>
+      <RefKeyName>peso_pkey</RefKeyName>
+      <RefColNames>id_peso</RefColNames>
+    </foreign-key>
+    <column id="83" parent="31" name="id_diag_gest">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>979</StateNumber>
+      <SequenceName>diagnostico_gestacao_id_diag_gest_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;diagnostico_gestacao_id_diag_gest_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="84" parent="31" name="data_diagnostico">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>979</StateNumber>
+    </column>
+    <column id="85" parent="31" name="data_inclusao">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>979</StateNumber>
+    </column>
+    <column id="86" parent="31" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>979</StateNumber>
+    </column>
+    <column id="87" parent="31" name="resultado_diag_gest_idresultado">
+      <Position>5</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>979</StateNumber>
+    </column>
+    <index id="88" parent="31" name="diagnostico_gestacao_pkey">
+      <ObjectId>17200</ObjectId>
+      <ColNames>id_diag_gest</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="31" name="diagnostico_gestacao_pkey">
+      <ObjectId>17201</ObjectId>
+      <ColNames>id_diag_gest</ColNames>
+      <UnderlyingIndexName>diagnostico_gestacao_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="90" parent="31" name="fk_jec1dtnv6ntroi924hixocga4">
+      <ObjectId>17378</ObjectId>
+      <ColNames>resultado_diag_gest_idresultado</ColNames>
+      <RefTableId>17307</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>resultado</RefTableName>
+      <RefKeyName>resultado_pkey</RefKeyName>
+      <RefColNames>id_resultado</RefColNames>
+    </foreign-key>
+    <column id="91" parent="32" name="idecc">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>980</StateNumber>
+      <SequenceName>ecc_idecc_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;ecc_idecc_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="92" parent="32" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>980</StateNumber>
+    </column>
+    <column id="93" parent="32" name="escore">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>980</StateNumber>
+    </column>
+    <column id="94" parent="32" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>980</StateNumber>
+    </column>
+    <index id="95" parent="32" name="ecc_pkey">
+      <ObjectId>17208</ObjectId>
+      <ColNames>idecc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="96" parent="32" name="ecc_pkey">
+      <ObjectId>17209</ObjectId>
+      <ColNames>idecc</ColNames>
+      <UnderlyingIndexName>ecc_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="97" parent="33" name="id_fazenda">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>981</StateNumber>
+      <SequenceName>fazenda_id_fazenda_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;fazenda_id_fazenda_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="98" parent="33" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>981</StateNumber>
+    </column>
+    <column id="99" parent="33" name="endereco_fazenda">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>981</StateNumber>
+    </column>
+    <column id="100" parent="33" name="nome_fazenda">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>981</StateNumber>
+    </column>
+    <column id="101" parent="33" name="status">
+      <Position>5</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>981</StateNumber>
+    </column>
+    <index id="102" parent="33" name="fazenda_pkey">
+      <ObjectId>17219</ObjectId>
+      <ColNames>id_fazenda</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="103" parent="33" name="fazenda_pkey">
+      <ObjectId>17220</ObjectId>
+      <ColNames>id_fazenda</ColNames>
+      <UnderlyingIndexName>fazenda_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="104" parent="34" name="id_ficha_matriz">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>982</StateNumber>
+      <SequenceName>ficha_matriz_id_ficha_matriz_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;ficha_matriz_id_ficha_matriz_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="105" parent="34" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>982</StateNumber>
+    </column>
+    <column id="106" parent="34" name="status">
+      <Position>3</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>982</StateNumber>
+    </column>
+    <index id="107" parent="34" name="ficha_matriz_pkey">
+      <ObjectId>17227</ObjectId>
+      <ColNames>id_ficha_matriz</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="108" parent="34" name="ficha_matriz_pkey">
+      <ObjectId>17228</ObjectId>
+      <ColNames>id_ficha_matriz</ColNames>
+      <UnderlyingIndexName>ficha_matriz_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="109" parent="35" name="ficha_matriz_idfichamatriz">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>983</StateNumber>
+    </column>
+    <column id="110" parent="35" name="diagnostico_gestacao_iddiaggest">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>983</StateNumber>
+    </column>
+    <index id="111" parent="35" name="uk_aknttlgd8047qhmgxd5qee5i0">
+      <ObjectId>17325</ObjectId>
+      <ColNames>diagnostico_gestacao_iddiaggest</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="112" parent="35" name="uk_aknttlgd8047qhmgxd5qee5i0">
+      <ObjectId>17326</ObjectId>
+      <ColNames>diagnostico_gestacao_iddiaggest</ColNames>
+      <UnderlyingIndexName>uk_aknttlgd8047qhmgxd5qee5i0</UnderlyingIndexName>
+    </key>
+    <foreign-key id="113" parent="35" name="fk_l0gio8wu1yppecd48vxonlcrp">
+      <ObjectId>17388</ObjectId>
+      <ColNames>ficha_matriz_idfichamatriz</ColNames>
+      <RefTableId>17223</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>ficha_matriz</RefTableName>
+      <RefKeyName>ficha_matriz_pkey</RefKeyName>
+      <RefColNames>id_ficha_matriz</RefColNames>
+    </foreign-key>
+    <foreign-key id="114" parent="35" name="fk_aknttlgd8047qhmgxd5qee5i0">
+      <ObjectId>17383</ObjectId>
+      <ColNames>diagnostico_gestacao_iddiaggest</ColNames>
+      <RefTableId>17196</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>diagnostico_gestacao</RefTableName>
+      <RefKeyName>diagnostico_gestacao_pkey</RefKeyName>
+      <RefColNames>id_diag_gest</RefColNames>
+    </foreign-key>
+    <column id="115" parent="36" name="ficha_matriz_idfichamatriz">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>984</StateNumber>
+    </column>
+    <column id="116" parent="36" name="inseminacao_idinseminacao">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>984</StateNumber>
+    </column>
+    <index id="117" parent="36" name="uk_2w3cb8w69r7d9yrwwrsgvfhf0">
+      <ObjectId>17327</ObjectId>
+      <ColNames>inseminacao_idinseminacao</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="118" parent="36" name="uk_2w3cb8w69r7d9yrwwrsgvfhf0">
+      <ObjectId>17328</ObjectId>
+      <ColNames>inseminacao_idinseminacao</ColNames>
+      <UnderlyingIndexName>uk_2w3cb8w69r7d9yrwwrsgvfhf0</UnderlyingIndexName>
+    </key>
+    <foreign-key id="119" parent="36" name="fk_92i2ih9acokjxmbxpyg49g2bk">
+      <ObjectId>17398</ObjectId>
+      <ColNames>ficha_matriz_idfichamatriz</ColNames>
+      <RefTableId>17223</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>ficha_matriz</RefTableName>
+      <RefKeyName>ficha_matriz_pkey</RefKeyName>
+      <RefColNames>id_ficha_matriz</RefColNames>
+    </foreign-key>
+    <foreign-key id="120" parent="36" name="fk_2w3cb8w69r7d9yrwwrsgvfhf0">
+      <ObjectId>17393</ObjectId>
+      <ColNames>inseminacao_idinseminacao</ColNames>
+      <RefTableId>17240</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>inseminacao</RefTableName>
+      <RefKeyName>inseminacao_pkey</RefKeyName>
+      <RefColNames>id_inseminacao</RefColNames>
+    </foreign-key>
+    <column id="121" parent="37" name="ficha_matriz_idfichamatriz">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>985</StateNumber>
+    </column>
+    <column id="122" parent="37" name="intervalo_parto_idintervaloparto">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>985</StateNumber>
+    </column>
+    <index id="123" parent="37" name="uk_f5ncxlj3jouwqy71ajbvgube3">
+      <ObjectId>17329</ObjectId>
+      <ColNames>intervalo_parto_idintervaloparto</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="124" parent="37" name="uk_f5ncxlj3jouwqy71ajbvgube3">
+      <ObjectId>17330</ObjectId>
+      <ColNames>intervalo_parto_idintervaloparto</ColNames>
+      <UnderlyingIndexName>uk_f5ncxlj3jouwqy71ajbvgube3</UnderlyingIndexName>
+    </key>
+    <foreign-key id="125" parent="37" name="fk_c2f9vmco6wstnriw4fajl92ml">
+      <ObjectId>17408</ObjectId>
+      <ColNames>ficha_matriz_idfichamatriz</ColNames>
+      <RefTableId>17223</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>ficha_matriz</RefTableName>
+      <RefKeyName>ficha_matriz_pkey</RefKeyName>
+      <RefColNames>id_ficha_matriz</RefColNames>
+    </foreign-key>
+    <foreign-key id="126" parent="37" name="fk_f5ncxlj3jouwqy71ajbvgube3">
+      <ObjectId>17403</ObjectId>
+      <ColNames>intervalo_parto_idintervaloparto</ColNames>
+      <RefTableId>17256</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>intervalo_parto</RefTableName>
+      <RefKeyName>intervalo_parto_pkey</RefKeyName>
+      <RefColNames>id_intervalo_parto</RefColNames>
+    </foreign-key>
+    <column id="127" parent="38" name="id_inseminacao">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>986</StateNumber>
+      <SequenceName>inseminacao_id_inseminacao_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;inseminacao_id_inseminacao_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="128" parent="38" name="data_da_inseminacao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>986</StateNumber>
+    </column>
+    <column id="129" parent="38" name="data_inclusao">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>986</StateNumber>
+    </column>
+    <column id="130" parent="38" name="monta">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>986</StateNumber>
+    </column>
+    <column id="131" parent="38" name="previsao_parto">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>986</StateNumber>
+    </column>
+    <column id="132" parent="38" name="status">
+      <Position>6</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>986</StateNumber>
+    </column>
+    <column id="133" parent="38" name="touro">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>986</StateNumber>
+    </column>
+    <column id="134" parent="38" name="inseminador_idinseminador">
+      <Position>8</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>986</StateNumber>
+    </column>
+    <column id="135" parent="38" name="parto_idparto">
+      <Position>9</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>986</StateNumber>
+    </column>
+    <index id="136" parent="38" name="inseminacao_pkey">
+      <ObjectId>17244</ObjectId>
+      <ColNames>id_inseminacao</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="137" parent="38" name="inseminacao_pkey">
+      <ObjectId>17245</ObjectId>
+      <ColNames>id_inseminacao</ColNames>
+      <UnderlyingIndexName>inseminacao_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="138" parent="38" name="fk_qhiwnliitwkemga6y2qdqae0b">
+      <ObjectId>17413</ObjectId>
+      <ColNames>inseminador_idinseminador</ColNames>
+      <RefTableId>17248</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>inseminador</RefTableName>
+      <RefKeyName>inseminador_pkey</RefKeyName>
+      <RefColNames>id_inseminador</RefColNames>
+    </foreign-key>
+    <foreign-key id="139" parent="38" name="fk_elho6udi3h5gc50bm055w1973">
+      <ObjectId>17418</ObjectId>
+      <ColNames>parto_idparto</ColNames>
+      <RefTableId>17264</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>parto</RefTableName>
+      <RefKeyName>parto_pkey</RefKeyName>
+      <RefColNames>id_parto</RefColNames>
+    </foreign-key>
+    <column id="140" parent="39" name="id_inseminador">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>987</StateNumber>
+      <SequenceName>inseminador_id_inseminador_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;inseminador_id_inseminador_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="141" parent="39" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>987</StateNumber>
+    </column>
+    <column id="142" parent="39" name="nome_inseminador">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>987</StateNumber>
+    </column>
+    <column id="143" parent="39" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>987</StateNumber>
+    </column>
+    <index id="144" parent="39" name="inseminador_pkey">
+      <ObjectId>17252</ObjectId>
+      <ColNames>id_inseminador</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="145" parent="39" name="inseminador_pkey">
+      <ObjectId>17253</ObjectId>
+      <ColNames>id_inseminador</ColNames>
+      <UnderlyingIndexName>inseminador_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="146" parent="40" name="id_intervalo_parto">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>988</StateNumber>
+      <SequenceName>intervalo_parto_id_intervalo_parto_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;intervalo_parto_id_intervalo_parto_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="147" parent="40" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>988</StateNumber>
+    </column>
+    <column id="148" parent="40" name="intervalo">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>988</StateNumber>
+    </column>
+    <column id="149" parent="40" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>988</StateNumber>
+    </column>
+    <index id="150" parent="40" name="intervalo_parto_pkey">
+      <ObjectId>17260</ObjectId>
+      <ColNames>id_intervalo_parto</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="151" parent="40" name="intervalo_parto_pkey">
+      <ObjectId>17261</ObjectId>
+      <ColNames>id_intervalo_parto</ColNames>
+      <UnderlyingIndexName>intervalo_parto_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="152" parent="41" name="id_parto">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>989</StateNumber>
+      <SequenceName>parto_id_parto_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;parto_id_parto_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="153" parent="41" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>989</StateNumber>
+    </column>
+    <column id="154" parent="41" name="data_parto">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>989</StateNumber>
+    </column>
+    <column id="155" parent="41" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>989</StateNumber>
+    </column>
+    <index id="156" parent="41" name="parto_pkey">
+      <ObjectId>17268</ObjectId>
+      <ColNames>id_parto</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="157" parent="41" name="parto_pkey">
+      <ObjectId>17269</ObjectId>
+      <ColNames>id_parto</ColNames>
+      <UnderlyingIndexName>parto_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="158" parent="42" name="parto_idparto">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>990</StateNumber>
+    </column>
+    <column id="159" parent="42" name="bovino_parto_idbovino">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>990</StateNumber>
+    </column>
+    <index id="160" parent="42" name="uk_haxjp1v7t6rsbtljng7lhaq7y">
+      <ObjectId>17331</ObjectId>
+      <ColNames>bovino_parto_idbovino</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="161" parent="42" name="uk_haxjp1v7t6rsbtljng7lhaq7y">
+      <ObjectId>17332</ObjectId>
+      <ColNames>bovino_parto_idbovino</ColNames>
+      <UnderlyingIndexName>uk_haxjp1v7t6rsbtljng7lhaq7y</UnderlyingIndexName>
+    </key>
+    <foreign-key id="162" parent="42" name="fk_57vltwj24cy9ns3jtnwb6vtyf">
+      <ObjectId>17428</ObjectId>
+      <ColNames>parto_idparto</ColNames>
+      <RefTableId>17264</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>parto</RefTableName>
+      <RefKeyName>parto_pkey</RefKeyName>
+      <RefColNames>id_parto</RefColNames>
+    </foreign-key>
+    <foreign-key id="163" parent="42" name="fk_haxjp1v7t6rsbtljng7lhaq7y">
+      <ObjectId>17423</ObjectId>
+      <ColNames>bovino_parto_idbovino</ColNames>
+      <RefTableId>17179</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>bovino</RefTableName>
+      <RefKeyName>bovino_pkey</RefKeyName>
+      <RefColNames>id_bovino</RefColNames>
+    </foreign-key>
+    <column id="164" parent="43" name="id_pelagem">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>991</StateNumber>
+      <SequenceName>pelagem_id_pelagem_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;pelagem_id_pelagem_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="165" parent="43" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>991</StateNumber>
+    </column>
+    <column id="166" parent="43" name="nome_pelagem">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>991</StateNumber>
+    </column>
+    <column id="167" parent="43" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>991</StateNumber>
+    </column>
+    <index id="168" parent="43" name="pelagem_pkey">
+      <ObjectId>17279</ObjectId>
+      <ColNames>id_pelagem</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="169" parent="43" name="pelagem_pkey">
+      <ObjectId>17280</ObjectId>
+      <ColNames>id_pelagem</ColNames>
+      <UnderlyingIndexName>pelagem_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="170" parent="44" name="id_peso">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>992</StateNumber>
+      <SequenceName>peso_id_peso_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;peso_id_peso_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="171" parent="44" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>992</StateNumber>
+    </column>
+    <column id="172" parent="44" name="data_pesagem">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>992</StateNumber>
+    </column>
+    <column id="173" parent="44" name="peso">
+      <Position>4</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>992</StateNumber>
+    </column>
+    <column id="174" parent="44" name="status">
+      <Position>5</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>992</StateNumber>
+    </column>
+    <index id="175" parent="44" name="peso_pkey">
+      <ObjectId>17287</ObjectId>
+      <ColNames>id_peso</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="176" parent="44" name="peso_pkey">
+      <ObjectId>17288</ObjectId>
+      <ColNames>id_peso</ColNames>
+      <UnderlyingIndexName>peso_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="177" parent="45" name="id_proprietario">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>993</StateNumber>
+      <SequenceName>proprietario_id_proprietario_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;proprietario_id_proprietario_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="178" parent="45" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>993</StateNumber>
+    </column>
+    <column id="179" parent="45" name="nome_proprietario">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>993</StateNumber>
+    </column>
+    <column id="180" parent="45" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>993</StateNumber>
+    </column>
+    <index id="181" parent="45" name="proprietario_pkey">
+      <ObjectId>17295</ObjectId>
+      <ColNames>id_proprietario</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="182" parent="45" name="proprietario_pkey">
+      <ObjectId>17296</ObjectId>
+      <ColNames>id_proprietario</ColNames>
+      <UnderlyingIndexName>proprietario_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="183" parent="46" name="id_raca">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>994</StateNumber>
+      <SequenceName>raca_id_raca_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;raca_id_raca_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="184" parent="46" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>994</StateNumber>
+    </column>
+    <column id="185" parent="46" name="nome_raca">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>994</StateNumber>
+    </column>
+    <column id="186" parent="46" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>994</StateNumber>
+    </column>
+    <index id="187" parent="46" name="raca_pkey">
+      <ObjectId>17303</ObjectId>
+      <ColNames>id_raca</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="188" parent="46" name="raca_pkey">
+      <ObjectId>17304</ObjectId>
+      <ColNames>id_raca</ColNames>
+      <UnderlyingIndexName>raca_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="189" parent="47" name="id_resultado">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>995</StateNumber>
+      <SequenceName>resultado_id_resultado_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;resultado_id_resultado_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="190" parent="47" name="data_inclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>995</StateNumber>
+    </column>
+    <column id="191" parent="47" name="resultado">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>995</StateNumber>
+    </column>
+    <column id="192" parent="47" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>995</StateNumber>
+    </column>
+    <index id="193" parent="47" name="resultado_pkey">
+      <ObjectId>17311</ObjectId>
+      <ColNames>id_resultado</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="194" parent="47" name="resultado_pkey">
+      <ObjectId>17312</ObjectId>
+      <ColNames>id_resultado</ColNames>
+      <UnderlyingIndexName>resultado_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="195" parent="48" name="id_tarefa">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>996</StateNumber>
+      <SequenceName>tarefa_id_tarefa_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;tarefa_id_tarefa_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="196" parent="48" name="data_conclusao">
+      <Position>2</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>996</StateNumber>
+    </column>
+    <column id="197" parent="48" name="data_inclusao">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>996</StateNumber>
+    </column>
+    <column id="198" parent="48" name="imei">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>996</StateNumber>
+    </column>
+    <column id="199" parent="48" name="status">
+      <Position>5</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>996</StateNumber>
+    </column>
+    <column id="200" parent="48" name="status_da_tarefa">
+      <Position>6</Position>
+      <DataType>boolean|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>996</StateNumber>
+    </column>
+    <column id="201" parent="48" name="tipo_tarefa">
+      <Position>7</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>996</StateNumber>
+    </column>
+    <column id="202" parent="48" name="bovino_matriz_idbovino">
+      <Position>8</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>996</StateNumber>
+    </column>
+    <index id="203" parent="48" name="tarefa_pkey">
+      <ObjectId>17319</ObjectId>
+      <ColNames>id_tarefa</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="204" parent="48" name="tarefa_pkey">
+      <ObjectId>17320</ObjectId>
+      <ColNames>id_tarefa</ColNames>
+      <UnderlyingIndexName>tarefa_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="205" parent="48" name="fk_rig2avxi9s2re4qpdx6rlfd76">
+      <ObjectId>17433</ObjectId>
+      <ColNames>bovino_matriz_idbovino</ColNames>
+      <RefTableId>17179</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>bovino</RefTableName>
+      <RefKeyName>bovino_pkey</RefKeyName>
+      <RefColNames>id_bovino</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
