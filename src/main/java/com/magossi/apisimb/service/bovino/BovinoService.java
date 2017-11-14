@@ -70,7 +70,7 @@ public class BovinoService {
     }
 
     public List<Bovino> buscarNomeBovino(String nome){
-        List<Bovino> bovino = bovinoRepository.findByNomeBovinoContainingAndStatus(nome,true);
+        List<Bovino> bovino = bovinoRepository.findByNomeBovino(nome);
 
         if(bovino==null){
             throw new BovinoNaoExistenteException("Bovino não Existe");
@@ -79,7 +79,7 @@ public class BovinoService {
         return bovino;
     }
     public List<Bovino> buscarMatriz(String nome){
-        List<Bovino> bovino = bovinoRepository.findByNomeBovinoContainingAndStatus(nome,true);
+        List<Bovino> bovino = bovinoRepository.findByNomeBovino(nome);
 
         if(bovino==null){
             throw new BovinoNaoExistenteException("Bovino não Existe");

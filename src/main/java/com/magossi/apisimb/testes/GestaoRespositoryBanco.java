@@ -625,9 +625,14 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            taxa = (result.getFloat(1) - (result.getFloat(2)));
-            taxa = taxa + result.getFloat(3);
-            taxa = taxa / result.getFloat(1);
+            if(result.getFloat(1) != 0 ) {
+                taxa = (result.getFloat(1) - (result.getFloat(2)));
+                taxa = taxa + result.getFloat(3);
+                taxa = taxa / result.getFloat(1);
+            }else{
+                taxa = 0.0f;
+            }
+
 
             conexao.close();
             json = "[{\"nome\": \"" + data + "\",\"fertilidade\": " + taxa + "}]";

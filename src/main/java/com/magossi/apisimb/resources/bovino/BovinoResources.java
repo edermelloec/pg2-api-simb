@@ -143,7 +143,7 @@ public class BovinoResources {
         if("todos".equals(nome)){
             bovino = bovinoService.buscarTodosAtivos();
         }else{
-            bovino = bovinoService.buscarNomeBovino(nome);
+            bovino = bovinoService.buscarNomeBovino("%"+nome+"%");
         }
 
 
