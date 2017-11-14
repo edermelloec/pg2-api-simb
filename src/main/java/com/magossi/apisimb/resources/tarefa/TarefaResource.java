@@ -140,16 +140,15 @@ public class TarefaResource {
 
     }
 
-    @RequestMapping(value = "/dataAtivas/{data}", method = RequestMethod.GET)
-    public ResponseEntity<List<Tarefa>> buscarTarefaAtivasPorData(@PathVariable("data")String dataString) throws Exception {
+    @RequestMapping(value = "/dataAtivas/{busca}/{tipoBusca}", method = RequestMethod.GET)
+    public ResponseEntity<List<Tarefa>> buscarTarefaAtivasPorData(@PathVariable("busca")String busca,@PathVariable("tipoBusca")String tipoBusca) throws Exception {
 
         List<Tarefa> tarefas = null;
 
-        if("todos".equals(dataString)){
+        if("todos".equals(busca)){
             tarefas = tarefaService.buscarTodasAtivas();
-        }else{
-            Date data = formataStringToDate(dataString);
-            tarefas = tarefaService.buscarAtivasData(data);
+        }else if ("nome".equals(tipoBusca)){
+            tarefas = tarefaService.buscarPorBovino(busca+"%");
         }
 
         return ResponseEntity.status(HttpStatus.OK).body(tarefas);

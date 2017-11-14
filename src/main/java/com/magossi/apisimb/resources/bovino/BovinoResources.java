@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -136,14 +139,27 @@ public class BovinoResources {
 
     }
 
-    @RequestMapping(value = "/nome/{nome}", method = RequestMethod.GET)
-    public ResponseEntity<List<Bovino>> buscarBovinoPorNome(@PathVariable("nome")String nome){
+    @RequestMapping(value = "/nome/{busca}/{tipoBusca}", method = RequestMethod.GET)
+    public ResponseEntity<List<Bovino>> buscarBovinoPorNome(@PathVariable("busca")String busca,@PathVariable("tipoBusca")String tipoBusca){
         List<Bovino> bovino = null;
 
-        if("todos".equals(nome)){
+        if("todos".equals(busca)){
             bovino = bovinoService.buscarTodosAtivos();
-        }else{
-            bovino = bovinoService.buscarNomeBovino("%"+nome+"%");
+        }else if ("nome".equals(tipoBusca)){
+            bovino = bovinoService.buscarNomeBovino("%"+busca+"%");
+        }else if ("raca".equals(tipoBusca)){
+            bovino = bovinoService.buscarPorRaca("%"+busca+"%");
+        }else if ("fazenda".equals(tipoBusca)){
+            bovino = bovinoService.buscarPorFazenda("%"+busca+"%");
+        }else if ("dataNascimento".equals(tipoBusca)){
+            SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+            try {
+                Date data = formato.parse(busca);
+                bovino = bovinoService.buscarPorData(data);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
         }
 
 

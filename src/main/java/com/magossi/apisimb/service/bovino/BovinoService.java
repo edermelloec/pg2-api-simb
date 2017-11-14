@@ -1,6 +1,8 @@
 package com.magossi.apisimb.service.bovino;
 
 import com.magossi.apisimb.domain.bovino.Bovino;
+import com.magossi.apisimb.domain.bovino.Fazenda;
+import com.magossi.apisimb.domain.bovino.Raca;
 import com.magossi.apisimb.repository.bovino.*;
 import com.magossi.apisimb.service.exceptions.BovinoExistenteException;
 import com.magossi.apisimb.service.exceptions.BovinoNaoEncontradoException;
@@ -8,6 +10,7 @@ import com.magossi.apisimb.service.exceptions.BovinoNaoExistenteException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -70,16 +73,50 @@ public class BovinoService {
     }
 
     public List<Bovino> buscarNomeBovino(String nome){
-        List<Bovino> bovino = bovinoRepository.findByNomeBovino(nome);
+        List<Bovino> bovino = bovinoRepository.buscaComLike(nome);
 
         if(bovino==null){
+
             throw new BovinoNaoExistenteException("Bovino não Existe");
         }
 
         return bovino;
     }
+    public List<Bovino> buscarPorRaca(String nome) {
+        Raca idRaca =  racaRepository.buscarPorRaca(nome);
+        List<Bovino> bovino = bovinoRepository.buscaPorRaca(idRaca);
+
+        if(bovino==null){
+
+            throw new BovinoNaoExistenteException("Bovino não Existe");
+        }
+
+        return bovino;
+    }
+    public List<Bovino> buscarPorFazenda(String nome) {
+        Fazenda idFazenda = fazendaRepository.buscarPorFazenda(nome);
+        List<Bovino> bovino = bovinoRepository.buscarPorFazenda(idFazenda);
+
+        if(bovino==null){
+
+            throw new BovinoNaoExistenteException("Bovino não Existe");
+        }
+
+        return bovino;
+    }
+    public List<Bovino> buscarPorData(Date data) {
+        List<Bovino> bovino = bovinoRepository.buscarPorData(data);
+
+        if(bovino==null){
+
+            throw new BovinoNaoExistenteException("Bovino não Existe");
+        }
+
+        return bovino;
+    }
+
     public List<Bovino> buscarMatriz(String nome){
-        List<Bovino> bovino = bovinoRepository.findByNomeBovino(nome);
+        List<Bovino> bovino = bovinoRepository.buscaComLike(nome);
 
         if(bovino==null){
             throw new BovinoNaoExistenteException("Bovino não Existe");
@@ -124,47 +161,6 @@ public class BovinoService {
         }
         return bovino;
     }
-
-
-
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//    public List<Pelagem> buscarPelagens(){
-//        List<Pelagem> pelagens = pelagemRepository.findAll();
-//
-//        if(pelagens==null){
-//            throw new BovinoNaoEncontradoException("Lista de Pelagens não Encontrada");
-//        }
-//        return pelagens;
-//    }
-//
-//    public List<Proprietario> buscarProprietarios(){
-//        List<Proprietario> proprietarios = proprietarioRepository.findAll();
-//
-//        if(proprietarios==null){
-//            throw new BovinoNaoEncontradoException("Lista de Prorietarios não Encontrada");
-//        }
-//        return proprietarios;
-//    }
-//
-//    public List<Raca> buscarRacas(){
-//        List<Raca> racas = racaRepository.findAll();
-//
-//        if(racas==null){
-//            throw new BovinoNaoEncontradoException("Lista de Racas não Encontrada");
-//        }
-//        return racas;
-//    }
 
 
 }

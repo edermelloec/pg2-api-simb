@@ -2,6 +2,7 @@ package com.magossi.apisimb.service.tarefa;
 
 import com.magossi.apisimb.domain.bovino.Bovino;
 import com.magossi.apisimb.domain.tarefa.Tarefa;
+import com.magossi.apisimb.repository.bovino.BovinoRepository;
 import com.magossi.apisimb.repository.tarefa.TarefaRepository;
 import com.magossi.apisimb.service.exceptions.BovinoExistenteException;
 import com.magossi.apisimb.service.exceptions.BovinoNaoEncontradoException;
@@ -25,6 +26,10 @@ public class TarefaService {
 
     @Autowired
     TarefaRepository tarefaRepository;
+
+    @Autowired
+    BovinoRepository bovinoRepository;
+
 
     public Tarefa salvar(Tarefa tarefa){
         if(tarefa.getIdTarefa() != null){
@@ -86,6 +91,21 @@ public class TarefaService {
     public List<Tarefa> buscarTodas(){
         List<Tarefa> tarefas = tarefaRepository.findAll();
 
+        if(tarefas==null){
+            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+        }
+        return tarefas;
+    }
+    public List<Tarefa> buscarPorBovino(String busca){
+        List<Bovino> bovinos = bovinoRepository.buscaComLike(busca);
+        List<Tarefa> tarefas;
+
+        if(bovinos.size()!=0) {
+
+            tarefas = tarefaRepository.buscarPorBovino(bovinos.get(0));
+        }else{
+            tarefas = tarefaRepository.findAll();
+        }
         if(tarefas==null){
             throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
         }
