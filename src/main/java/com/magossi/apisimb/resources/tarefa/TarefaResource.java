@@ -37,8 +37,8 @@ public class TarefaResource {
     // ******************************** METODOS POST *******************************************************
 
 
-    @RequestMapping(method =  RequestMethod.POST)
-    public ResponseEntity<Void> salvar(@RequestBody Tarefa tarefa){
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<Void> salvar(@RequestBody Tarefa tarefa) {
         tarefa = tarefaService.salvar(tarefa);
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -47,10 +47,10 @@ public class TarefaResource {
         return ResponseEntity.created(uri).build();
     }
 
-    @RequestMapping(value = "/{id}/inseminacao", method =  RequestMethod.POST)
-    public ResponseEntity<Void> salvarInseminacaoTarefa(@PathVariable("id") Long id, @RequestBody Inseminacao inseminacao){
+    @RequestMapping(value = "/{id}/inseminacao", method = RequestMethod.POST)
+    public ResponseEntity<Void> salvarInseminacaoTarefa(@PathVariable("id") Long id, @RequestBody Inseminacao inseminacao) {
         Tarefa tarefa = tarefaService.buscarId(id);
-        if (tarefa.getBovinoMatriz().getFichaMatriz().getInseminacao().isEmpty()){
+        if (tarefa.getBovinoMatriz().getFichaMatriz().getInseminacao().isEmpty()) {
             List<Inseminacao> inseminacaos = new ArrayList<>();
             tarefa.getBovinoMatriz().getFichaMatriz().setInseminacao(inseminacaos);
         }
@@ -69,8 +69,8 @@ public class TarefaResource {
 
     // ******************************** METODOS PUT *******************************************************
 
-    @RequestMapping(method =  RequestMethod.PUT)
-    public ResponseEntity<Void> alterar(@RequestBody Tarefa tarefa){
+    @RequestMapping(method = RequestMethod.PUT)
+    public ResponseEntity<Void> alterar(@RequestBody Tarefa tarefa) {
         tarefa = tarefaService.alterar(tarefa);
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -80,11 +80,10 @@ public class TarefaResource {
     }
 
 
-
     // ******************************** METODOS DELETE *******************************************************
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Void> deletar(@PathVariable("id")Long id){
+    public ResponseEntity<Void> deletar(@PathVariable("id") Long id) {
 
         tarefaService.deletar(id);
         return ResponseEntity.status(HttpStatus.OK).build();
@@ -95,28 +94,28 @@ public class TarefaResource {
     // ******************************** METODOS GET *******************************************************
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<Tarefa>> listar(){
+    public ResponseEntity<List<Tarefa>> listar() {
 
         List<Tarefa> tarefas = tarefaService.buscarTodas();
         return ResponseEntity.status(HttpStatus.OK).body(tarefas);
     }
 
     @RequestMapping(value = "/ativas", method = RequestMethod.GET)
-    public ResponseEntity<List<Tarefa>> listarAtivas(){
+    public ResponseEntity<List<Tarefa>> listarAtivas() {
 
         List<Tarefa> tarefas = tarefaService.buscarTodasAtivas();
         return ResponseEntity.status(HttpStatus.OK).body(tarefas);
     }
 
     @RequestMapping(value = "/concluidas", method = RequestMethod.GET)
-    public ResponseEntity<List<Tarefa>> listarConcluidas(){
+    public ResponseEntity<List<Tarefa>> listarConcluidas() {
 
         List<Tarefa> tarefas = tarefaService.buscarTodasConcluidas();
         return ResponseEntity.status(HttpStatus.OK).body(tarefas);
     }
 
     @RequestMapping(value = "/imei/{imei}", method = RequestMethod.GET)
-    public ResponseEntity<List<Tarefa>> buscarTarefaPorImei(@PathVariable("imei")String imei){
+    public ResponseEntity<List<Tarefa>> buscarTarefaPorImei(@PathVariable("imei") String imei) {
 
         List<Tarefa> tarefas = tarefaService.buscarImei(imei);
         return ResponseEntity.status(HttpStatus.OK).body(tarefas);
@@ -124,14 +123,14 @@ public class TarefaResource {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Tarefa> buscarTarefaPorId(@PathVariable("id") Long id){   //? encapsula qualquer tipo de objeto
+    public ResponseEntity<Tarefa> buscarTarefaPorId(@PathVariable("id") Long id) {   //? encapsula qualquer tipo de objeto
 
         Tarefa tarefa = tarefaService.buscarId(id);
         return ResponseEntity.status(HttpStatus.OK).body(tarefa);
     }
 
     @RequestMapping(value = "/bovinoMatriz/{idBovino}", method = RequestMethod.GET)
-    public ResponseEntity<List<Tarefa>> buscarTarefasPorBovinoMatriz(@PathVariable("idBovino")Long idBovino){
+    public ResponseEntity<List<Tarefa>> buscarTarefasPorBovinoMatriz(@PathVariable("idBovino") Long idBovino) {
         Bovino bovino = bovinoService.buscarId(idBovino);
         List<Tarefa> tarefas = tarefaService.buscarPorBovinoMatriz(bovino);
         return ResponseEntity.status(HttpStatus.OK).body(tarefas);
@@ -139,19 +138,19 @@ public class TarefaResource {
     }
 
     @RequestMapping(value = "/dataAtivas/{busca}/{tipoBusca}", method = RequestMethod.GET)
-    public ResponseEntity<List<Tarefa>> buscarTarefaAtivasPorData(@PathVariable("busca")String busca,@PathVariable("tipoBusca")String tipoBusca) throws Exception {
+    public ResponseEntity<List<Tarefa>> buscarTarefaAtivasPorData(@PathVariable("busca") String busca, @PathVariable("tipoBusca") String tipoBusca) throws Exception {
 
         List<Tarefa> tarefas = null;
 
-        if("todos".equals(busca)){
+        if ("todos".equals(busca)) {
             tarefas = tarefaService.buscarTodasAtivas();
-        }else if ("nome".equals(tipoBusca)){
-            tarefas = tarefaService.buscarPorBovino(busca+"%",false);
-        }else if ("tipoTarefa".equals(tipoBusca)){
-            tarefas = tarefaService.buscarPorTipoTarefa(busca,false);
-        }else if ("funcionario".equals(tipoBusca)){
-            tarefas = tarefaService.buscarPorFuncionario(busca,false);
-        }else if ("dataInclusao".equals(tipoBusca)){
+        } else if ("nome".equals(tipoBusca)) {
+            tarefas = tarefaService.buscarPorBovino(busca + "%", false);
+        } else if ("tipoTarefa".equals(tipoBusca)) {
+            tarefas = tarefaService.buscarPorTipoTarefa(busca, false);
+        } else if ("funcionario".equals(tipoBusca)) {
+            tarefas = tarefaService.buscarPorFuncionario(busca, false);
+        } else if ("dataInclusao".equals(tipoBusca)) {
             SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
             try {
 
@@ -162,7 +161,7 @@ public class TarefaResource {
                 data2.setSeconds(59);
 
 
-                tarefas = tarefaService.buscarPorData(data1,data2,false);
+                tarefas = tarefaService.buscarPorData(data1, data2, false);
             } catch (ParseException e) {
                 e.printStackTrace();
             }
@@ -183,34 +182,34 @@ public class TarefaResource {
         if ("todos".equals(busca)) {
             tarefas = tarefaService.buscarTodasConcluidas();
         } else if ("nome".equals(tipoBusca)) {
-            tarefas = tarefaService.buscarPorBovino(busca + "%",true);
+            tarefas = tarefaService.buscarPorBovino(busca + "%", true);
         } else if ("tipoTarefa".equals(tipoBusca)) {
-            tarefas = tarefaService.buscarPorTipoTarefa(busca,true);
+            tarefas = tarefaService.buscarPorTipoTarefa(busca, true);
         } else if ("funcionario".equals(tipoBusca)) {
-            tarefas = tarefaService.buscarPorFuncionario(busca,true);
+            tarefas = tarefaService.buscarPorFuncionario(busca, true);
         } else if ("dataExecucao".equals(tipoBusca)) {
             SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
             try {
 
                 Date data1 = formato.parse(busca);
                 Date data2 = formato.parse(busca);
-                    data2.setHours(23);
-                    data2.setMinutes(59);
-                    data2.setSeconds(59);
+                data2.setHours(23);
+                data2.setMinutes(59);
+                data2.setSeconds(59);
 
-                    System.out.println(data2);
-                    System.out.println(data1);
-                    tarefas = tarefaService.buscarPorData(data1,data2,true);
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-
+                System.out.println(data2);
+                System.out.println(data1);
+                tarefas = tarefaService.buscarPorData(data1, data2, true);
+            } catch (ParseException e) {
+                e.printStackTrace();
             }
 
-
-            return ResponseEntity.status(HttpStatus.OK).body(tarefas);
-
         }
+
+
+        return ResponseEntity.status(HttpStatus.OK).body(tarefas);
+
+    }
 
 
 }

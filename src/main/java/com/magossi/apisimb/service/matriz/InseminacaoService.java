@@ -58,7 +58,7 @@ public class InseminacaoService {
 
         if(bovinos.size()!=0) {
 
-            System.out.println("TEST123 ------------  : " +String.valueOf(bovinos.get(0).getFichaMatriz().getIdFichaMatriz()));
+
             inseminacaos = inseminacaoRepository.buscarPorMatriz(String.valueOf(bovinos.get(0).getFichaMatriz().getIdFichaMatriz()));
         }else{
             inseminacaos = inseminacaoRepository.findByStatus(true);

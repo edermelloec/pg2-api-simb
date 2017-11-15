@@ -5,10 +5,7 @@ import com.magossi.apisimb.service.matriz.ResultadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -35,11 +32,17 @@ public class ResultadoResources {
 
         return ResponseEntity.created(uri).build();
     }
+    @RequestMapping(value = "/{busca}/{tipoBusca}", method = RequestMethod.GET)
+    public ResponseEntity<List<Resultado>> listar(@PathVariable("busca") String busca, @PathVariable("tipoBusca") String tipoBusca){
+        List<Resultado> resultados=null;
+        if ("todos".equals(busca)) {
+            resultados = resultadoService.listar();
+        } else if ("nomeMatriz".equals(tipoBusca)) {
+            resultados = resultadoService.buscarPorMatriz("%"+busca+"%");
+        }else if ("resultado".equals(tipoBusca)) {
+            resultados = resultadoService.buscarPorResultado("%"+busca+"%");
+        }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<Resultado>> listar(){
-
-        List<Resultado> resultados = resultadoService.listar();
         return ResponseEntity.status(HttpStatus.OK).body(resultados);
     }
 }

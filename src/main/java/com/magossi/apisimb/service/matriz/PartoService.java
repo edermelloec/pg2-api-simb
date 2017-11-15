@@ -12,9 +12,7 @@ import com.magossi.apisimb.repository.bovino.PesoRepository;
 import com.magossi.apisimb.repository.matriz.InseminacaoRepository;
 import com.magossi.apisimb.repository.matriz.PartoRepository;
 import com.magossi.apisimb.repository.matriz.ResultadoRepository;
-import com.magossi.apisimb.service.exceptions.FazendaExistenteException;
-import com.magossi.apisimb.service.exceptions.FazendaNaoEncontradaException;
-import com.magossi.apisimb.service.exceptions.GestaoException;
+import com.magossi.apisimb.service.exceptions.*;
 import com.magossi.apisimb.testes.GestaoRespositoryBanco;
 import com.magossi.apisimb.testes.Morte;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +31,10 @@ public class PartoService {
 
     @Autowired
     PartoRepository partoRepository;
+
+    @Autowired
+    BovinoRepository bovinoRepository;
+
     GestaoRespositoryBanco grb = new GestaoRespositoryBanco();
 
 
@@ -54,7 +56,58 @@ public class PartoService {
         }
         return partos;
     }
+    public List<Parto> buscarPorMatriz(String busca){
+        List<Bovino> bovinos = bovinoRepository.buscarPorMatriz(busca);
+        List<Parto> partos=null;
 
+        if(bovinos.size()!=0) {
+
+
+            partos = partoRepository.buscarPorMatriz(bovinos.get(0).getFichaMatriz().getIdFichaMatriz());
+        }else{
+            partos = partoRepository.findAll();
+        }
+        if(partos==null){
+            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+        }
+        return partos;
+    }
+    public List<Parto> buscarPorDataParto(Date data1, Date data2) {
+        List<Parto> partos = partoRepository.buscarPorDataParto(data1,data2);
+
+
+
+        if(partos==null){
+
+            throw new BovinoNaoExistenteException("Bovino não Existe");
+        }
+
+        return partos;
+    }
+    public List<Parto> buscarPorDescricao(String busca){
+        List<Parto> partos;
+
+        partos = partoRepository.buscarPorDescricao(busca);
+        if(partos.size()==0) {
+            partos = partoRepository.findAll();
+        }
+        if(partos==null){
+            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+        }
+        return partos;
+    }
+    public List<Parto> buscarPorStatus(String busca){
+        List<Parto> partos;
+
+        partos = partoRepository.buscarPorStatus(busca);
+        if(partos.size()==0) {
+            partos = partoRepository.findAll();
+        }
+        if(partos==null){
+            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+        }
+        return partos;
+    }
 
     public Parto salvarParto(Parto parto) {
         Parto p;
