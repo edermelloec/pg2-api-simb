@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import javax.validation.constraints.AssertFalse;
 import java.net.URI;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -148,40 +147,72 @@ public class TarefaResource {
         if("todos".equals(busca)){
             tarefas = tarefaService.buscarTodasAtivas();
         }else if ("nome".equals(tipoBusca)){
-            tarefas = tarefaService.buscarPorBovino(busca+"%");
+            tarefas = tarefaService.buscarPorBovino(busca+"%",false);
+        }else if ("tipoTarefa".equals(tipoBusca)){
+            tarefas = tarefaService.buscarPorTipoTarefa(busca,false);
+        }else if ("funcionario".equals(tipoBusca)){
+            tarefas = tarefaService.buscarPorFuncionario(busca,false);
+        }else if ("dataInclusao".equals(tipoBusca)){
+            SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+            try {
+
+                Date data1 = formato.parse(busca);
+                Date data2 = formato.parse(busca);
+                data2.setHours(23);
+                data2.setMinutes(59);
+                data2.setSeconds(59);
+
+                System.out.println(data2);
+                System.out.println(data1);
+                tarefas = tarefaService.buscarPorData(data1,data2,false);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
         }
+
 
         return ResponseEntity.status(HttpStatus.OK).body(tarefas);
 
     }
 
-    @RequestMapping(value = "/dataConcluidas/{data}", method = RequestMethod.GET)
-    public ResponseEntity<List<Tarefa>> buscarTarefaConcluidasPorData(@PathVariable("data")String dataString) throws Exception {
+
+    @RequestMapping(value = "/dataConcluidas/{busca}/{tipoBusca}", method = RequestMethod.GET)
+    public ResponseEntity<List<Tarefa>> buscarTarefaConcluidasPorData(@PathVariable("busca") String busca, @PathVariable("tipoBusca") String tipoBusca) throws Exception {
 
         List<Tarefa> tarefas = null;
 
-        if("todos".equals(dataString)){
+        if ("todos".equals(busca)) {
             tarefas = tarefaService.buscarTodasConcluidas();
-        }else{
-            Date data = formataStringToDate(dataString);
-            tarefas = tarefaService.buscarConcluidasData(data);
+        } else if ("nome".equals(tipoBusca)) {
+            tarefas = tarefaService.buscarPorBovino(busca + "%",true);
+        } else if ("tipoTarefa".equals(tipoBusca)) {
+            tarefas = tarefaService.buscarPorTipoTarefa(busca,true);
+        } else if ("funcionario".equals(tipoBusca)) {
+            tarefas = tarefaService.buscarPorFuncionario(busca,true);
+        } else if ("dataExecucao".equals(tipoBusca)) {
+            SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+            try {
+
+                Date data1 = formato.parse(busca);
+                Date data2 = formato.parse(busca);
+                    data2.setHours(23);
+                    data2.setMinutes(59);
+                    data2.setSeconds(59);
+
+                    System.out.println(data2);
+                    System.out.println(data1);
+                    tarefas = tarefaService.buscarPorData(data1,data2,true);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+
+            return ResponseEntity.status(HttpStatus.OK).body(tarefas);
+
         }
 
 
-        return ResponseEntity.status(HttpStatus.OK).body(tarefas);
-
-    }
-
-    public static Date formataStringToDate(String data) throws Exception {
-        if (data == null || data.equals(""))
-            return null;
-        Date date = null;
-        try {
-            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-            date = (java.util.Date)formatter.parse(data);
-        } catch (ParseException e) {
-            throw e;
-        }
-        return date;
-    }
 }
