@@ -161,8 +161,7 @@ public class TarefaResource {
                 data2.setMinutes(59);
                 data2.setSeconds(59);
 
-                System.out.println(data2);
-                System.out.println(data1);
+
                 tarefas = tarefaService.buscarPorData(data1,data2,false);
             } catch (ParseException e) {
                 e.printStackTrace();

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a76cb600-10dd-4b23-b2df-36d7113fd9cf" name="Default" comment="Primeiro Commit">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/InseminacaoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/InseminacaoRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/InseminacaoResources.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/InseminacaoResources.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/InseminacaoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/InseminacaoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/ConexaoFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/ConexaoFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,18 +47,18 @@
       <file leaf-file-name="TarefaResource.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="149" column="9" lean-forward="true" selection-start-line="147" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
+            <state relative-caret-position="152">
+              <caret line="189" column="50" lean-forward="true" selection-start-line="189" selection-start-column="50" selection-end-line="189" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InseminacaoResources.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InseminacaoResources.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/InseminacaoResources.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="44" column="64" lean-forward="false" selection-start-line="44" selection-start-column="64" selection-end-line="44" selection-end-column="64" />
+            <state relative-caret-position="107">
+              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -69,8 +67,8 @@
       <file leaf-file-name="TarefaService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-765">
-              <caret line="106" column="28" lean-forward="true" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+            <state relative-caret-position="271">
+              <caret line="159" column="5" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="159" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -79,8 +77,8 @@
       <file leaf-file-name="InseminacaoService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/InseminacaoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="55" column="69" lean-forward="false" selection-start-line="55" selection-start-column="69" selection-end-line="55" selection-end-column="69" />
+            <state relative-caret-position="175">
+              <caret line="131" column="78" lean-forward="false" selection-start-line="131" selection-start-column="49" selection-end-line="131" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -99,8 +97,8 @@
       <file leaf-file-name="TarefaRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/tarefa/TarefaRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="30" column="65" lean-forward="true" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+            <state relative-caret-position="306">
+              <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="122" />
               <folding />
             </state>
           </provider>
@@ -109,7 +107,7 @@
       <file leaf-file-name="BovinoRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
+            <state relative-caret-position="217">
               <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
               <folding>
                 <marker date="1510760027504" expanded="true" signature="624:708" ph="select b fro... Bovino" />
@@ -118,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InseminacaoRepository.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InseminacaoRepository.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/InseminacaoRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="141">
+              <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -228,11 +226,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/ConexaoFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/InseminacaoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/InseminacaoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/InseminacaoResources.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/InseminacaoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/InseminacaoRepository.java" />
       </list>
     </option>
   </component>
@@ -600,7 +598,7 @@
       <workItem from="1510570936200" duration="5427000" />
       <workItem from="1510660982569" duration="28454000" />
       <workItem from="1510732028798" duration="10934000" />
-      <workItem from="1510748970235" duration="10166000" />
+      <workItem from="1510748970235" duration="13472000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro Commit">
       <created>1503260464978</created>
@@ -613,7 +611,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="441349000" />
+    <option name="totallyTimeSpent" value="444655000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -635,7 +633,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41362917" sideWeight="0.4956076" order="13" side_tool="false" content_ui="combo" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41362917" sideWeight="0.4956076" order="13" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24881141" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -971,14 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="149" column="9" lean-forward="true" selection-start-line="147" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1090,14 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/tarefa/TarefaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="30" column="65" lean-forward="true" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Inseminacao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1106,17 +1088,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/InseminacaoRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
+        <state relative-caret-position="217">
           <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding>
             <marker date="1510760027504" expanded="true" signature="624:708" ph="select b fro... Bovino" />
@@ -1124,26 +1098,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765">
-          <caret line="106" column="28" lean-forward="true" selection-start-line="106" selection-start-column="28" selection-end-line="106" selection-end-column="28" />
+        <state relative-caret-position="152">
+          <caret line="189" column="50" lean-forward="true" selection-start-line="189" selection-start-column="50" selection-end-line="189" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/InseminacaoService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="55" column="69" lean-forward="false" selection-start-line="55" selection-start-column="69" selection-end-line="55" selection-end-column="69" />
+        <state relative-caret-position="271">
+          <caret line="159" column="5" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="159" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/tarefa/TarefaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="122" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/InseminacaoResources.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="44" column="64" lean-forward="false" selection-start-line="44" selection-start-column="64" selection-end-line="44" selection-end-column="64" />
+        <state relative-caret-position="107">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/InseminacaoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="131" column="78" lean-forward="false" selection-start-line="131" selection-start-column="49" selection-end-line="131" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/InseminacaoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
           <folding />
         </state>
       </provider>

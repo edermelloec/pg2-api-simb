@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -43,6 +46,42 @@ public class InseminacaoResources {
             inseminacoes = inseminacaoService.listar();
         }else if ("nomeMatriz".equals(tipoBusca)){
             inseminacoes = inseminacaoService.buscarPorMatriz("%"+busca+"%");
+        }else if ("nomeTouro".equals(tipoBusca)){
+            inseminacoes = inseminacaoService.buscarPorTouro("%"+busca+"%");
+        }else if ("dataInseminacao".equals(tipoBusca)){
+            SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+            try {
+
+                Date data1 = formato.parse(busca);
+                Date data2 = formato.parse(busca);
+                data2.setHours(23);
+                data2.setMinutes(59);
+                data2.setSeconds(59);
+
+
+                inseminacoes = inseminacaoService.buscarPorDataInseminacao(data1,data2);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }else if ("dataPrevisaoParto".equals(tipoBusca)){
+            SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+            try {
+
+                Date data1 = formato.parse(busca);
+                Date data2 = formato.parse(busca);
+                data2.setHours(23);
+                data2.setMinutes(59);
+                data2.setSeconds(59);
+
+
+                inseminacoes = inseminacaoService.buscarPorDataPrevisaoParto(data1,data2);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }else if ("tipo".equals(tipoBusca)){
+            inseminacoes = inseminacaoService.buscarPorTipo(busca);
+        }else if ("funcionario".equals(tipoBusca)){
+            inseminacoes = inseminacaoService.buscarPorFuncionario(busca);
         }
 
 
