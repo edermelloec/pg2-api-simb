@@ -92,6 +92,7 @@ public class TarefaService {
     public List<Tarefa> buscarTodas(){
         List<Tarefa> tarefas = tarefaRepository.findAll();
 
+
         if(tarefas==null){
             throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
         }

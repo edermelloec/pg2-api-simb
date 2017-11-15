@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a76cb600-10dd-4b23-b2df-36d7113fd9cf" name="Default" comment="Primeiro Commit">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/repository/tarefa/TarefaRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/repository/tarefa/TarefaRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/resources/tarefa/TarefaResource.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/resources/tarefa/TarefaResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/tarefa/TarefaService.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/tarefa/TarefaService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/tarefa/TarefaRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/tarefa/TarefaRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java" />
     </list>
@@ -57,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TarefaResource.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TarefaResource.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="195" column="0" lean-forward="true" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+            <state relative-caret-position="214">
+              <caret line="197" column="39" lean-forward="true" selection-start-line="197" selection-start-column="39" selection-end-line="197" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -80,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TarefaService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TarefaService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="92" column="55" lean-forward="false" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="55" />
+            <state relative-caret-position="157">
+              <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -223,9 +218,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/BovinoResources.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/tarefa/Tarefa.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/tarefa/TarefaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" />
       </list>
     </option>
   </component>
@@ -548,7 +543,7 @@
       <workItem from="1510527108541" duration="4418000" />
       <workItem from="1510570936200" duration="5427000" />
       <workItem from="1510660982569" duration="28454000" />
-      <workItem from="1510732028798" duration="10081000" />
+      <workItem from="1510732028798" duration="10934000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro Commit">
       <created>1503260464978</created>
@@ -561,11 +556,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="430330000" />
+    <option name="totallyTimeSpent" value="431183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34548336" sideWeight="0.5043924" order="7" side_tool="true" content_ui="tabs" />
@@ -1066,14 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="195" column="0" lean-forward="true" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/tarefa/TarefaRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
@@ -1084,8 +1070,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="92" column="55" lean-forward="false" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="55" />
+        <state relative-caret-position="157">
+          <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="197" column="39" lean-forward="true" selection-start-line="197" selection-start-column="39" selection-end-line="197" selection-end-column="39" />
           <folding />
         </state>
       </provider>
