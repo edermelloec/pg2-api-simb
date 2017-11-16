@@ -102,7 +102,7 @@ public class TarefaService {
         List<Bovino> bovinos = bovinoRepository.buscaComLike(busca);
         List<Tarefa> tarefas;
         if(bovinos.size()!=0) {
-            System.out.println("______________________________________------ : "+bovinos.get(0).getNomeBovino());
+
             tarefas = tarefaRepository.buscarPorBovino(bovinos.get(0),b);
         }else{
             tarefas = tarefaRepository.findByStatusDaTarefaAndStatus(b,true);

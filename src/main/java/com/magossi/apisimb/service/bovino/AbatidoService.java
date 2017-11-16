@@ -1,9 +1,8 @@
 package com.magossi.apisimb.service.bovino;
 
-
+import com.magossi.apisimb.domain.bovino.Abatido;
 import com.magossi.apisimb.domain.bovino.Bovino;
-import com.magossi.apisimb.domain.bovino.Morto;
-import com.magossi.apisimb.domain.bovino.Venda;
+import com.magossi.apisimb.repository.bovino.AbatidoRepository;
 import com.magossi.apisimb.repository.bovino.BovinoRepository;
 import com.magossi.apisimb.repository.bovino.VendaRepository;
 import com.magossi.apisimb.service.exceptions.BovinoNaoEncontradoException;
@@ -15,47 +14,50 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 
+
 @SuppressWarnings("ALL")
 @Service
-public class VendaService {
+public class AbatidoService {
     @Autowired
-    VendaRepository vendaRepository;
+    AbatidoRepository abatidoRepository;
     @Autowired
     BovinoRepository bovinoRepository;
 
 
-    public List<Venda> buscarTodos(){
-        List<Venda> venda = vendaRepository.findAll();
+    public List<Abatido> buscarTodos() {
+        List<Abatido> abatidos = abatidoRepository.findAll();
 
-        if(venda==null){
+        if (abatidos == null) {
             throw new BovinoNaoEncontradoException("Lista de Bovinos não Encontrada");
         }
-        return venda;
+        return abatidos;
     }
 
-    public List<Venda> buscarPorBovino(String busca){
+    public List<Abatido> buscarPorBovino(String busca) {
         List<Bovino> bovinos = bovinoRepository.buscaComLike(busca);
-        List<Venda> vendas;
-        if(bovinos.size()!=0) {
+        List<Abatido> abatidos;
+        if (bovinos.size() != 0) {
 
-            vendas = vendaRepository.buscarPorBovino(bovinos.get(0).getIdBovino());
-        }else{
-            vendas = vendaRepository.findAll();
+            abatidos = abatidoRepository.buscarPorBovino(bovinos.get(0).getIdBovino());
+        } else {
+            abatidos = abatidoRepository.findAll();
         }
-        if(vendas==null){
+        if (abatidos == null) {
             throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
         }
-        return vendas;
+        return abatidos;
     }
-    public List<Venda> buscarPorData(Date data1, Date data2) {
-        List<Venda> vendas = vendaRepository.buscarPorData(data1,data2);
 
-        if(vendas==null){
+    public List<Abatido> buscarPorData(Date data1, Date data2) {
+        List<Abatido> abatidos = abatidoRepository.buscarPorData(data1, data2);
+
+        if (abatidos == null) {
 
             throw new BovinoNaoExistenteException("Bovino não Existe");
         }
 
-        return vendas;
+        return abatidos;
     }
 
 }
+
