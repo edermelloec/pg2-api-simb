@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @SuppressWarnings("ALL")
@@ -31,6 +34,23 @@ public class DesmamaResources {
             desmamas = desmamaService.buscarPorBovino("%"+busca+"%");
         }else if ("nomeMatriz".equals(tipoBusca)){
             desmamas = desmamaService.buscarPorMatriz("%"+busca+"%");
+        }else if ("dataDesmama".equals(tipoBusca)){
+            SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+            try {
+
+                Date data1 = formato.parse(busca);
+                Date data2 = formato.parse(busca);
+                data2.setHours(23);
+                data2.setMinutes(59);
+                data2.setSeconds(59);
+
+
+
+                desmamas = desmamaService.buscarPorData(data1, data2);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
         }
 
 

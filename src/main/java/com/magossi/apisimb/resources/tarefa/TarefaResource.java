@@ -145,7 +145,7 @@ public class TarefaResource {
         if ("todos".equals(busca)) {
             tarefas = tarefaService.buscarTodasAtivas();
         } else if ("nome".equals(tipoBusca)) {
-            tarefas = tarefaService.buscarPorBovino(busca + "%", false);
+            tarefas = tarefaService.buscarPorBovino("%"+busca, false);
         } else if ("tipoTarefa".equals(tipoBusca)) {
             tarefas = tarefaService.buscarPorTipoTarefa(busca, false);
         } else if ("funcionario".equals(tipoBusca)) {
@@ -182,7 +182,8 @@ public class TarefaResource {
         if ("todos".equals(busca)) {
             tarefas = tarefaService.buscarTodasConcluidas();
         } else if ("nome".equals(tipoBusca)) {
-            tarefas = tarefaService.buscarPorBovino(busca + "%", true);
+
+            tarefas = tarefaService.buscarPorBovino("%"+busca, true);
         } else if ("tipoTarefa".equals(tipoBusca)) {
             tarefas = tarefaService.buscarPorTipoTarefa(busca, true);
         } else if ("funcionario".equals(tipoBusca)) {
@@ -196,9 +197,6 @@ public class TarefaResource {
                 data2.setHours(23);
                 data2.setMinutes(59);
                 data2.setSeconds(59);
-
-                System.out.println(data2);
-                System.out.println(data1);
                 tarefas = tarefaService.buscarPorData(data1, data2, true);
             } catch (ParseException e) {
                 e.printStackTrace();
