@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a76cb600-10dd-4b23-b2df-36d7113fd9cf" name="Default" comment="Primeiro Commit">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/AbatidoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/AbatidoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/VendaRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/VendaRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/VendaService.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/VendaService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,67 +43,132 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VendaResources.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/VendaResources.java">
+      <file leaf-file-name="GestaoRespositoryBanco.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="580" column="27" lean-forward="false" selection-start-line="580" selection-start-column="22" selection-end-line="580" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1510848678663" expanded="true" signature="644:769" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="652:712" ph="select count... resultado" />
+                <marker date="1510848678663" expanded="true" signature="1567:1854" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="1600:1663" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="2644:2931" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="2677:2740" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="3720:4007" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="3753:3816" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="4801:4917" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="4818:4870" ph="select count... parto" />
+                <marker date="1510848678663" expanded="true" signature="5716:5887" ph="select (sele... " />
+                <marker date="1510848678663" expanded="true" signature="5716:5943" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="5724:5885" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="6740:6967" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="6748:6909" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="7761:7990" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="7769:7932" ph="select count... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="8802:9044" ph="SELECT min((... bovino" />
+                <marker date="1510848678663" expanded="true" signature="8802:9066" ph="select b.fic... bovino" />
+                <marker date="1510848678663" expanded="true" signature="9734:9961" ph="select ((DAT... desmama" />
+                <marker date="1510848678663" expanded="true" signature="9940:9961" ph="SELECT min((... bovino" />
+                <marker date="1510848678663" expanded="true" signature="10620:10719" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="10620:10721" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="10638:10684" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="11518:11691" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="11535:11581" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="12483:12659" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="12500:12546" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="13456:13697" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="13473:13519" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="14493:14730" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="14510:14556" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="15517:15600" ph="select (sele... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="15525:15553" ph="select count... desmama" />
+                <marker date="1510848678663" expanded="true" signature="16385:16488" ph="select (sele... bovino" />
+                <marker date="1510848678663" expanded="true" signature="16393:16447" ph="select count... bovino" />
+                <marker date="1510848678663" expanded="true" signature="17314:17391" ph="select (sele... " />
+                <marker date="1510848678663" expanded="true" signature="17314:17411" ph="select (sele... " />
+                <marker date="1510848678663" expanded="true" signature="17314:17551" ph="select (sele... " />
+                <marker date="1510848678663" expanded="true" signature="17314:17761" ph="select (sele... bovino" />
+                <marker date="1510848678663" expanded="true" signature="18692:18777" ph="select (sele... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="18700:18741" ph="select count... ficha_touro" />
+                <marker date="1510848678663" expanded="true" signature="19432:19485" ph="UPDATE bovin... " />
+                <marker date="1510848678663" expanded="true" signature="19432:19489" ph="select MAX(i... bovino" />
+                <marker date="1510848678663" expanded="true" signature="19954:20145" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20148" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20191" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20226" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20263" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20286" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20377" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20432" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20541" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20547" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20587" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20590" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20633" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20686" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20732" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="19954:20735" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="20175:20191" ph="values (defa... " />
+                <marker date="1510848678663" expanded="true" signature="21189:21735" ph="update bovin... " />
+                <marker date="1510848678663" expanded="true" signature="21195:21735" ph="insert into bovino... " />
+                <marker date="1510848678663" expanded="true" signature="22181:22249" ph="insert into morto... " />
+                <marker date="1510848678663" expanded="true" signature="22181:22294" ph="insert into morto... " />
+                <marker date="1510848678663" expanded="true" signature="22181:22344" ph="insert into morto... " />
+                <marker date="1510848678663" expanded="true" signature="22181:22369" ph="insert into morto... " />
+                <marker date="1510848678663" expanded="true" signature="22181:22376" ph="insert into morto... " />
+                <marker date="1510848678663" expanded="true" signature="22181:22378" ph="insert into morto... " />
+                <marker date="1510848678663" expanded="true" signature="22276:22294" ph="values (defa... " />
+                <marker date="1510848678663" expanded="true" signature="22513:22585" ph="UPDATE bovin... " />
+                <marker date="1510848678663" expanded="true" signature="22513:22631" ph="UPDATE bovin... " />
+                <marker date="1510848678663" expanded="true" signature="23053:23083" ph="UPDATE bovin... " />
+                <marker date="1510848678663" expanded="true" signature="23053:23091" ph="UPDATE bovin... " />
+                <marker date="1510848678663" expanded="true" signature="23053:23125" ph="UPDATE bovin... " />
+                <marker date="1510848678663" expanded="true" signature="23053:23126" ph="UPDATE bovin... " />
+                <marker date="1510848678663" expanded="true" signature="23568:23641" ph="UPDATE bovin... " />
+                <marker date="1510848678663" expanded="true" signature="24096:24219" ph="insert into desmama... " />
+                <marker date="1510848678663" expanded="true" signature="24096:24252" ph="insert into desmama... " />
+                <marker date="1510848678663" expanded="true" signature="24096:24253" ph="insert into desmama... " />
+                <marker date="1510848678663" expanded="true" signature="24096:24297" ph="insert into desmama... " />
+                <marker date="1510848678663" expanded="true" signature="24096:24329" ph="insert into desmama... " />
+                <marker date="1510848678663" expanded="true" signature="24824:24973" ph="select id_bo... bovino" />
+                <marker date="1510848678663" expanded="true" signature="25745:25810" ph="select nome_... bovino" />
+                <marker date="1510848678663" expanded="true" signature="25745:25814" ph="select ficha... bovino" />
+                <marker date="1510848678663" expanded="true" signature="26459:26547" ph="select id_bo... bovino" />
+                <marker date="1510848678663" expanded="true" signature="26459:26558" ph="select id_bo... bovino" />
+                <marker date="1510848678663" expanded="true" signature="27339:27449" ph="select id_bo... bovino" />
+                <marker date="1510848678663" expanded="true" signature="27339:27478" ph="select id_bo... bovino" />
+                <marker date="1510848678663" expanded="true" signature="28243:28304" ph="select quant... ficha_matriz" />
+                <marker date="1510848678663" expanded="true" signature="28844:28908" ph="update ficha... " />
+                <marker date="1510848678663" expanded="true" signature="28959:29038" ph="update ficha... " />
+                <marker date="1510848678663" expanded="true" signature="28959:29039" ph="update ficha... " />
+                <marker date="1510848678663" expanded="true" signature="29493:29569" ph="insert into ficha_touro... " />
+                <marker date="1510848678663" expanded="true" signature="29493:29614" ph="insert into ficha_touro... " />
+                <marker date="1510848678663" expanded="true" signature="29493:29643" ph="insert into ficha_touro... " />
+                <marker date="1510848678663" expanded="true" signature="29493:29644" ph="insert into ficha_touro... " />
+                <marker date="1510848678663" expanded="true" signature="29493:29668" ph="insert into ficha_touro... " />
+                <marker date="1510848678663" expanded="true" signature="29493:29690" ph="insert into ficha_touro... " />
+                <marker date="1510848678663" expanded="true" signature="29596:29614" ph="values (defa... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbatidoResources.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/AbatidoResources.java">
+      <file leaf-file-name="GestaoResources.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="30" column="51" lean-forward="true" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VendaService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/VendaService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="61" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="217">
+              <caret line="196" column="72" lean-forward="true" selection-start-line="196" selection-start-column="72" selection-end-line="196" selection-end-column="72" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbatidoService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/AbatidoService.java">
+      <file leaf-file-name="GestaoService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="51" column="50" lean-forward="false" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VendaRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/VendaRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="16" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbatidoRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/AbatidoRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            <state relative-caret-position="345">
+              <caret line="311" column="52" lean-forward="false" selection-start-line="311" selection-start-column="52" selection-end-line="311" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -123,8 +185,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>salvarin</find>
-      <find>salvar</find>
       <find>peso</find>
       <find>fichamatri</find>
       <find>test12</find>
@@ -153,6 +213,8 @@
       <find>listar</find>
       <find>ven</find>
       <find>vend</find>
+      <find>des</find>
+      <find>abate</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,12 +240,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Parto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Resultado.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/bovino/Desmama.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/bovino/Venda.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/bovino/Abatido.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/bovino/Peso.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pg2/apisimb/resources/bovino/PesoResources.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/RacaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/FazendaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/BovinoService.java" />
@@ -209,7 +269,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/DesmamaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/DesmamaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/VendaResources.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/VendaService.java" />
@@ -217,6 +276,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/AbatidoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/AbatidoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/AbatidoResources.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java" />
       </list>
     </option>
   </component>
@@ -295,26 +357,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="apisimb" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apisimb" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="bovino" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apisimb" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="matriz" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
@@ -567,7 +609,7 @@
       <workItem from="1510660982569" duration="28454000" />
       <workItem from="1510732028798" duration="10934000" />
       <workItem from="1510748970235" duration="25225000" />
-      <workItem from="1510832201389" duration="8107000" />
+      <workItem from="1510832201389" duration="11836000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro Commit">
       <created>1503260464978</created>
@@ -580,7 +622,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="464515000" />
+    <option name="totallyTimeSpent" value="468244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -656,13 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="33" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -915,129 +950,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="783" column="26" lean-forward="false" selection-start-line="783" selection-start-column="22" selection-end-line="783" selection-end-column="26" />
-          <folding>
-            <marker date="1510669876776" expanded="true" signature="644:769" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="652:712" ph="select count... resultado" />
-            <marker date="1510669876776" expanded="true" signature="1567:1854" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="1600:1663" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="2644:2931" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="2677:2740" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="3720:4007" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="3753:3816" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="4801:4917" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="4818:4870" ph="select count... parto" />
-            <marker date="1510669876776" expanded="true" signature="5716:5887" ph="select (sele... " />
-            <marker date="1510669876776" expanded="true" signature="5716:5943" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="5724:5885" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="6740:6967" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="6748:6909" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="7761:7990" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="7769:7932" ph="select count... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="8802:9044" ph="SELECT min((... bovino" />
-            <marker date="1510669876776" expanded="true" signature="8802:9066" ph="select b.fic... bovino" />
-            <marker date="1510669876776" expanded="true" signature="9734:9961" ph="select ((DAT... desmama" />
-            <marker date="1510669876776" expanded="true" signature="9940:9961" ph="SELECT min((... bovino" />
-            <marker date="1510669876776" expanded="true" signature="10620:10719" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="10620:10721" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="10638:10684" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="11518:11691" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="11535:11581" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="12483:12659" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="12500:12546" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="13456:13697" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="13473:13519" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="14493:14730" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="14510:14556" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="15517:15600" ph="select (sele... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="15525:15553" ph="select count... desmama" />
-            <marker date="1510669876776" expanded="true" signature="16385:16488" ph="select (sele... bovino" />
-            <marker date="1510669876776" expanded="true" signature="16393:16447" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="17290:17366" ph="select (sele... " />
-            <marker date="1510669876776" expanded="true" signature="17290:17522" ph="select (sele... bovino" />
-            <marker date="1510669876776" expanded="true" signature="17290:17523" ph="select (sele... bovino" />
-            <marker date="1510669876776" expanded="true" signature="17290:17524" ph="select (sele... bovino" />
-            <marker date="1510669876776" expanded="true" signature="17290:17533" ph="select (sele... bovino" />
-            <marker date="1510669876776" expanded="true" signature="17397:17462" ph="select count... bovino" />
-            <marker date="1510669876776" expanded="true" signature="18422:18507" ph="select (sele... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="18430:18471" ph="select count... ficha_touro" />
-            <marker date="1510669876776" expanded="true" signature="19162:19215" ph="UPDATE bovin... " />
-            <marker date="1510669876776" expanded="true" signature="19162:19219" ph="select MAX(i... bovino" />
-            <marker date="1510669876776" expanded="true" signature="19684:19875" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:19878" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:19921" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:19956" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:19993" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:20016" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:20107" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:20162" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:20271" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:20277" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:20317" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:20320" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:20363" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:20416" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:20462" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19684:20465" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="19905:19921" ph="values (defa... " />
-            <marker date="1510669876776" expanded="true" signature="20919:21465" ph="update bovin... " />
-            <marker date="1510669876776" expanded="true" signature="20925:21465" ph="insert into bovino... " />
-            <marker date="1510669876776" expanded="true" signature="21911:21979" ph="insert into morto... " />
-            <marker date="1510669876776" expanded="true" signature="21911:22024" ph="insert into morto... " />
-            <marker date="1510669876776" expanded="true" signature="21911:22074" ph="insert into morto... " />
-            <marker date="1510669876776" expanded="true" signature="21911:22099" ph="insert into morto... " />
-            <marker date="1510669876776" expanded="true" signature="21911:22106" ph="insert into morto... " />
-            <marker date="1510669876776" expanded="true" signature="21911:22108" ph="insert into morto... " />
-            <marker date="1510669876776" expanded="true" signature="22006:22024" ph="values (defa... " />
-            <marker date="1510669876776" expanded="true" signature="22243:22315" ph="UPDATE bovin... " />
-            <marker date="1510669876776" expanded="true" signature="22243:22361" ph="UPDATE bovin... " />
-            <marker date="1510669876776" expanded="true" signature="22783:22813" ph="UPDATE bovin... " />
-            <marker date="1510669876776" expanded="true" signature="22783:22821" ph="UPDATE bovin... " />
-            <marker date="1510669876776" expanded="true" signature="22783:22855" ph="UPDATE bovin... " />
-            <marker date="1510669876776" expanded="true" signature="22783:22856" ph="UPDATE bovin... " />
-            <marker date="1510669876776" expanded="true" signature="23298:23371" ph="UPDATE bovin... " />
-            <marker date="1510669876776" expanded="true" signature="23826:23949" ph="insert into desmama... " />
-            <marker date="1510669876776" expanded="true" signature="23826:23982" ph="insert into desmama... " />
-            <marker date="1510669876776" expanded="true" signature="23826:23983" ph="insert into desmama... " />
-            <marker date="1510669876776" expanded="true" signature="23826:24027" ph="insert into desmama... " />
-            <marker date="1510669876776" expanded="true" signature="23826:24059" ph="insert into desmama... " />
-            <marker date="1510669876776" expanded="true" signature="24554:24703" ph="select id_bo... bovino" />
-            <marker date="1510669876776" expanded="true" signature="25475:25540" ph="select nome_... bovino" />
-            <marker date="1510669876776" expanded="true" signature="25475:25544" ph="select ficha... bovino" />
-            <marker date="1510669876776" expanded="true" signature="26189:26277" ph="select id_bo... bovino" />
-            <marker date="1510669876776" expanded="true" signature="26189:26288" ph="select id_bo... bovino" />
-            <marker date="1510669876776" expanded="true" signature="27069:27179" ph="select id_bo... bovino" />
-            <marker date="1510669876776" expanded="true" signature="27069:27208" ph="select id_bo... bovino" />
-            <marker date="1510669876776" expanded="true" signature="27973:28034" ph="select quant... ficha_matriz" />
-            <marker date="1510669876776" expanded="true" signature="28574:28638" ph="update ficha... " />
-            <marker date="1510669876776" expanded="true" signature="28689:28768" ph="update ficha... " />
-            <marker date="1510669876776" expanded="true" signature="28689:28769" ph="update ficha... " />
-            <marker date="1510669876776" expanded="true" signature="29223:29299" ph="insert into ficha_touro... " />
-            <marker date="1510669876776" expanded="true" signature="29223:29344" ph="insert into ficha_touro... " />
-            <marker date="1510669876776" expanded="true" signature="29223:29373" ph="insert into ficha_touro... " />
-            <marker date="1510669876776" expanded="true" signature="29223:29374" ph="insert into ficha_touro... " />
-            <marker date="1510669876776" expanded="true" signature="29223:29398" ph="insert into ficha_touro... " />
-            <marker date="1510669876776" expanded="true" signature="29223:29420" ph="insert into ficha_touro... " />
-            <marker date="1510669876776" expanded="true" signature="29326:29344" ph="values (defa... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/DesmamaResources.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="32" column="9" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="42" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1079,8 +995,8 @@
         <state relative-caret-position="326">
           <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#833#834#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1089,6 +1005,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
           <caret line="56" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/AbatidoResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="30" column="51" lean-forward="true" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1129,12 +1055,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/AbatidoResources.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="30" column="51" lean-forward="true" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+        <state relative-caret-position="345">
+          <caret line="311" column="52" lean-forward="false" selection-start-line="311" selection-start-column="52" selection-end-line="311" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="196" column="72" lean-forward="true" selection-start-line="196" selection-start-column="72" selection-end-line="196" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="580" column="27" lean-forward="false" selection-start-line="580" selection-start-column="22" selection-end-line="580" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1510848678663" expanded="true" signature="644:769" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="652:712" ph="select count... resultado" />
+            <marker date="1510848678663" expanded="true" signature="1567:1854" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="1600:1663" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="2644:2931" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="2677:2740" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="3720:4007" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="3753:3816" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="4801:4917" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="4818:4870" ph="select count... parto" />
+            <marker date="1510848678663" expanded="true" signature="5716:5887" ph="select (sele... " />
+            <marker date="1510848678663" expanded="true" signature="5716:5943" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="5724:5885" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="6740:6967" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="6748:6909" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="7761:7990" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="7769:7932" ph="select count... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="8802:9044" ph="SELECT min((... bovino" />
+            <marker date="1510848678663" expanded="true" signature="8802:9066" ph="select b.fic... bovino" />
+            <marker date="1510848678663" expanded="true" signature="9734:9961" ph="select ((DAT... desmama" />
+            <marker date="1510848678663" expanded="true" signature="9940:9961" ph="SELECT min((... bovino" />
+            <marker date="1510848678663" expanded="true" signature="10620:10719" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="10620:10721" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="10638:10684" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="11518:11691" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="11535:11581" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="12483:12659" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="12500:12546" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="13456:13697" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="13473:13519" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="14493:14730" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="14510:14556" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="15517:15600" ph="select (sele... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="15525:15553" ph="select count... desmama" />
+            <marker date="1510848678663" expanded="true" signature="16385:16488" ph="select (sele... bovino" />
+            <marker date="1510848678663" expanded="true" signature="16393:16447" ph="select count... bovino" />
+            <marker date="1510848678663" expanded="true" signature="17314:17391" ph="select (sele... " />
+            <marker date="1510848678663" expanded="true" signature="17314:17411" ph="select (sele... " />
+            <marker date="1510848678663" expanded="true" signature="17314:17551" ph="select (sele... " />
+            <marker date="1510848678663" expanded="true" signature="17314:17761" ph="select (sele... bovino" />
+            <marker date="1510848678663" expanded="true" signature="18692:18777" ph="select (sele... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="18700:18741" ph="select count... ficha_touro" />
+            <marker date="1510848678663" expanded="true" signature="19432:19485" ph="UPDATE bovin... " />
+            <marker date="1510848678663" expanded="true" signature="19432:19489" ph="select MAX(i... bovino" />
+            <marker date="1510848678663" expanded="true" signature="19954:20145" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20148" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20191" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20226" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20263" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20286" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20377" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20432" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20541" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20547" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20587" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20590" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20633" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20686" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20732" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="19954:20735" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="20175:20191" ph="values (defa... " />
+            <marker date="1510848678663" expanded="true" signature="21189:21735" ph="update bovin... " />
+            <marker date="1510848678663" expanded="true" signature="21195:21735" ph="insert into bovino... " />
+            <marker date="1510848678663" expanded="true" signature="22181:22249" ph="insert into morto... " />
+            <marker date="1510848678663" expanded="true" signature="22181:22294" ph="insert into morto... " />
+            <marker date="1510848678663" expanded="true" signature="22181:22344" ph="insert into morto... " />
+            <marker date="1510848678663" expanded="true" signature="22181:22369" ph="insert into morto... " />
+            <marker date="1510848678663" expanded="true" signature="22181:22376" ph="insert into morto... " />
+            <marker date="1510848678663" expanded="true" signature="22181:22378" ph="insert into morto... " />
+            <marker date="1510848678663" expanded="true" signature="22276:22294" ph="values (defa... " />
+            <marker date="1510848678663" expanded="true" signature="22513:22585" ph="UPDATE bovin... " />
+            <marker date="1510848678663" expanded="true" signature="22513:22631" ph="UPDATE bovin... " />
+            <marker date="1510848678663" expanded="true" signature="23053:23083" ph="UPDATE bovin... " />
+            <marker date="1510848678663" expanded="true" signature="23053:23091" ph="UPDATE bovin... " />
+            <marker date="1510848678663" expanded="true" signature="23053:23125" ph="UPDATE bovin... " />
+            <marker date="1510848678663" expanded="true" signature="23053:23126" ph="UPDATE bovin... " />
+            <marker date="1510848678663" expanded="true" signature="23568:23641" ph="UPDATE bovin... " />
+            <marker date="1510848678663" expanded="true" signature="24096:24219" ph="insert into desmama... " />
+            <marker date="1510848678663" expanded="true" signature="24096:24252" ph="insert into desmama... " />
+            <marker date="1510848678663" expanded="true" signature="24096:24253" ph="insert into desmama... " />
+            <marker date="1510848678663" expanded="true" signature="24096:24297" ph="insert into desmama... " />
+            <marker date="1510848678663" expanded="true" signature="24096:24329" ph="insert into desmama... " />
+            <marker date="1510848678663" expanded="true" signature="24824:24973" ph="select id_bo... bovino" />
+            <marker date="1510848678663" expanded="true" signature="25745:25810" ph="select nome_... bovino" />
+            <marker date="1510848678663" expanded="true" signature="25745:25814" ph="select ficha... bovino" />
+            <marker date="1510848678663" expanded="true" signature="26459:26547" ph="select id_bo... bovino" />
+            <marker date="1510848678663" expanded="true" signature="26459:26558" ph="select id_bo... bovino" />
+            <marker date="1510848678663" expanded="true" signature="27339:27449" ph="select id_bo... bovino" />
+            <marker date="1510848678663" expanded="true" signature="27339:27478" ph="select id_bo... bovino" />
+            <marker date="1510848678663" expanded="true" signature="28243:28304" ph="select quant... ficha_matriz" />
+            <marker date="1510848678663" expanded="true" signature="28844:28908" ph="update ficha... " />
+            <marker date="1510848678663" expanded="true" signature="28959:29038" ph="update ficha... " />
+            <marker date="1510848678663" expanded="true" signature="28959:29039" ph="update ficha... " />
+            <marker date="1510848678663" expanded="true" signature="29493:29569" ph="insert into ficha_touro... " />
+            <marker date="1510848678663" expanded="true" signature="29493:29614" ph="insert into ficha_touro... " />
+            <marker date="1510848678663" expanded="true" signature="29493:29643" ph="insert into ficha_touro... " />
+            <marker date="1510848678663" expanded="true" signature="29493:29644" ph="insert into ficha_touro... " />
+            <marker date="1510848678663" expanded="true" signature="29493:29668" ph="insert into ficha_touro... " />
+            <marker date="1510848678663" expanded="true" signature="29493:29690" ph="insert into ficha_touro... " />
+            <marker date="1510848678663" expanded="true" signature="29596:29614" ph="values (defa... " />
           </folding>
         </state>
       </provider>

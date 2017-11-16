@@ -307,9 +307,9 @@ public class GestaoService {
         return json;
     }
 
-    public String taxaDesfrute(String data) {
+    public String taxaDesfrute(String dataInicial, String dataFinal) {
 
-        String json = grb.taxaDesfrute(data);
+        String json = grb.taxaDesfrute(dataInicial, dataFinal);
 
         if (json == null) {
             throw new GestaoException("Taxa de Desfrute não Encontrada");

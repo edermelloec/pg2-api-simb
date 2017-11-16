@@ -191,10 +191,10 @@ public class GestaoResources {
     }
 
 
-    @RequestMapping(value = "/desfrute/{data}", method = RequestMethod.GET)
-    public ResponseEntity<String> taxaDesfrute(@PathVariable("data") String data) {
+    @RequestMapping(value = "/desfrute/{dataInicial}/{dataFinal}", method = RequestMethod.GET)
+    public ResponseEntity<String> taxaDesfrute(@PathVariable("dataInicial") String dataInicial,@PathVariable("dataFinal") String dataFinal) {
 
-        String json = gestaoService.taxaDesfrute(data);
+        String json = gestaoService.taxaDesfrute(dataInicial,dataFinal);
         return ResponseEntity.status(HttpStatus.OK).body(json);
     }
 

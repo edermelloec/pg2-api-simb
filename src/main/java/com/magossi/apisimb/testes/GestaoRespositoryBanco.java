@@ -609,14 +609,16 @@ public class GestaoRespositoryBanco {
 
     }
 
-    public String taxaDesfrute(String data) {
+    public String taxaDesfrute(String dataInicial,String dataFinal) {
 
 
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select (select count(*) as inicial from bovino where DATE(data_inclusao) <= '"+data+"' ),count(*) as dois,(select count(*) as vendido from bovino where situacao = 'Vendido') from bovino where status = true and DATE(data_inclusao) >= '"+data+"'";
+            sql = "select (select count(*) as inicial from bovino where DATE(data_inclusao) <= '"+dataInicial+"' )\n" +
+                    "\t,count(*) as dois,(select count(*) as vendido from bovino where situacao = 'Vendido' and DATE(data_inclusao) >= '"+dataInicial+"' and DATE(data_inclusao) <= '"+dataFinal+"')\n" +
+                    "\t\tfrom bovino where status = true and DATE(data_inclusao) >= '"+dataInicial+"' and DATE(data_inclusao) <= '"+dataFinal+"'";
 
 
             PreparedStatement prepareStatement;
@@ -626,16 +628,19 @@ public class GestaoRespositoryBanco {
 
             result.next();
             if(result.getFloat(1) != 0 ) {
+
+
                 taxa = (result.getFloat(1) - (result.getFloat(2)));
                 taxa = taxa + result.getFloat(3);
                 taxa = taxa / result.getFloat(1);
+                taxa = taxa*100;
             }else{
                 taxa = 0.0f;
             }
 
 
             conexao.close();
-            json = "[{\"nome\": \"" + data + "\",\"fertilidade\": " + taxa + "}]";
+            json = "[{\"nome\": \"" + dataInicial + "\",\"fertilidade\": " + taxa + "}]";
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
