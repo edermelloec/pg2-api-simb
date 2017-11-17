@@ -22,9 +22,6 @@ public class Peso {
     private Long idPeso;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    //    @JsonFormat(shape=JsonFormat.Shape.STRING,
-    //                pattern = "dd/MM/yyyy hh:mm:ss",
-    //                locale = "pt-BR", timezone = "America/Cuiaba")
     private Date dataPesagem;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)

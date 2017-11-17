@@ -147,6 +147,8 @@ public class BovinoResources {
             bovino = bovinoService.buscarTodosAtivos();
         }else if ("nome".equals(tipoBusca)){
             bovino = bovinoService.buscarNomeBovino("%"+busca+"%");
+
+
         }else if ("raca".equals(tipoBusca)){
             bovino = bovinoService.buscarPorRaca("%"+busca+"%");
         }else if ("fazenda".equals(tipoBusca)){

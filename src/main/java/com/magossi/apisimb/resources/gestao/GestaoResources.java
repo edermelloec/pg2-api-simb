@@ -64,6 +64,7 @@ public class GestaoResources {
         return ResponseEntity.status(HttpStatus.OK).body(matriz);
     }
 
+
     @RequestMapping(value = "/listar/femea", method = RequestMethod.GET)
     public ResponseEntity<List<Bovino>> listarFemea() {
 

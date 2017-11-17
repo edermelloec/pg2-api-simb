@@ -19,9 +19,7 @@ public class GestaoRespositoryBanco {
     Float taxa;
 
     String sql;
-    String json=null;
-
-
+    String json = null;
 
 
     public String prenhezTodos() {
@@ -41,10 +39,10 @@ public class GestaoRespositoryBanco {
 
             result.next();
 
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -53,9 +51,6 @@ public class GestaoRespositoryBanco {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-
-
 
 
         return json;
@@ -81,10 +76,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -114,10 +109,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -126,7 +121,6 @@ public class GestaoRespositoryBanco {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
 
 
         return json;
@@ -151,10 +145,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -184,10 +178,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -196,9 +190,6 @@ public class GestaoRespositoryBanco {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-
-
 
 
         return json;
@@ -221,10 +212,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -233,9 +224,6 @@ public class GestaoRespositoryBanco {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-
-
 
 
         return json;
@@ -257,10 +245,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -269,8 +257,6 @@ public class GestaoRespositoryBanco {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-
 
 
         return json;
@@ -293,10 +279,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -305,9 +291,6 @@ public class GestaoRespositoryBanco {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-
-
 
 
         return json;
@@ -338,9 +321,6 @@ public class GestaoRespositoryBanco {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
-
-
 
 
         return json;
@@ -374,9 +354,6 @@ public class GestaoRespositoryBanco {
         }
 
 
-
-
-
         return json;
 
 
@@ -395,10 +372,10 @@ public class GestaoRespositoryBanco {
 
             result.next();
 
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
 
@@ -428,10 +405,10 @@ public class GestaoRespositoryBanco {
 
             result.next();
 
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -459,10 +436,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
 
@@ -470,13 +447,11 @@ public class GestaoRespositoryBanco {
             conexao.close();
 
 
-
             json = "[{\"fertilidade\":" + taxa + "}]";
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
 
 
         return json;
@@ -496,10 +471,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
 
@@ -528,10 +503,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -559,10 +534,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -590,10 +565,10 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(2) != 0) {
+            if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-            }else{
+            } else {
                 taxa = 0.0f;
             }
             conexao.close();
@@ -609,16 +584,16 @@ public class GestaoRespositoryBanco {
 
     }
 
-    public String taxaDesfrute(String dataInicial,String dataFinal) {
+    public String taxaDesfrute(String dataInicial, String dataFinal) {
 
 
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select (select count(*) as inicial from bovino where DATE(data_inclusao) <= '"+dataInicial+"' )\n" +
-                    "\t,count(*) as dois,(select count(*) as vendido from bovino where situacao = 'Vendido' and DATE(data_inclusao) >= '"+dataInicial+"' and DATE(data_inclusao) <= '"+dataFinal+"')\n" +
-                    "\t\tfrom bovino where status = true and DATE(data_inclusao) >= '"+dataInicial+"' and DATE(data_inclusao) <= '"+dataFinal+"'";
+            sql = "select (select count(*) as inicial from bovino where DATE(data_inclusao) <= '" + dataInicial + "' )\n" +
+                    "\t,count(*) as dois,(select count(*) as vendido from bovino where situacao = 'Vendido' and DATE(data_inclusao) >= '" + dataInicial + "' and DATE(data_inclusao) <= '" + dataFinal + "')\n" +
+                    "\t\tfrom bovino where status = true and DATE(data_inclusao) >= '" + dataInicial + "' and DATE(data_inclusao) <= '" + dataFinal + "'";
 
 
             PreparedStatement prepareStatement;
@@ -627,14 +602,14 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if(result.getFloat(1) != 0 ) {
+            if (result.getFloat(1) != 0) {
 
 
                 taxa = (result.getFloat(1) - (result.getFloat(2)));
                 taxa = taxa + result.getFloat(3);
                 taxa = taxa / result.getFloat(1);
-                taxa = taxa*100;
-            }else{
+                taxa = taxa * 100;
+            } else {
                 taxa = 0.0f;
             }
 
@@ -645,7 +620,6 @@ public class GestaoRespositoryBanco {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
 
 
         return json;
@@ -667,7 +641,7 @@ public class GestaoRespositoryBanco {
 
             result.next();
 
-            json = "[{\"nome\": \"" + result.getInt(1)+" : "+result.getInt(2) + "\",\"fertilidade\": " + taxa + "}]";
+            json = "[{\"nome\": \"" + result.getInt(1) + " : " + result.getInt(2) + "\",\"fertilidade\": " + taxa + "}]";
             conexao.close();
 
         } catch (SQLException e) {
@@ -711,7 +685,6 @@ public class GestaoRespositoryBanco {
                     "\tvalues (default,'" + bovino.getDataInclusao() + "','" + bovino.getDataNascimento() + "','" + bovino.getGenero() + "','" + bovino.getMae() + "','" + bovino.getNomeBovino() + "','" + bovino.getPai() + "','" + bovino.getStatus() + "','" + bovino.getTag() + "','http://comprerural.com.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/11/20202430/boi_touro_backup_.jpg'" + "," + bovino.getFazenda().getIdFazenda() + "," + bovino.getPelagem().getIdPelagem() + "," + bovino.getProprietario().getIdProprietario() + "," + bovino.getRaca().getIdRaca() + ",'Vivo'" + ")";
 
 
-
             PreparedStatement ps;
 
             ps = conexao.prepareStatement(sql);
@@ -739,8 +712,6 @@ public class GestaoRespositoryBanco {
             sql = "update bovino set data_nascimento = '" + bovino.getDataNascimento() + "',genero =" + bovino.getGenero() + ",status =" + bovino.getStatus() + ",mae = '" + bovino.getMae() + "',nome_bovino = '" + bovino.getNomeBovino() + "',pai='" + bovino.getPai() + "',fazenda_idfazenda = " + bovino.getFazenda().idFazenda + ",pelagem_idpelagem = " + bovino.getPelagem().getIdPelagem() + ",proprietario_idproprietario=" + bovino.getProprietario().getIdProprietario() + ",raca_idraca= " + bovino.getRaca().getIdRaca() + "where id_bovino =" + bovino.getIdBovino();
 
 
-
-
             PreparedStatement ps;
 
             ps = conexao.prepareStatement(sql);
@@ -765,7 +736,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
             sql = "insert into morto (id_morte, causa, data_morte, id_bovino, status)\n" +
-                    "\tvalues (default, '"+morto.getCausa()+"', '"+morto.getDataMorte()+"',"+morto.getIdBovino()+", "+true+")";
+                    "\tvalues (default, '" + morto.getCausa() + "', '" + morto.getDataMorte() + "'," + morto.getIdBovino() + ", " + true + ")";
 
 
             PreparedStatement ps;
@@ -774,7 +745,7 @@ public class GestaoRespositoryBanco {
 
 
             ps.execute();
-            sql = "UPDATE bovino set status = false, situacao = 'Morto', data_falecimento = '"+morto.getDataMorte()+"' where id_bovino = "+morto.getIdBovino();
+            sql = "UPDATE bovino set status = false, situacao = 'Morto', data_falecimento = '" + morto.getDataMorte() + "' where id_bovino = " + morto.getIdBovino();
             ps = conexao.prepareStatement(sql);
             ps.execute();
             conexao.close();
@@ -786,13 +757,14 @@ public class GestaoRespositoryBanco {
         return morto;
 
     }
+
     public Long salvarVendido(Long id) {
 
 
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
-            sql = "UPDATE bovino SET situacao = 'Vendido', status = false where id_bovino = "+id;
+            sql = "UPDATE bovino SET situacao = 'Vendido', status = false where id_bovino = " + id;
 
 
             PreparedStatement ps;
@@ -811,13 +783,14 @@ public class GestaoRespositoryBanco {
         return id;
 
     }
+
     public Long salvarAbatido(Long id) {
 
 
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
-            sql = "UPDATE bovino SET situacao = 'Abatido', status = false where id_bovino = "+id;
+            sql = "UPDATE bovino SET situacao = 'Abatido', status = false where id_bovino = " + id;
 
 
             PreparedStatement ps;
@@ -903,7 +876,7 @@ public class GestaoRespositoryBanco {
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
-            sql = "select nome_bovino from bovino where ficha_matriz_idfichamatriz ="+id;
+            sql = "select nome_bovino from bovino where ficha_matriz_idfichamatriz =" + id;
 
 
             PreparedStatement ps;
@@ -911,11 +884,9 @@ public class GestaoRespositoryBanco {
             ps = conexao.prepareStatement(sql);
             ResultSet result = ps.executeQuery();
 
-                bovino = new Bovino();
-                result.next();
-                bovino.setNomeBovino(result.getString(1));
-
-
+            bovino = new Bovino();
+            result.next();
+            bovino.setNomeBovino(result.getString(1));
 
 
             conexao.close();
@@ -990,11 +961,11 @@ public class GestaoRespositoryBanco {
 
 
     public void salvarQtdParto(Integer id) {
-        Integer qtdParto=0;
+        Integer qtdParto = 0;
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
-            sql = "select quant_parto from ficha_matriz where id_ficha_matriz = "+id;
+            sql = "select quant_parto from ficha_matriz where id_ficha_matriz = " + id;
             PreparedStatement prepareStatement;
             prepareStatement = conexao.prepareStatement(sql);
             ResultSet result = prepareStatement.executeQuery();
@@ -1013,9 +984,9 @@ public class GestaoRespositoryBanco {
 
         try {
             Connection conexao = ConexaoFactory.criarConexao();
-            if(qtdParto == 0){
+            if (qtdParto == 0) {
                 sql = "update ficha_matriz set quant_parto = 1 where id_ficha_matriz = " + id;
-            }else {
+            } else {
                 sql = "update ficha_matriz set quant_parto = (quant_parto + 1) where id_ficha_matriz = " + id;
             }
 
@@ -1036,7 +1007,6 @@ public class GestaoRespositoryBanco {
     }
 
 
-
     public FichaTouro salvarTouro(FichaTouro touro) {
 
 
@@ -1044,7 +1014,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
             sql = "insert into ficha_touro (id_ficha_touro, data_inclusao, id_bovino, status)\n" +
-                    "\tvalues (default, '"+touro.getDataInclusao()+"', "+touro.getIdBovino()+","+touro.getStatus()+")";
+                    "\tvalues (default, '" + touro.getDataInclusao() + "', " + touro.getIdBovino() + "," + touro.getStatus() + ")";
 
 
             PreparedStatement ps;
@@ -1063,6 +1033,8 @@ public class GestaoRespositoryBanco {
 
         return touro;
     }
+
+
 
 
 }

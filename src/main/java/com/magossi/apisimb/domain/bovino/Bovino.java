@@ -41,8 +41,8 @@ public class Bovino implements Serializable {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Date dataNascimento;
 
-//    @JsonInclude(JsonInclude.Include.NON_NULL)
-//    private Date dataFalecimento;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Date dataFalecimento;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @OneToOne
@@ -75,8 +75,8 @@ public class Bovino implements Serializable {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String urlFoto;
 
-//    @JsonInclude(JsonInclude.Include.NON_NULL)
-//    private String situacao;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private String situacao;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     @JsonInclude(JsonInclude.Include.NON_NULL)
