@@ -24,7 +24,7 @@ public class Desmama {
 
 
 
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Date dataDesmama;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)

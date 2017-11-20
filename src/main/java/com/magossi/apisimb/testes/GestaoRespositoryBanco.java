@@ -63,9 +63,9 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select count(r.id_ficha_matriz),(select count(*) from ficha_matriz fm where fm.quant_parto = '0')  from ficha_matriz fm\n" +
+            sql = "select count(r.id_ficha_matriz),(select count(*) from ficha_matriz fm where fm.quant_parto is null)  from ficha_matriz fm\n" +
                     "inner join resultado r on r.id_ficha_matriz=fm.id_ficha_matriz\n" +
-                    "where r.resultado = 'Cheia' and fm.quant_parto = '0'";
+                    "where r.resultado = 'Cheia' and fm.quant_parto is null";
 
 
             PreparedStatement prepareStatement;
@@ -178,9 +178,9 @@ public class GestaoRespositoryBanco {
 
 
             result.next();
-            if (result.getFloat(2) != 0) {
-                taxa = result.getFloat(1);
-                taxa = ((taxa / result.getFloat(2)) * 100);
+            if (result.getFloat(1) != 0) {
+                taxa = result.getFloat(2);
+                taxa = ((taxa / result.getFloat(1)) * 100);
             } else {
                 taxa = 0.0f;
             }

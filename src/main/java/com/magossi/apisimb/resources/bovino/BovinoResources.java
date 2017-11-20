@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -31,7 +32,7 @@ public class BovinoResources {
 
 
     @Autowired
-    BovinoService bovinoService ;
+    BovinoService bovinoService;
 
     @Autowired
     EccService eccService;
@@ -40,11 +41,10 @@ public class BovinoResources {
     GestaoRespositoryBanco grb = new GestaoRespositoryBanco();
 
 
+    // ******************************** METODOS PUT *******************************************************
 
-   // ******************************** METODOS PUT *******************************************************
-
-    @RequestMapping(method =  RequestMethod.PUT)
-    public ResponseEntity<Void> alterar(@RequestBody Bovino bovino){
+    @RequestMapping(method = RequestMethod.PUT)
+    public ResponseEntity<Void> alterar(@RequestBody Bovino bovino) {
 
         bovino = grb.alterarBovino(bovino);
 
@@ -56,8 +56,8 @@ public class BovinoResources {
 
     // ******************************** METODOS POST *******************************************************
 
-    @RequestMapping(method =  RequestMethod.POST)
-    public ResponseEntity<Void> salvar(@RequestBody Bovino bovino){
+    @RequestMapping(method = RequestMethod.POST)
+    public ResponseEntity<Void> salvar(@RequestBody Bovino bovino) {
         bovino = bovinoService.salvar(bovino);
         grb.alterarBovino(bovino.getIdBovino().intValue());
 
@@ -68,8 +68,8 @@ public class BovinoResources {
     }
 
 
-    @RequestMapping(value = "/{id}/ecc", method =  RequestMethod.POST)
-    public ResponseEntity<Void> salvarEccBovino(@PathVariable("id") Long id, @RequestBody Ecc ecc){
+    @RequestMapping(value = "/{id}/ecc", method = RequestMethod.POST)
+    public ResponseEntity<Void> salvarEccBovino(@PathVariable("id") Long id, @RequestBody Ecc ecc) {
         Bovino bovino = bovinoService.buscarId(id);
         bovino.getEcc().add(ecc);
         bovino = bovinoService.alterar(bovino);
@@ -81,9 +81,10 @@ public class BovinoResources {
         return ResponseEntity.created(uri).build();
     }
 
-    @RequestMapping(value = "/{id}/peso", method =  RequestMethod.POST)
-    public ResponseEntity<Void> salvarPesoBovino(@PathVariable("id") Long id, @RequestBody Peso peso){
+    @RequestMapping(value = "/{id}/peso", method = RequestMethod.POST)
+    public ResponseEntity<Void> salvarPesoBovino(@PathVariable("id") Long id, @RequestBody Peso peso) {
         Bovino bovino = bovinoService.buscarId(id);
+
         bovino.getPeso().add(peso);
         bovino = bovinoService.alterar(bovino);
 
@@ -94,8 +95,8 @@ public class BovinoResources {
         return ResponseEntity.created(uri).build();
     }
 
-    @RequestMapping(value = "/{id}/fichamatriz", method =  RequestMethod.POST)
-    public ResponseEntity<Void> salvarFichaMatrizBovino(@PathVariable("id") Long id, @RequestBody FichaMatriz fichaMatriz){
+    @RequestMapping(value = "/{id}/fichamatriz", method = RequestMethod.POST)
+    public ResponseEntity<Void> salvarFichaMatrizBovino(@PathVariable("id") Long id, @RequestBody FichaMatriz fichaMatriz) {
         Bovino bovino = bovinoService.buscarId(id);
 
         bovino.setFichaMatriz(fichaMatriz);
@@ -112,27 +113,28 @@ public class BovinoResources {
     // ******************************** METODOS GET *******************************************************
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<Bovino>> listar(){
+    public ResponseEntity<List<Bovino>> listar() {
 
         List<Bovino> bovino = bovinoService.buscarTodos();
         return ResponseEntity.status(HttpStatus.OK).body(bovino);
     }
+
     @RequestMapping(value = "/ativos", method = RequestMethod.GET)
-    public ResponseEntity<List<Bovino>> listarAtivos(){
+    public ResponseEntity<List<Bovino>> listarAtivos() {
 
         List<Bovino> bovino = bovinoService.buscarTodosAtivos();
         return ResponseEntity.status(HttpStatus.OK).body(bovino);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Bovino> buscarBovinoPorId(@PathVariable("id") Long id){   //? encapsula qualquer tipo de objeto
+    public ResponseEntity<Bovino> buscarBovinoPorId(@PathVariable("id") Long id) {   //? encapsula qualquer tipo de objeto
 
         Bovino bovino = bovinoService.buscarId(id);
         return ResponseEntity.status(HttpStatus.OK).body(bovino);
     }
 
     @RequestMapping(value = "/tag/{tag}", method = RequestMethod.GET)
-    public ResponseEntity<Bovino> buscarBovinoPorTag(@PathVariable("tag")String tag){
+    public ResponseEntity<Bovino> buscarBovinoPorTag(@PathVariable("tag") String tag) {
 
         Bovino bovino = bovinoService.buscarTag(tag);
         return ResponseEntity.status(HttpStatus.OK).body(bovino);
@@ -140,20 +142,20 @@ public class BovinoResources {
     }
 
     @RequestMapping(value = "/nome/{busca}/{tipoBusca}", method = RequestMethod.GET)
-    public ResponseEntity<List<Bovino>> buscarBovinoPorNome(@PathVariable("busca")String busca,@PathVariable("tipoBusca")String tipoBusca){
+    public ResponseEntity<List<Bovino>> buscarBovinoPorNome(@PathVariable("busca") String busca, @PathVariable("tipoBusca") String tipoBusca) {
         List<Bovino> bovino = null;
 
-        if("todos".equals(busca)){
+        if ("todos".equals(busca)) {
             bovino = bovinoService.buscarTodosAtivos();
-        }else if ("nome".equals(tipoBusca)){
-            bovino = bovinoService.buscarNomeBovino("%"+busca+"%");
+        } else if ("nome".equals(tipoBusca)) {
+            bovino = bovinoService.buscarNomeBovino("%" + busca + "%");
 
 
-        }else if ("raca".equals(tipoBusca)){
-            bovino = bovinoService.buscarPorRaca("%"+busca+"%");
-        }else if ("fazenda".equals(tipoBusca)){
-            bovino = bovinoService.buscarPorFazenda("%"+busca+"%");
-        }else if ("dataNascimento".equals(tipoBusca)){
+        } else if ("raca".equals(tipoBusca)) {
+            bovino = bovinoService.buscarPorRaca("%" + busca + "%");
+        } else if ("fazenda".equals(tipoBusca)) {
+            bovino = bovinoService.buscarPorFazenda("%" + busca + "%");
+        } else if ("dataNascimento".equals(tipoBusca)) {
             SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
             try {
                 Date data = formato.parse(busca);
@@ -170,15 +172,12 @@ public class BovinoResources {
     }
 
     @RequestMapping(value = "/mae/{mae}", method = RequestMethod.GET)
-    public ResponseEntity<List<Bovino>> buscarBovinoPorMae(@PathVariable("mae")String mae){
+    public ResponseEntity<List<Bovino>> buscarBovinoPorMae(@PathVariable("mae") String mae) {
 
         List<Bovino> bovino = bovinoService.buscarMae(mae);
         return ResponseEntity.status(HttpStatus.OK).body(bovino);
 
     }
-
-
-
 
 
 
