@@ -27,7 +27,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select (select count(*) from resultado r where r.resultado = 'Cheia' ),count(*) from ficha_matriz fm where fm.status = 'True'";
+            sql = "select (select count(*) from resultado r where r.resultado = 'Cheia' ),count(*) from ficha_matriz fm where fm.status = true";
 
 
             PreparedStatement prepareStatement;
@@ -63,7 +63,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select count(r.id_ficha_matriz),(select count(*) from ficha_matriz fm where fm.quant_parto is null)  from ficha_matriz fm\n" +
+            sql = "select count(r.id_ficha_matriz),(select count(*) from ficha_matriz fm where fm.quant_parto is null and fm.status = true)  from ficha_matriz fm\n" +
                     "inner join resultado r on r.id_ficha_matriz=fm.id_ficha_matriz\n" +
                     "where r.resultado = 'Cheia' and fm.quant_parto is null";
 
@@ -98,7 +98,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select count(r.id_ficha_matriz),(select count(*) from ficha_matriz fm where fm.quant_parto = '1')  from ficha_matriz fm\n" +
+            sql = "select count(r.id_ficha_matriz),(select count(*) from ficha_matriz fm where fm.quant_parto = '1' and fm.status=true)  from ficha_matriz fm\n" +
                     "inner join resultado r on r.id_ficha_matriz=fm.id_ficha_matriz\n" +
                     "where r.resultado = 'Cheia' and fm.quant_parto = '1'";
 
@@ -132,7 +132,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select count(r.id_ficha_matriz),(select count(*) from ficha_matriz fm where fm.quant_parto > '1')  from ficha_matriz fm\n" +
+            sql = "select count(r.id_ficha_matriz),(select count(*) from ficha_matriz fm where fm.quant_parto > '1' and fm.status = true)  from ficha_matriz fm\n" +
                     "inner join resultado r on r.id_ficha_matriz=fm.id_ficha_matriz\n" +
                     "where r.resultado = 'Cheia' and fm.quant_parto > '1'";
 
@@ -202,7 +202,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select (select count(p.id_ficha_matriz)  from ficha_matriz fm inner join parto p on p.id_ficha_matriz=fm.id_ficha_matriz where p.status = 'Vivo' and fm.quant_parto = '1'),count(*) from ficha_matriz fm where fm.quant_parto = '1'";
+            sql = "select (select count(p.id_ficha_matriz)  from ficha_matriz fm inner join parto p on p.id_ficha_matriz=fm.id_ficha_matriz where p.status = 'Vivo' and fm.quant_parto = '1' and fm.status=true),count(*) from ficha_matriz fm where fm.quant_parto = '1' and fm.status = TRUE ";
 
             PreparedStatement prepareStatement;
 
@@ -236,7 +236,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select (select count(p.id_ficha_matriz)  from ficha_matriz fm inner join parto p on p.id_ficha_matriz=fm.id_ficha_matriz where p.status = 'Vivo' and fm.quant_parto = '2'),count(*) from ficha_matriz fm where fm.quant_parto = '2'";
+            sql = "select (select count(p.id_ficha_matriz)  from ficha_matriz fm inner join parto p on p.id_ficha_matriz=fm.id_ficha_matriz where p.status = 'Vivo' and fm.quant_parto = '2' and fm.status=true),count(*) from ficha_matriz fm where fm.quant_parto = '2' and fm.status=true";
 
             PreparedStatement prepareStatement;
 
@@ -269,7 +269,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select (select count(p.id_ficha_matriz)  from ficha_matriz fm\n inner join parto p on p.id_ficha_matriz=fm.id_ficha_matriz where p.status = 'Vivo' and fm.quant_parto > '2'),count(*) from ficha_matriz fm where fm.quant_parto > '2'";
+            sql = "select (select count(p.id_ficha_matriz)  from ficha_matriz fm\n inner join parto p on p.id_ficha_matriz=fm.id_ficha_matriz where p.status = 'Vivo' and fm.quant_parto > '2' and fm.status=true),count(*) from ficha_matriz fm where fm.quant_parto > '2' and fm.status=true";
 
             PreparedStatement prepareStatement;
 
@@ -526,7 +526,7 @@ public class GestaoRespositoryBanco {
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
-            sql = "select (select count(*) from desmama),count(*) from ficha_matriz where status = 't'";
+            sql = "select (select count(*) from desmama),count(*) from ficha_matriz where status = true";
             PreparedStatement prepareStatement;
 
             prepareStatement = conexao.prepareStatement(sql);
@@ -591,9 +591,9 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select (select count(*) as inicial from bovino where DATE(data_inclusao) <= '" + dataInicial + "' )\n" +
+            sql = "select (select count(*) as inicial from bovino b where DATE(data_inclusao) <= '" + dataInicial + "' )\n" +
                     "\t,count(*) as dois,(select count(*) as vendido from bovino where situacao = 'Vendido' and DATE(data_inclusao) >= '" + dataInicial + "' and DATE(data_inclusao) <= '" + dataFinal + "')\n" +
-                    "\t\tfrom bovino where status = true and DATE(data_inclusao) >= '" + dataInicial + "' and DATE(data_inclusao) <= '" + dataFinal + "'";
+                    "\t\tfrom bovino where DATE(data_inclusao) >= '" + dataInicial + "' and DATE(data_inclusao) <= '" + dataFinal + "'";
 
 
             PreparedStatement prepareStatement;
@@ -603,7 +603,9 @@ public class GestaoRespositoryBanco {
 
             result.next();
             if (result.getFloat(1) != 0) {
-
+                System.out.println(result.getFloat(1));
+                System.out.println(result.getFloat(2));
+                System.out.println(result.getFloat(3));
 
                 taxa = (result.getFloat(1) - (result.getFloat(2)));
                 taxa = taxa + result.getFloat(3);
@@ -633,7 +635,7 @@ public class GestaoRespositoryBanco {
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
-            sql = "select (select count(*) as touro from ficha_touro),count(*) as vaca from ficha_matriz";
+            sql = "select (select count(*) as touro from ficha_touro where status=true),count(*) as vaca from ficha_matriz where status=true";
             PreparedStatement prepareStatement;
             prepareStatement = conexao.prepareStatement(sql);
             ResultSet result = prepareStatement.executeQuery();
