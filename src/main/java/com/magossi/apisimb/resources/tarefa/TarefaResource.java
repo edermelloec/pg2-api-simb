@@ -3,6 +3,7 @@ package com.magossi.apisimb.resources.tarefa;
 import com.magossi.apisimb.domain.bovino.Bovino;
 import com.magossi.apisimb.domain.matriz.Inseminacao;
 import com.magossi.apisimb.domain.tarefa.Tarefa;
+import com.magossi.apisimb.gestao.GestaoRespositoryBanco;
 import com.magossi.apisimb.service.bovino.BovinoService;
 import com.magossi.apisimb.service.tarefa.TarefaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,7 @@ public class TarefaResource {
     @Autowired
     public BovinoService bovinoService;
 
+    GestaoRespositoryBanco gestaoRespositoryBanco = new GestaoRespositoryBanco();
 
     // ******************************** METODOS POST *******************************************************
 

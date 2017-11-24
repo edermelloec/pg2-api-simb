@@ -128,6 +128,20 @@ public class GestaoResources {
         return ResponseEntity.status(HttpStatus.OK).body(json);
     }
 
+    @RequestMapping(value = "/peso/desmama", method = RequestMethod.GET)
+    public ResponseEntity<String> mediaPesoDesmama() {
+
+        String json = gestaoService.mediaPesoDesmama();
+        return ResponseEntity.status(HttpStatus.OK).body(json);
+    }
+
+    @RequestMapping(value = "/idade/desmama", method = RequestMethod.GET)
+    public ResponseEntity<String> mediaIdadeDesmama() {
+
+        String json = gestaoService.mediaIdadeDesmama();
+        return ResponseEntity.status(HttpStatus.OK).body(json);
+    }
+
     @RequestMapping(value = "/idade/{bovino}", method = RequestMethod.GET)
     public ResponseEntity<String> idadePrimeiraCria(@PathVariable("bovino") String bovino) {
 
@@ -282,4 +296,5 @@ public class GestaoResources {
         return ResponseEntity.created(uri).build();
 
     }
+
 }

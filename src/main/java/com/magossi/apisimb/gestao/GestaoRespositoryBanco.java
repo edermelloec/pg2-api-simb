@@ -1,4 +1,4 @@
-package com.magossi.apisimb.testes;
+package com.magossi.apisimb.gestao;
 
 
 import com.magossi.apisimb.domain.bovino.Bovino;
@@ -15,7 +15,6 @@ import java.util.List;
 
 
 public class GestaoRespositoryBanco {
-
     Float taxa;
 
     String sql;
@@ -27,7 +26,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select (select count(*) from resultado r where r.resultado = 'Cheia' ),count(*) from ficha_matriz fm where fm.status = true";
+            sql = "select (select count(*) from resultado r where r.resultado = 'Cheia' ),count(*) from resultado";
 
 
             PreparedStatement prepareStatement;
@@ -59,98 +58,160 @@ public class GestaoRespositoryBanco {
     }
 
     public String prenhezNovilha() {
+
+
         try {
             Connection conexao = ConexaoFactory.criarConexao();
-
-
-            sql = "select count(r.id_ficha_matriz),(select count(*) from ficha_matriz fm where fm.quant_parto is null and fm.status = true)  from ficha_matriz fm\n" +
-                    "inner join resultado r on r.id_ficha_matriz=fm.id_ficha_matriz\n" +
-                    "where r.resultado = 'Cheia' and fm.quant_parto is null";
-
-
             PreparedStatement prepareStatement;
+
+            sql = "select id_ficha_matriz from ficha_matriz where status = true order by id_ficha_matriz";
 
 
             prepareStatement = conexao.prepareStatement(sql);
             ResultSet result = prepareStatement.executeQuery();
 
-
-            result.next();
-            if (result.getFloat(2) != 0) {
-                taxa = result.getFloat(1);
-                taxa = ((taxa / result.getFloat(2)) * 100);
-            } else {
-                taxa = 0.0f;
+            List<Integer> idMatrizAtivas = new ArrayList<>();
+            while (result.next()) {
+                idMatrizAtivas.add(result.getInt(1));
             }
+
+            float qtdNovinlha = 0;
+            float qtdCheia = 0;
+
+            for (int i = 0; i < idMatrizAtivas.size(); i++) {
+
+
+                sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
+                prepareStatement = conexao.prepareStatement(sql);
+                result = prepareStatement.executeQuery();
+
+                if (result.next()) {
+                    qtdNovinlha++;
+                    if ("Cheia".equals(result.getString(2))) {
+                        qtdCheia++;
+                    }
+                }
+            }
+
+
+            if (qtdNovinlha != 0) {
+                taxa = (qtdCheia / qtdNovinlha) * 100;
+            } else {
+                taxa = 0f;
+            }
+            System.out.println(qtdCheia+" - "+qtdNovinlha);
             conexao.close();
             json = "[{\"fertilidade\":" + taxa + "}]";
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
 
         return json;
     }
 
     public String prenhezPrimi() {
+
+
         try {
             Connection conexao = ConexaoFactory.criarConexao();
-
-
-            sql = "select count(r.id_ficha_matriz),(select count(*) from ficha_matriz fm where fm.quant_parto = '1' and fm.status=true)  from ficha_matriz fm\n" +
-                    "inner join resultado r on r.id_ficha_matriz=fm.id_ficha_matriz\n" +
-                    "where r.resultado = 'Cheia' and fm.quant_parto = '1'";
-
-
             PreparedStatement prepareStatement;
+
+            sql = "select id_ficha_matriz from ficha_matriz where status = true order by id_ficha_matriz";
+
+
             prepareStatement = conexao.prepareStatement(sql);
             ResultSet result = prepareStatement.executeQuery();
 
-
-            result.next();
-            if (result.getFloat(2) != 0) {
-                taxa = result.getFloat(1);
-                taxa = ((taxa / result.getFloat(2)) * 100);
-            } else {
-                taxa = 0.0f;
+            List<Integer> idMatrizAtivas = new ArrayList<>();
+            while (result.next()) {
+                idMatrizAtivas.add(result.getInt(1));
             }
+
+            float qtdPrimiparas = 0;
+            float qtdCheia = 0;
+
+            for (int i = 0; i < idMatrizAtivas.size(); i++) {
+
+
+                sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
+                prepareStatement = conexao.prepareStatement(sql);
+                result = prepareStatement.executeQuery();
+
+                if (result.next()) {
+                    if (result.next()) {
+                        qtdPrimiparas++;
+                        if ("Cheia".equals(result.getString(2))) {
+                            qtdCheia++;
+                        }
+                    }
+                }
+            }
+
+
+            if (qtdPrimiparas != 0) {
+                taxa = (qtdCheia / qtdPrimiparas) * 100;
+            } else {
+                taxa = 0f;
+            }
+
             conexao.close();
             json = "[{\"fertilidade\":" + taxa + "}]";
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
 
         return json;
     }
 
 
     public String prenhezMult() {
+
         try {
             Connection conexao = ConexaoFactory.criarConexao();
-
-
-            sql = "select count(r.id_ficha_matriz),(select count(*) from ficha_matriz fm where fm.quant_parto > '1' and fm.status = true)  from ficha_matriz fm\n" +
-                    "inner join resultado r on r.id_ficha_matriz=fm.id_ficha_matriz\n" +
-                    "where r.resultado = 'Cheia' and fm.quant_parto > '1'";
-
-
             PreparedStatement prepareStatement;
+
+            sql = "select id_ficha_matriz from ficha_matriz where status = true order by id_ficha_matriz";
 
 
             prepareStatement = conexao.prepareStatement(sql);
             ResultSet result = prepareStatement.executeQuery();
 
-
-            result.next();
-            if (result.getFloat(2) != 0) {
-                taxa = result.getFloat(1);
-                taxa = ((taxa / result.getFloat(2)) * 100);
-            } else {
-                taxa = 0.0f;
+            List<Integer> idMatrizAtivas = new ArrayList<>();
+            while (result.next()) {
+                idMatrizAtivas.add(result.getInt(1));
             }
+
+            float qtdMultiparas = 0;
+            float qtdCheia = 0;
+
+            for (int i = 0; i < idMatrizAtivas.size(); i++) {
+
+
+                sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
+                prepareStatement = conexao.prepareStatement(sql);
+                result = prepareStatement.executeQuery();
+
+                if (result.next()) {
+                    if (result.next()) {
+                        if (result.next()) {
+                            qtdMultiparas++;
+                            if ("Cheia".equals(result.getString(2))) {
+                                qtdCheia++;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            if (qtdMultiparas != 0) {
+                taxa = (qtdCheia / qtdMultiparas) * 100;
+            } else {
+                taxa = 0f;
+            }
+
             conexao.close();
             json = "[{\"fertilidade\":" + taxa + "}]";
         } catch (SQLException e) {
@@ -168,7 +229,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select count(*),(select count(*) from parto p where p.status = 'Vivo') from ficha_matriz fm where fm.status = 'True'";
+            sql = "select count(*),(select count(*) from parto p where p.status = 'Vivo') from parto";
 
 
             PreparedStatement prepareStatement;
@@ -198,33 +259,57 @@ public class GestaoRespositoryBanco {
     }
 
     public String natalidadeNovilha() {
+
         try {
             Connection conexao = ConexaoFactory.criarConexao();
-
-
-            sql = "select (select count(p.id_ficha_matriz)  from ficha_matriz fm inner join parto p on p.id_ficha_matriz=fm.id_ficha_matriz where p.status = 'Vivo' and fm.quant_parto = '1' and fm.status=true),count(*) from ficha_matriz fm where fm.quant_parto = '1' and fm.status = TRUE ";
-
             PreparedStatement prepareStatement;
+
+            sql = "select id_ficha_matriz from ficha_matriz where status = true order by id_ficha_matriz";
 
 
             prepareStatement = conexao.prepareStatement(sql);
             ResultSet result = prepareStatement.executeQuery();
 
-
-            result.next();
-            if (result.getFloat(2) != 0) {
-                taxa = result.getFloat(1);
-                taxa = ((taxa / result.getFloat(2)) * 100);
-            } else {
-                taxa = 0.0f;
+            List<Integer> idMatrizAtivas = new ArrayList<>();
+            while (result.next()) {
+                idMatrizAtivas.add(result.getInt(1));
             }
+
+            float qtdNovinlha = 0;
+            float qtdVivo = 0;
+
+            for (int i = 0; i < idMatrizAtivas.size(); i++) {
+
+
+                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_ficha_matriz";
+                prepareStatement = conexao.prepareStatement(sql);
+                result = prepareStatement.executeQuery();
+
+                if (result.next()) {
+                    qtdNovinlha++;
+
+
+                    if ("Vivo".equals(result.getString(2))) {
+
+                        qtdVivo++;
+                    }
+
+                }
+            }
+
+
+            if (qtdNovinlha != 0) {
+                taxa = (qtdVivo / qtdNovinlha) * 100;
+            } else {
+                taxa = 0f;
+            }
+
             conexao.close();
             json = "[{\"fertilidade\":" + taxa + "}]";
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
 
         return json;
 
@@ -232,32 +317,60 @@ public class GestaoRespositoryBanco {
     }
 
     public String natalidadePrimi() {
+
+
         try {
             Connection conexao = ConexaoFactory.criarConexao();
-
-
-            sql = "select (select count(p.id_ficha_matriz)  from ficha_matriz fm inner join parto p on p.id_ficha_matriz=fm.id_ficha_matriz where p.status = 'Vivo' and fm.quant_parto = '2' and fm.status=true),count(*) from ficha_matriz fm where fm.quant_parto = '2' and fm.status=true";
-
             PreparedStatement prepareStatement;
+
+            sql = "select id_ficha_matriz from ficha_matriz where status = true order by id_ficha_matriz";
+
 
             prepareStatement = conexao.prepareStatement(sql);
             ResultSet result = prepareStatement.executeQuery();
 
-
-            result.next();
-            if (result.getFloat(2) != 0) {
-                taxa = result.getFloat(1);
-                taxa = ((taxa / result.getFloat(2)) * 100);
-            } else {
-                taxa = 0.0f;
+            List<Integer> idMatrizAtivas = new ArrayList<>();
+            while (result.next()) {
+                idMatrizAtivas.add(result.getInt(1));
             }
+
+            float qtdPrimiparas = 0;
+            float qtdVivo = 0;
+
+            for (int i = 0; i < idMatrizAtivas.size(); i++) {
+
+
+                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
+                prepareStatement = conexao.prepareStatement(sql);
+                result = prepareStatement.executeQuery();
+
+                if (result.next()) {
+                    if (result.next()) {
+                        qtdPrimiparas++;
+
+
+                        if ("Vivo".equals(result.getString(2))) {
+
+                            qtdVivo++;
+                        }
+                    }
+
+                }
+            }
+
+
+            if (qtdPrimiparas != 0) {
+                taxa = (qtdVivo / qtdPrimiparas) * 100;
+            } else {
+                taxa = 0f;
+            }
+
             conexao.close();
             json = "[{\"fertilidade\":" + taxa + "}]";
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
 
         return json;
 
@@ -265,26 +378,53 @@ public class GestaoRespositoryBanco {
     }
 
     public String natalidadeMult() {
+
         try {
             Connection conexao = ConexaoFactory.criarConexao();
-
-
-            sql = "select (select count(p.id_ficha_matriz)  from ficha_matriz fm\n inner join parto p on p.id_ficha_matriz=fm.id_ficha_matriz where p.status = 'Vivo' and fm.quant_parto > '2' and fm.status=true),count(*) from ficha_matriz fm where fm.quant_parto > '2' and fm.status=true";
-
             PreparedStatement prepareStatement;
+
+            sql = "select id_ficha_matriz from ficha_matriz where status = true order by id_ficha_matriz";
 
 
             prepareStatement = conexao.prepareStatement(sql);
             ResultSet result = prepareStatement.executeQuery();
 
-
-            result.next();
-            if (result.getFloat(2) != 0) {
-                taxa = result.getFloat(1);
-                taxa = ((taxa / result.getFloat(2)) * 100);
-            } else {
-                taxa = 0.0f;
+            List<Integer> idMatrizAtivas = new ArrayList<>();
+            while (result.next()) {
+                idMatrizAtivas.add(result.getInt(1));
             }
+
+            float qtdMultiparas = 0;
+            float qtdVivo = 0;
+
+            for (int i = 0; i < idMatrizAtivas.size(); i++) {
+
+
+                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
+                prepareStatement = conexao.prepareStatement(sql);
+                result = prepareStatement.executeQuery();
+
+                if (result.next()) {
+                    if (result.next()) {
+                        if (result.next()) {
+                            qtdMultiparas++;
+                            if ("Vivo".equals(result.getString(2))) {
+
+                                qtdVivo++;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+            if (qtdMultiparas != 0) {
+                taxa = (qtdVivo / qtdMultiparas) * 100;
+            } else {
+                taxa = 0f;
+            }
+
             conexao.close();
             json = "[{\"fertilidade\":" + taxa + "}]";
         } catch (SQLException e) {
@@ -292,6 +432,71 @@ public class GestaoRespositoryBanco {
             e.printStackTrace();
         }
 
+        return json;
+
+
+    }
+    public String mediaPesoDesmama() {
+
+        try {
+            Connection conexao = ConexaoFactory.criarConexao();
+            PreparedStatement prepareStatement;
+
+            sql = "select peso from desmama";
+
+
+            prepareStatement = conexao.prepareStatement(sql);
+            ResultSet result = prepareStatement.executeQuery();
+
+            Float qtd=0f;
+            Float pesoTotal=0f;
+            while (result.next()) {
+                qtd++;
+               pesoTotal = pesoTotal + result.getFloat(1);
+            }
+
+            taxa =pesoTotal/qtd;
+
+            conexao.close();
+            json = "[{\"fertilidade\":" + taxa + "}]";
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return json;
+
+
+    }
+
+    public String mediaIdadeDesmama() {
+
+        try {
+            Connection conexao = ConexaoFactory.criarConexao();
+            PreparedStatement prepareStatement;
+
+            sql = "select ((DATE(d.data_desmama)-DATE(b.data_nascimento))/30) from desmama d\n" +
+                    "                    inner join bovino b on b.id_bovino=d.id_bovino";
+
+
+            prepareStatement = conexao.prepareStatement(sql);
+            ResultSet result = prepareStatement.executeQuery();
+
+            Float qtd=0f;
+            Float pesoTotal=0f;
+            while (result.next()) {
+                qtd++;
+                pesoTotal = pesoTotal + result.getFloat(1);
+            }
+
+            taxa =pesoTotal/qtd;
+
+            conexao.close();
+            json = "[{\"fertilidade\":" + taxa + "}]";
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
         return json;
 
@@ -343,9 +548,11 @@ public class GestaoRespositoryBanco {
             ResultSet result = prepareStatement.executeQuery();
 
 
-            result.next();
-            taxa = result.getFloat(1);
-
+            if(result.next()) {
+                taxa = result.getFloat(1);
+            }else {
+                taxa = 0f;
+            }
             conexao.close();
             json = "[{\"nome\": \"" + bovino + "\",\"fertilidade\": " + taxa + "}]";
         } catch (SQLException e) {
@@ -677,10 +884,10 @@ public class GestaoRespositoryBanco {
     }
 
     public Bovino salvarBovino(Bovino bovino) {
-        String foto=null;
-        if(bovino.getGenero()){
+        String foto = null;
+        if (bovino.getGenero()) {
             foto = "http://comprerural.com.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/11/20202430/boi_touro_backup_.jpg";
-        }else{
+        } else {
             foto = "http://www.colonialagropecuaria.com.br/_upload/_original/023c2bc3a26004145cec3db2373e8ca7.jpg";
         }
 
@@ -688,7 +895,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
             sql = "insert into bovino(id_bovino,data_inclusao,data_nascimento,genero,mae,nome_bovino,pai,status,tag,url_foto,fazenda_idfazenda,pelagem_idpelagem,proprietario_idproprietario,raca_idraca,situacao) \n" +
-                    "\tvalues (default,'" + bovino.getDataInclusao() + "','" + bovino.getDataNascimento() + "','" + bovino.getGenero() + "','" + bovino.getMae() + "','" + bovino.getNomeBovino() + "','" + bovino.getPai() + "','" + bovino.getStatus() + "','" + bovino.getTag() + "','" + foto+"'," + bovino.getFazenda().getIdFazenda() + "," + bovino.getPelagem().getIdPelagem() + "," + bovino.getProprietario().getIdProprietario() + "," + bovino.getRaca().getIdRaca() + ",'Vivo'" + ")";
+                    "\tvalues (default,'" + bovino.getDataInclusao() + "','" + bovino.getDataNascimento() + "','" + bovino.getGenero() + "','" + bovino.getMae() + "','" + bovino.getNomeBovino() + "','" + bovino.getPai() + "','" + bovino.getStatus() + "','" + bovino.getTag() + "','" + foto + "'," + bovino.getFazenda().getIdFazenda() + "," + bovino.getPelagem().getIdPelagem() + "," + bovino.getProprietario().getIdProprietario() + "," + bovino.getRaca().getIdRaca() + ",'Vivo'" + ")";
 
 
             PreparedStatement ps;

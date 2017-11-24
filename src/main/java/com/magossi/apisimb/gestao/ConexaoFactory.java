@@ -1,4 +1,4 @@
-package com.magossi.apisimb.testes;
+package com.magossi.apisimb.gestao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

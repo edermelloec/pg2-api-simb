@@ -41,6 +41,8 @@ public class FichaMatrizService {
         return fichaMatrizs;
     }
 
+
+
     public List<FichaMatriz> buscarMatrizInseminada(){
         List<FichaMatriz> fichaMatrizs = fichaMatrizRepository.findAll();
 

@@ -10,4 +10,6 @@ import java.util.List;
  * Created by RafaelMq on 04/11/2016.
  */
 public interface FichaMatrizRepository extends JpaRepository<FichaMatriz, Long> {
+    @Query("select f from FichaMatriz f where f.status=true order by f.idFichaMatriz")
+    List<FichaMatriz> buscaMatrizAtiva();
 }

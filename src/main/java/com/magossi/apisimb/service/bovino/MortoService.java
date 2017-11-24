@@ -37,7 +37,7 @@ public class MortoService {
         if(bovinos.size()!=0) {
 
 
-            mortos = mortoRepository.buscarPorBovino(bovinos.get(0).getFichaMatriz().getIdFichaMatriz());
+            mortos = mortoRepository.buscarPorBovino(bovinos.get(0).getIdBovino());
         }else{
             mortos = mortoRepository.findAll();
         }

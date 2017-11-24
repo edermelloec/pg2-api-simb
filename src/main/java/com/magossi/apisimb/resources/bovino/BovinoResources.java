@@ -2,13 +2,15 @@ package com.magossi.apisimb.resources.bovino;
 
 import com.magossi.apisimb.domain.bovino.Bovino;
 
+import com.magossi.apisimb.domain.bovino.Desmama;
 import com.magossi.apisimb.domain.bovino.Ecc;
 import com.magossi.apisimb.domain.bovino.Peso;
 import com.magossi.apisimb.domain.matriz.FichaMatriz;
 import com.magossi.apisimb.domain.matriz.Inseminacao;
+import com.magossi.apisimb.repository.bovino.DesmamaRepository;
 import com.magossi.apisimb.service.bovino.BovinoService;
 import com.magossi.apisimb.service.bovino.EccService;
-import com.magossi.apisimb.testes.GestaoRespositoryBanco;
+import com.magossi.apisimb.gestao.GestaoRespositoryBanco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +18,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -39,6 +40,8 @@ public class BovinoResources {
     @Autowired
     EccService eccService;
 
+    @Autowired
+    DesmamaRepository desmamaRepository;
 
     GestaoRespositoryBanco grb = new GestaoRespositoryBanco();
 
@@ -121,9 +124,12 @@ public class BovinoResources {
             List<Inseminacao> inseminacaos = new ArrayList<>();
             bovino.getFichaMatriz().setInseminacao(inseminacaos);
         }
+
+
         bovino.getFichaMatriz().getInseminacao().add(inseminacao);
 
         bovino = bovinoService.alterar(bovino);
+
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(bovino.getIdBovino()).toUri();
@@ -197,6 +203,29 @@ public class BovinoResources {
     public ResponseEntity<List<Bovino>> buscarBovinoPorMae(@PathVariable("mae") String mae) {
 
         List<Bovino> bovino = bovinoService.buscarMae(mae);
+        return ResponseEntity.status(HttpStatus.OK).body(bovino);
+
+    }
+    @RequestMapping(value = "/bezerro", method = RequestMethod.GET)
+    public ResponseEntity<List<Bovino>> buscarBezerro() {
+
+        List<Bovino> bovino = bovinoService.buscarBezerro();
+//        List<Desmama> desmama = desmamaRepository.findAll();
+//        int aux = bovino.size();
+//        for(int i=0;i<aux;i++) {
+//            System.out.println(bovino.size() + " - "+desmama.size());
+//            for(int j=0;j<desmama.size();j++) {
+//
+//
+//                    if(bovino.get(i).getIdBovino() == desmama.get(j).getIdBovino()) {
+//                        bovino.remove(i);
+//                    }
+//                    aux = bovino.size();
+//            }
+//        }
+
+
+
         return ResponseEntity.status(HttpStatus.OK).body(bovino);
 
     }

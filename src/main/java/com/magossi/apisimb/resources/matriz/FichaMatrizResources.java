@@ -43,4 +43,6 @@ public class FichaMatrizResources {
         List<FichaMatriz> fichaMatrizes = fichaMatrizService.listar();
         return ResponseEntity.status(HttpStatus.OK).body(fichaMatrizes);
     }
+
+
 }

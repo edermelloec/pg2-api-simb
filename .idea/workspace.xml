@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a76cb600-10dd-4b23-b2df-36d7113fd9cf" name="Default" comment="Primeiro Commit" />
+    <list default="true" id="a76cb600-10dd-4b23-b2df-36d7113fd9cf" name="Default" comment="Primeiro Commit">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/testes/ConexaoFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/testes/GestaoRespositoryBanco.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/testes/Morte.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/ConexaoFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/gestao/ConexaoFactory.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/gestao/GestaoRespositoryBanco.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/Morte.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/gestao/Morte.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/domain/matriz/Parto.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/domain/matriz/Parto.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/repository/bovino/BovinoRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/repository/bovino/BovinoRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/repository/matriz/FichaMatrizRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/repository/matriz/FichaMatrizRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/resources/bovino/BovinoResources.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/resources/bovino/BovinoResources.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/resources/gestao/GestaoResources.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/resources/gestao/GestaoResources.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/resources/matriz/PartoResources.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/resources/matriz/PartoResources.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/resources/tarefa/TarefaResource.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/resources/tarefa/TarefaResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/bovino/BovinoService.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/bovino/BovinoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/bovino/MortoService.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/bovino/MortoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/gestao/GestaoService.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/gestao/GestaoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/matriz/FichaMatrizService.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/matriz/FichaMatrizService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/matriz/PartoService.class" afterPath="$PROJECT_DIR$/target/classes/com/magossi/apisimb/service/matriz/PartoService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Parto.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Parto.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/FichaMatrizRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/FichaMatrizRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/PartoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/PartoRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/BovinoResources.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/BovinoResources.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/FichaMatrizResources.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/FichaMatrizResources.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/PartoResources.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/PartoResources.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/BovinoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/BovinoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/MortoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/MortoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/FichaMatrizService.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/FichaMatrizService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/PartoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/PartoService.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,44 +73,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GestaoService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java">
+      <file leaf-file-name="GestaoResources.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="99" column="44" lean-forward="false" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FichaTouro.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/FichaTouro.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FichaToutroRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/FichaToutroRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="59" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
+            <state relative-caret-position="2380">
+              <caret line="165" column="51" lean-forward="false" selection-start-line="165" selection-start-column="51" selection-end-line="165" selection-end-column="51" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1511542590552" expanded="true" signature="8754:8998" ph="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FichaMatrizRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/FichaMatrizRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -84,102 +88,119 @@
       <file leaf-file-name="BovinoRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="46" />
+            <state relative-caret-position="135">
+              <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BovinoResources.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/BovinoResources.java">
+      <file leaf-file-name="Inseminacao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Inseminacao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="176" column="44" lean-forward="false" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
+            <state relative-caret-position="170">
+              <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GestaoResources.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="210" column="38" lean-forward="false" selection-start-line="210" selection-start-column="38" selection-end-line="210" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GestaoRespositoryBanco.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java">
+      <file leaf-file-name="TarefaResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="263">
-              <caret line="67" column="75" lean-forward="true" selection-start-line="65" selection-start-column="19" selection-end-line="67" selection-end-column="75" />
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BovinoResources.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/BovinoResources.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="224" column="11" lean-forward="false" selection-start-line="212" selection-start-column="10" selection-end-line="224" selection-end-column="11" />
               <folding>
-                <marker date="1511486121360" expanded="true" signature="644:767" ph="select (sele... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="652:712" ph="select count... resultado" />
-                <marker date="1511486121360" expanded="true" signature="1565:1877" ph="select count... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="1598:1684" ph="select count... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="2670:2976" ph="select count... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="2703:2785" ph="select count... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="3767:4075" ph="select count... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="3800:3884" ph="select count... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="4872:4988" ph="select count... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="4889:4941" ph="select count... parto" />
-                <marker date="1511486121360" expanded="true" signature="5787:6054" ph="select (sele... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="5795:5975" ph="select count... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="6852:7117" ph="select (sele... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="6860:7040" ph="select count... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="7912:8179" ph="select (sele... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="7920:8102" ph="select count... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="8991:9255" ph="SELECT min((... bovino" />
-                <marker date="1511486121360" expanded="true" signature="9920:10147" ph="select ((DAT... desmama" />
-                <marker date="1511486121360" expanded="true" signature="10803:10902" ph="select count... bovino" />
-                <marker date="1511486121360" expanded="true" signature="10821:10867" ph="select count... bovino" />
-                <marker date="1511486121360" expanded="true" signature="11704:11877" ph="select count... bovino" />
-                <marker date="1511486121360" expanded="true" signature="11721:11767" ph="select count... bovino" />
-                <marker date="1511486121360" expanded="true" signature="12672:12848" ph="select count... bovino" />
-                <marker date="1511486121360" expanded="true" signature="12689:12735" ph="select count... bovino" />
-                <marker date="1511486121360" expanded="true" signature="13646:13887" ph="select count... bovino" />
-                <marker date="1511486121360" expanded="true" signature="13663:13709" ph="select count... bovino" />
-                <marker date="1511486121360" expanded="true" signature="14686:14923" ph="select count... bovino" />
-                <marker date="1511486121360" expanded="true" signature="14703:14749" ph="select count... bovino" />
-                <marker date="1511486121360" expanded="true" signature="15713:15797" ph="select (sele... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="15721:15749" ph="select count... desmama" />
-                <marker date="1511486121360" expanded="true" signature="16585:16688" ph="select (sele... bovino" />
-                <marker date="1511486121360" expanded="true" signature="16593:16647" ph="select count... bovino" />
-                <marker date="1511486121360" expanded="true" signature="17518:17969" ph="select (sele... bovino" />
-                <marker date="1511486121360" expanded="true" signature="19020:19141" ph="select (sele... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="19028:19087" ph="select count... ficha_touro" />
-                <marker date="1511486121360" expanded="true" signature="19800:19853" ph="UPDATE bovin... " />
-                <marker date="1511486121360" expanded="true" signature="20650:21129" ph="insert into bovino... " />
-                <marker date="1511486121360" expanded="true" signature="20650:21329" ph="insert into bovino... " />
-                <marker date="1511486121360" expanded="true" signature="21782:22302" ph="update bovin... " />
-                <marker date="1511486121360" expanded="true" signature="22772:22985" ph="insert into morto... " />
-                <marker date="1511486121360" expanded="true" signature="23120:23242" ph="UPDATE bovin... " />
-                <marker date="1511486121360" expanded="true" signature="23667:23740" ph="UPDATE bovin... " />
-                <marker date="1511486121360" expanded="true" signature="24185:24258" ph="UPDATE bovin... " />
-                <marker date="1511486121360" expanded="true" signature="24715:24869" ph="insert into desmama... " />
-                <marker date="1511486121360" expanded="true" signature="24715:24928" ph="insert into desmama... " />
-                <marker date="1511486121360" expanded="true" signature="25423:25562" ph="select ficha... bovino" />
-                <marker date="1511486121360" expanded="true" signature="26334:26399" ph="select nome_... bovino" />
-                <marker date="1511486121360" expanded="true" signature="27036:27135" ph="select id_bo... bovino" />
-                <marker date="1511486121360" expanded="true" signature="28880:28941" ph="select quant... ficha_matriz" />
-                <marker date="1511486121360" expanded="true" signature="29485:29549" ph="update ficha... " />
-                <marker date="1511486121360" expanded="true" signature="29601:29681" ph="update ficha... " />
-                <marker date="1511486121360" expanded="true" signature="30134:30343" ph="insert into ficha_touro... " />
+                <marker date="1511566255130" expanded="true" signature="4576:4781" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DesmamaService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/DesmamaService.java">
+      <file leaf-file-name="BovinoService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/BovinoService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="2" selection-end-line="67" selection-end-column="7" />
+            <state relative-caret-position="161">
+              <caret line="138" column="52" lean-forward="true" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="52" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GestaoRespositoryBanco.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/gestao/GestaoRespositoryBanco.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="1239" column="28" lean-forward="true" selection-start-line="1239" selection-start-column="28" selection-end-line="1239" selection-end-column="28" />
+              <folding>
+                <marker date="1511555374008" expanded="true" signature="643:737" ph="select (sele... resultado" />
+                <marker date="1511555374008" expanded="true" signature="651:711" ph="select count... resultado" />
+                <marker date="1511555374008" expanded="true" signature="1584:1669" ph="select id_fi... ficha_matriz" />
+                <marker date="1511555374008" expanded="true" signature="2123:2222" ph="select id_fi... resultado" />
+                <marker date="1511555374008" expanded="true" signature="2123:2234" ph="select id_fi... resultado" />
+                <marker date="1511555374008" expanded="true" signature="2123:2246" ph="select id_fi... resultado" />
+                <marker date="1511555374008" expanded="true" signature="3235:3320" ph="select id_fi... ficha_matriz" />
+                <marker date="1511555374008" expanded="true" signature="3776:3899" ph="select id_fi... resultado" />
+                <marker date="1511555374008" expanded="true" signature="4913:4998" ph="select id_fi... ficha_matriz" />
+                <marker date="1511555374008" expanded="true" signature="5454:5577" ph="select id_fi... resultado" />
+                <marker date="1511555374008" expanded="true" signature="6635:6716" ph="select count... parto" />
+                <marker date="1511555374008" expanded="true" signature="6652:6704" ph="select count... parto" />
+                <marker date="1511555374008" expanded="true" signature="7563:7648" ph="select id_fi... ficha_matriz" />
+                <marker date="1511555374008" expanded="true" signature="8101:8165" ph="select id_fi... parto" />
+                <marker date="1511555374008" expanded="true" signature="8101:8219" ph="select id_fi... parto" />
+                <marker date="1511555374008" expanded="true" signature="9155:9240" ph="select id_fi... ficha_matriz" />
+                <marker date="1511555374008" expanded="true" signature="9695:9798" ph="select id_fi... parto" />
+                <marker date="1511555374008" expanded="true" signature="9695:9806" ph="select id_fi... parto" />
+                <marker date="1511555374008" expanded="true" signature="10825:10910" ph="select id_fi... ficha_matriz" />
+                <marker date="1511555374008" expanded="true" signature="11365:11468" ph="select id_fi... parto" />
+                <marker date="1511555374008" expanded="true" signature="11365:11476" ph="select id_fi... parto" />
+                <marker date="1511555374008" expanded="true" signature="12581:12605" ph="select peso desmama" />
+                <marker date="1511555374008" expanded="true" signature="13389:13555" ph="select ((DAT... desmama" />
+                <marker date="1511555374008" expanded="true" signature="14305:14569" ph="SELECT min((... bovino" />
+                <marker date="1511555374008" expanded="true" signature="15234:15461" ph="select ((DAT... desmama" />
+                <marker date="1511555374008" expanded="true" signature="16186:16285" ph="select count... bovino" />
+                <marker date="1511555374008" expanded="true" signature="16204:16250" ph="select count... bovino" />
+                <marker date="1511555374008" expanded="true" signature="17087:17260" ph="select count... bovino" />
+                <marker date="1511555374008" expanded="true" signature="17104:17150" ph="select count... bovino" />
+                <marker date="1511555374008" expanded="true" signature="18055:18231" ph="select count... bovino" />
+                <marker date="1511555374008" expanded="true" signature="18072:18118" ph="select count... bovino" />
+                <marker date="1511555374008" expanded="true" signature="19029:19270" ph="select count... bovino" />
+                <marker date="1511555374008" expanded="true" signature="19046:19092" ph="select count... bovino" />
+                <marker date="1511555374008" expanded="true" signature="20069:20306" ph="select count... bovino" />
+                <marker date="1511555374008" expanded="true" signature="20086:20132" ph="select count... bovino" />
+                <marker date="1511555374008" expanded="true" signature="21096:21180" ph="select (sele... ficha_matriz" />
+                <marker date="1511555374008" expanded="true" signature="21104:21132" ph="select count... desmama" />
+                <marker date="1511555374008" expanded="true" signature="21968:22071" ph="select (sele... bovino" />
+                <marker date="1511555374008" expanded="true" signature="21976:22030" ph="select count... bovino" />
+                <marker date="1511555374008" expanded="true" signature="22901:23352" ph="select (sele... bovino" />
+                <marker date="1511555374008" expanded="true" signature="24403:24524" ph="select (sele... ficha_matriz" />
+                <marker date="1511555374008" expanded="true" signature="24411:24470" ph="select count... ficha_touro" />
+                <marker date="1511555374008" expanded="true" signature="25183:25236" ph="UPDATE bovin... " />
+                <marker date="1511555374008" expanded="true" signature="26039:26720" ph="insert into bovino... " />
+                <marker date="1511555374008" expanded="true" signature="27173:27693" ph="update bovin... " />
+                <marker date="1511555374008" expanded="true" signature="28163:28376" ph="insert into morto... " />
+                <marker date="1511555374008" expanded="true" signature="28511:28633" ph="UPDATE bovin... " />
+                <marker date="1511555374008" expanded="true" signature="29058:29131" ph="UPDATE bovin... " />
+                <marker date="1511555374008" expanded="true" signature="29576:29649" ph="UPDATE bovin... " />
+                <marker date="1511555374008" expanded="true" signature="30106:30319" ph="insert into desmama... " />
+                <marker date="1511555374008" expanded="true" signature="30814:30953" ph="select id_bo... bovino" />
+                <marker date="1511555374008" expanded="true" signature="31725:31790" ph="select nome_... bovino" />
+                <marker date="1511555374008" expanded="true" signature="32427:32526" ph="select id_bo... bovino" />
+                <marker date="1511555374008" expanded="true" signature="34271:34332" ph="select quant... ficha_matriz" />
+                <marker date="1511555374008" expanded="true" signature="34876:34940" ph="update ficha... " />
+                <marker date="1511555374008" expanded="true" signature="34992:35072" ph="update ficha... " />
+                <marker date="1511555374008" expanded="true" signature="35689:35988" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,8 +208,18 @@
       <file leaf-file-name="DesmamaResources.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/DesmamaResources.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+            <state relative-caret-position="155">
+              <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DesmamaService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/DesmamaService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -205,17 +236,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>desf</find>
-      <find>bovinor</find>
-      <find>findall</find>
-      <find>is</find>
-      <find>ven</find>
-      <find>vend</find>
-      <find>des</find>
-      <find>abate</find>
-      <find>arrrumaData</find>
-      <find>listar/t</find>
-      <find>morta</find>
       <find>PRENHEZM</find>
       <find>abatido</find>
       <find>touro</find>
@@ -227,14 +247,25 @@
       <find>listar</find>
       <find>desfr</find>
       <find>salvar</find>
-      <find>desmama</find>
       <find>listar/f</find>
       <find>salvarvend</find>
       <find>LISTAR/TO</find>
       <find>salva</find>
-      <find>morto</find>
       <find>aba</find>
       <find>prenhe</find>
+      <find>abati</find>
+      <find>na</find>
+      <find>nata</find>
+      <find>natala</find>
+      <find>p</find>
+      <find>desmama</find>
+      <find>idade</find>
+      <find>peso</find>
+      <find>idaded</find>
+      <find>morto</find>
+      <find>/morto</find>
+      <find>/mo</find>
+      <find>up</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -248,9 +279,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/exceptions/GestaoException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/bovino/Morto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Parto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/bovino/Venda.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/bovino/Abatido.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pg2/apisimb/resources/bovino/PesoResources.java" />
@@ -264,7 +293,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/PartoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/PartoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/PartoResources.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/MortoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/MortoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/MortoResources.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/tarefa/TarefaService.java" />
@@ -280,25 +308,28 @@
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/bovino/Bovino.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/InseminacaoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/InseminacaoResources.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Inseminacao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/InseminacaoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/BovinoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/BovinoResources.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Resultado.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/FichaMatriz.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/FichaMatrizRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/FichaMatrizService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/FichaMatrizResources.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/bovino/Desmama.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/DesmamaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/DesmamaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/DesmamaResources.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/FichaToutroRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/FichaMatriz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Parto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/MortoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/FichaMatrizRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/FichaMatrizService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/FichaMatrizResources.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Inseminacao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/gestao/GestaoRespositoryBanco.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/BovinoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/BovinoResources.java" />
       </list>
     </option>
   </component>
@@ -316,8 +347,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="683" />
-    <option name="width" value="683" />
+    <option name="x" value="-2" />
+    <option name="y" value="195" />
+    <option name="width" value="1343" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectView">
@@ -352,62 +384,51 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apisimb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="apisimb" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="apisimb" type="462c0819:PsiDirectoryNode" />
               <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="bovino" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -416,8 +437,17 @@
               <item name="matriz" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="apisimb" type="462c0819:PsiDirectoryNode" />
+              <item name="gestao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -425,28 +455,8 @@
               <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apisimb" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-              <item name="bovino" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apisimb" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-              <item name="matriz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -454,8 +464,8 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -464,8 +474,8 @@
               <item name="bovino" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -474,8 +484,8 @@
               <item name="gestao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -484,26 +494,21 @@
               <item name="matriz" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
+              <item name="api-simb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="api-simb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="apisimb" type="462c0819:PsiDirectoryNode" />
-              <item name="testes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pg2-api-simb-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pg2-api-simb-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="tarefa" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -721,7 +726,9 @@
       <workItem from="1511129962178" duration="12208000" />
       <workItem from="1511171110828" duration="2169000" />
       <workItem from="1511257934048" duration="10517000" />
-      <workItem from="1511446212263" duration="23555000" />
+      <workItem from="1511446212263" duration="23686000" />
+      <workItem from="1511496442797" duration="110000" />
+      <workItem from="1511496593991" duration="35028000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro Commit">
       <created>1503260464978</created>
@@ -734,11 +741,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="528529000" />
+    <option name="totallyTimeSpent" value="563798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41362917" sideWeight="0.50732064" order="7" side_tool="true" content_ui="tabs" />
@@ -756,12 +762,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3312203" sideWeight="0.49267936" order="13" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24881141" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3755943" sideWeight="0.49267936" order="13" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.49707174" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24881141" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24597365" sideWeight="0.4909091" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21083455" sideWeight="0.4909091" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18228404" sideWeight="0.5090909" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -820,24 +826,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/MortoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/MortoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="11" column="41" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/MortoResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -918,37 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/ConexaoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="113" lean-forward="false" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/InseminacaoResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/InseminacaoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/tarefa/Tarefa.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="32" column="46" lean-forward="false" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,31 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="62" column="18" lean-forward="false" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="69" column="36" lean-forward="true" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/BovinoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="138" column="18" lean-forward="false" selection-start-line="138" selection-start-column="18" selection-end-line="138" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,7 +935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="27" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1004,7 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,62 +953,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/FichaMatriz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Resultado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="e#908#909#0" expanded="false" />
-            <element signature="e#944#945#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/InseminacaoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/FichaMatrizService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/ResultadoResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="27" column="42" lean-forward="false" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Parto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Inseminacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1079,15 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="68" column="27" lean-forward="false" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/FichaMatrizResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1095,11 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
           <caret line="62" column="29" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
-          <folding>
-            <element signature="e#1435#1436#0" expanded="true" />
-            <element signature="e#1475#1476#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1107,141 +978,262 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/DesmamaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="2" selection-end-line="67" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/DesmamaResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/BovinoResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="176" column="44" lean-forward="false" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="210" column="38" lean-forward="false" selection-start-line="210" selection-start-column="38" selection-end-line="210" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/FichaMatrizRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="36" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/FichaToutroRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="59" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/FichaToutroRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/FichaTouro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="170">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/gestao/ConexaoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="113" lean-forward="false" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/FichaMatriz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Parto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/gestao/GestaoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="99" column="44" lean-forward="false" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
+        <state relative-caret-position="172">
+          <caret line="290" column="35" lean-forward="false" selection-start-line="290" selection-start-column="18" selection-end-line="290" selection-end-column="35" />
+          <folding>
+            <marker date="1511542590364" expanded="true" signature="4395:4569" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/InseminacaoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="49" column="29" lean-forward="false" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/testes/GestaoRespositoryBanco.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/ResultadoResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Resultado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.11.4.RELEASE/spring-data-commons-1.11.4.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/MortoResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/MortoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="39" column="81" lean-forward="false" selection-start-line="39" selection-start-column="81" selection-end-line="39" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/InseminacaoResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="47" column="49" lean-forward="false" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/domain/matriz/Inseminacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="46" column="27" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/matriz/FichaMatrizRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="84" lean-forward="false" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/matriz/FichaMatrizService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/matriz/FichaMatrizResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/gestao/GestaoResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="165" column="51" lean-forward="false" selection-start-line="165" selection-start-column="51" selection-end-line="165" selection-end-column="51" />
+          <folding>
+            <marker date="1511542590552" expanded="true" signature="8754:8998" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/tarefa/TarefaResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
-          <caret line="67" column="75" lean-forward="true" selection-start-line="65" selection-start-column="19" selection-end-line="67" selection-end-column="75" />
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/gestao/GestaoRespositoryBanco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="1239" column="28" lean-forward="true" selection-start-line="1239" selection-start-column="28" selection-end-line="1239" selection-end-column="28" />
           <folding>
-            <marker date="1511486121360" expanded="true" signature="644:767" ph="select (sele... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="652:712" ph="select count... resultado" />
-            <marker date="1511486121360" expanded="true" signature="1565:1877" ph="select count... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="1598:1684" ph="select count... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="2670:2976" ph="select count... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="2703:2785" ph="select count... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="3767:4075" ph="select count... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="3800:3884" ph="select count... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="4872:4988" ph="select count... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="4889:4941" ph="select count... parto" />
-            <marker date="1511486121360" expanded="true" signature="5787:6054" ph="select (sele... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="5795:5975" ph="select count... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="6852:7117" ph="select (sele... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="6860:7040" ph="select count... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="7912:8179" ph="select (sele... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="7920:8102" ph="select count... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="8991:9255" ph="SELECT min((... bovino" />
-            <marker date="1511486121360" expanded="true" signature="9920:10147" ph="select ((DAT... desmama" />
-            <marker date="1511486121360" expanded="true" signature="10803:10902" ph="select count... bovino" />
-            <marker date="1511486121360" expanded="true" signature="10821:10867" ph="select count... bovino" />
-            <marker date="1511486121360" expanded="true" signature="11704:11877" ph="select count... bovino" />
-            <marker date="1511486121360" expanded="true" signature="11721:11767" ph="select count... bovino" />
-            <marker date="1511486121360" expanded="true" signature="12672:12848" ph="select count... bovino" />
-            <marker date="1511486121360" expanded="true" signature="12689:12735" ph="select count... bovino" />
-            <marker date="1511486121360" expanded="true" signature="13646:13887" ph="select count... bovino" />
-            <marker date="1511486121360" expanded="true" signature="13663:13709" ph="select count... bovino" />
-            <marker date="1511486121360" expanded="true" signature="14686:14923" ph="select count... bovino" />
-            <marker date="1511486121360" expanded="true" signature="14703:14749" ph="select count... bovino" />
-            <marker date="1511486121360" expanded="true" signature="15713:15797" ph="select (sele... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="15721:15749" ph="select count... desmama" />
-            <marker date="1511486121360" expanded="true" signature="16585:16688" ph="select (sele... bovino" />
-            <marker date="1511486121360" expanded="true" signature="16593:16647" ph="select count... bovino" />
-            <marker date="1511486121360" expanded="true" signature="17518:17969" ph="select (sele... bovino" />
-            <marker date="1511486121360" expanded="true" signature="19020:19141" ph="select (sele... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="19028:19087" ph="select count... ficha_touro" />
-            <marker date="1511486121360" expanded="true" signature="19800:19853" ph="UPDATE bovin... " />
-            <marker date="1511486121360" expanded="true" signature="20650:21129" ph="insert into bovino... " />
-            <marker date="1511486121360" expanded="true" signature="20650:21329" ph="insert into bovino... " />
-            <marker date="1511486121360" expanded="true" signature="21782:22302" ph="update bovin... " />
-            <marker date="1511486121360" expanded="true" signature="22772:22985" ph="insert into morto... " />
-            <marker date="1511486121360" expanded="true" signature="23120:23242" ph="UPDATE bovin... " />
-            <marker date="1511486121360" expanded="true" signature="23667:23740" ph="UPDATE bovin... " />
-            <marker date="1511486121360" expanded="true" signature="24185:24258" ph="UPDATE bovin... " />
-            <marker date="1511486121360" expanded="true" signature="24715:24869" ph="insert into desmama... " />
-            <marker date="1511486121360" expanded="true" signature="24715:24928" ph="insert into desmama... " />
-            <marker date="1511486121360" expanded="true" signature="25423:25562" ph="select ficha... bovino" />
-            <marker date="1511486121360" expanded="true" signature="26334:26399" ph="select nome_... bovino" />
-            <marker date="1511486121360" expanded="true" signature="27036:27135" ph="select id_bo... bovino" />
-            <marker date="1511486121360" expanded="true" signature="28880:28941" ph="select quant... ficha_matriz" />
-            <marker date="1511486121360" expanded="true" signature="29485:29549" ph="update ficha... " />
-            <marker date="1511486121360" expanded="true" signature="29601:29681" ph="update ficha... " />
-            <marker date="1511486121360" expanded="true" signature="30134:30343" ph="insert into ficha_touro... " />
+            <marker date="1511555374008" expanded="true" signature="643:737" ph="select (sele... resultado" />
+            <marker date="1511555374008" expanded="true" signature="651:711" ph="select count... resultado" />
+            <marker date="1511555374008" expanded="true" signature="1584:1669" ph="select id_fi... ficha_matriz" />
+            <marker date="1511555374008" expanded="true" signature="2123:2222" ph="select id_fi... resultado" />
+            <marker date="1511555374008" expanded="true" signature="2123:2234" ph="select id_fi... resultado" />
+            <marker date="1511555374008" expanded="true" signature="2123:2246" ph="select id_fi... resultado" />
+            <marker date="1511555374008" expanded="true" signature="3235:3320" ph="select id_fi... ficha_matriz" />
+            <marker date="1511555374008" expanded="true" signature="3776:3899" ph="select id_fi... resultado" />
+            <marker date="1511555374008" expanded="true" signature="4913:4998" ph="select id_fi... ficha_matriz" />
+            <marker date="1511555374008" expanded="true" signature="5454:5577" ph="select id_fi... resultado" />
+            <marker date="1511555374008" expanded="true" signature="6635:6716" ph="select count... parto" />
+            <marker date="1511555374008" expanded="true" signature="6652:6704" ph="select count... parto" />
+            <marker date="1511555374008" expanded="true" signature="7563:7648" ph="select id_fi... ficha_matriz" />
+            <marker date="1511555374008" expanded="true" signature="8101:8165" ph="select id_fi... parto" />
+            <marker date="1511555374008" expanded="true" signature="8101:8219" ph="select id_fi... parto" />
+            <marker date="1511555374008" expanded="true" signature="9155:9240" ph="select id_fi... ficha_matriz" />
+            <marker date="1511555374008" expanded="true" signature="9695:9798" ph="select id_fi... parto" />
+            <marker date="1511555374008" expanded="true" signature="9695:9806" ph="select id_fi... parto" />
+            <marker date="1511555374008" expanded="true" signature="10825:10910" ph="select id_fi... ficha_matriz" />
+            <marker date="1511555374008" expanded="true" signature="11365:11468" ph="select id_fi... parto" />
+            <marker date="1511555374008" expanded="true" signature="11365:11476" ph="select id_fi... parto" />
+            <marker date="1511555374008" expanded="true" signature="12581:12605" ph="select peso desmama" />
+            <marker date="1511555374008" expanded="true" signature="13389:13555" ph="select ((DAT... desmama" />
+            <marker date="1511555374008" expanded="true" signature="14305:14569" ph="SELECT min((... bovino" />
+            <marker date="1511555374008" expanded="true" signature="15234:15461" ph="select ((DAT... desmama" />
+            <marker date="1511555374008" expanded="true" signature="16186:16285" ph="select count... bovino" />
+            <marker date="1511555374008" expanded="true" signature="16204:16250" ph="select count... bovino" />
+            <marker date="1511555374008" expanded="true" signature="17087:17260" ph="select count... bovino" />
+            <marker date="1511555374008" expanded="true" signature="17104:17150" ph="select count... bovino" />
+            <marker date="1511555374008" expanded="true" signature="18055:18231" ph="select count... bovino" />
+            <marker date="1511555374008" expanded="true" signature="18072:18118" ph="select count... bovino" />
+            <marker date="1511555374008" expanded="true" signature="19029:19270" ph="select count... bovino" />
+            <marker date="1511555374008" expanded="true" signature="19046:19092" ph="select count... bovino" />
+            <marker date="1511555374008" expanded="true" signature="20069:20306" ph="select count... bovino" />
+            <marker date="1511555374008" expanded="true" signature="20086:20132" ph="select count... bovino" />
+            <marker date="1511555374008" expanded="true" signature="21096:21180" ph="select (sele... ficha_matriz" />
+            <marker date="1511555374008" expanded="true" signature="21104:21132" ph="select count... desmama" />
+            <marker date="1511555374008" expanded="true" signature="21968:22071" ph="select (sele... bovino" />
+            <marker date="1511555374008" expanded="true" signature="21976:22030" ph="select count... bovino" />
+            <marker date="1511555374008" expanded="true" signature="22901:23352" ph="select (sele... bovino" />
+            <marker date="1511555374008" expanded="true" signature="24403:24524" ph="select (sele... ficha_matriz" />
+            <marker date="1511555374008" expanded="true" signature="24411:24470" ph="select count... ficha_touro" />
+            <marker date="1511555374008" expanded="true" signature="25183:25236" ph="UPDATE bovin... " />
+            <marker date="1511555374008" expanded="true" signature="26039:26720" ph="insert into bovino... " />
+            <marker date="1511555374008" expanded="true" signature="27173:27693" ph="update bovin... " />
+            <marker date="1511555374008" expanded="true" signature="28163:28376" ph="insert into morto... " />
+            <marker date="1511555374008" expanded="true" signature="28511:28633" ph="UPDATE bovin... " />
+            <marker date="1511555374008" expanded="true" signature="29058:29131" ph="UPDATE bovin... " />
+            <marker date="1511555374008" expanded="true" signature="29576:29649" ph="UPDATE bovin... " />
+            <marker date="1511555374008" expanded="true" signature="30106:30319" ph="insert into desmama... " />
+            <marker date="1511555374008" expanded="true" signature="30814:30953" ph="select id_bo... bovino" />
+            <marker date="1511555374008" expanded="true" signature="31725:31790" ph="select nome_... bovino" />
+            <marker date="1511555374008" expanded="true" signature="32427:32526" ph="select id_bo... bovino" />
+            <marker date="1511555374008" expanded="true" signature="34271:34332" ph="select quant... ficha_matriz" />
+            <marker date="1511555374008" expanded="true" signature="34876:34940" ph="update ficha... " />
+            <marker date="1511555374008" expanded="true" signature="34992:35072" ph="update ficha... " />
+            <marker date="1511555374008" expanded="true" signature="35689:35988" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/DesmamaResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="31" column="41" lean-forward="false" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/DesmamaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/service/bovino/BovinoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="138" column="52" lean-forward="true" selection-start-line="138" selection-start-column="52" selection-end-line="138" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/repository/bovino/BovinoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="52" column="21" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magossi/apisimb/resources/bovino/BovinoResources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="224" column="11" lean-forward="false" selection-start-line="212" selection-start-column="10" selection-end-line="224" selection-end-column="11" />
+          <folding>
+            <marker date="1511566255130" expanded="true" signature="4576:4781" ph="{...}" />
           </folding>
         </state>
       </provider>

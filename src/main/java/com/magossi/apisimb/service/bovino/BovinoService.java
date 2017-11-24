@@ -135,6 +135,16 @@ public class BovinoService {
 
         return bovino;
     }
+    public List<Bovino> buscarBezerro(){
+        List<Bovino> bovino = bovinoRepository.buscarBezerro();
+
+        if(bovino==null){
+            throw new BovinoNaoExistenteException("Bovino não Existe");
+        }
+
+        return bovino;
+    }
+
 
     public Bovino buscarId(Long id){
         Bovino bovino = bovinoRepository.findOne(id);
@@ -155,7 +165,7 @@ public class BovinoService {
     }
 
     public List<Bovino> buscarTodos(){
-        List<Bovino> bovino = bovinoRepository.findAll();
+        List<Bovino> bovino = bovinoRepository.buscarOrdenadoNome();
 
         if(bovino==null){
             throw new BovinoNaoEncontradoException("Lista de Bovinos não Encontrada");

@@ -1,14 +1,7 @@
 package com.magossi.apisimb.resources.matriz;
 
-import com.magossi.apisimb.domain.bovino.Bovino;
-import com.magossi.apisimb.domain.bovino.Desmama;
-import com.magossi.apisimb.domain.bovino.Peso;
-import com.magossi.apisimb.domain.matriz.FichaTouro;
-import com.magossi.apisimb.domain.matriz.Inseminacao;
 import com.magossi.apisimb.domain.matriz.Parto;
-import com.magossi.apisimb.domain.matriz.Resultado;
 import com.magossi.apisimb.service.matriz.PartoService;
-import com.magossi.apisimb.testes.Morte;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

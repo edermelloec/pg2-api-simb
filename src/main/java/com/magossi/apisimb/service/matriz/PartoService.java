@@ -1,20 +1,11 @@
 package com.magossi.apisimb.service.matriz;
 
 import com.magossi.apisimb.domain.bovino.Bovino;
-import com.magossi.apisimb.domain.bovino.Desmama;
-import com.magossi.apisimb.domain.bovino.Peso;
-import com.magossi.apisimb.domain.matriz.FichaTouro;
-import com.magossi.apisimb.domain.matriz.Inseminacao;
 import com.magossi.apisimb.domain.matriz.Parto;
-import com.magossi.apisimb.domain.matriz.Resultado;
 import com.magossi.apisimb.repository.bovino.BovinoRepository;
-import com.magossi.apisimb.repository.bovino.PesoRepository;
-import com.magossi.apisimb.repository.matriz.InseminacaoRepository;
 import com.magossi.apisimb.repository.matriz.PartoRepository;
-import com.magossi.apisimb.repository.matriz.ResultadoRepository;
 import com.magossi.apisimb.service.exceptions.*;
-import com.magossi.apisimb.testes.GestaoRespositoryBanco;
-import com.magossi.apisimb.testes.Morte;
+import com.magossi.apisimb.gestao.GestaoRespositoryBanco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

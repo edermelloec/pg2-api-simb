@@ -3,12 +3,14 @@ package com.magossi.apisimb.service.gestao;
 import com.magossi.apisimb.domain.bovino.Bovino;
 import com.magossi.apisimb.domain.bovino.Desmama;
 import com.magossi.apisimb.domain.bovino.Morto;
+import com.magossi.apisimb.domain.matriz.FichaMatriz;
 import com.magossi.apisimb.domain.matriz.FichaTouro;
 import com.magossi.apisimb.repository.bovino.BovinoRepository;
+import com.magossi.apisimb.repository.matriz.FichaMatrizRepository;
 import com.magossi.apisimb.repository.matriz.FichaToutroRepository;
+import com.magossi.apisimb.repository.matriz.PartoRepository;
 import com.magossi.apisimb.service.exceptions.GestaoException;
-import com.magossi.apisimb.testes.GestaoRespositoryBanco;
-import com.magossi.apisimb.testes.Morte;
+import com.magossi.apisimb.gestao.GestaoRespositoryBanco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,9 @@ public class GestaoService {
     BovinoRepository bovinoRepository;
     @Autowired
     FichaToutroRepository fichaToutroRepository;
+    @Autowired
+    FichaMatrizRepository fichaMatrizRepository;
+
 
     GestaoRespositoryBanco grb = new GestaoRespositoryBanco();
 
@@ -226,6 +231,15 @@ public class GestaoService {
 
     public String natalidadeTotal() {
 
+        List<FichaMatriz> fichaMatriz = fichaMatrizRepository.findAll();
+
+        for (int i=0;i<fichaMatriz.size();i++){
+
+        }
+
+
+
+
         String json = grb.natalidadeTodos();
 
         if (json == null) {
@@ -257,6 +271,26 @@ public class GestaoService {
     public String natalidadeMult() {
 
         String json = grb.natalidadeMult();
+
+        if (json == null) {
+            throw new GestaoException("Natalidade não Encontrada");
+        }
+        return json;
+    }
+
+    public String mediaPesoDesmama() {
+
+        String json = grb.mediaPesoDesmama();
+
+        if (json == null) {
+            throw new GestaoException("Natalidade não Encontrada");
+        }
+        return json;
+    }
+
+    public String mediaIdadeDesmama() {
+
+        String json = grb.mediaIdadeDesmama();
 
         if (json == null) {
             throw new GestaoException("Natalidade não Encontrada");

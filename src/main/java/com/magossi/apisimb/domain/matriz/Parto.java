@@ -37,6 +37,19 @@ public class Parto {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Long idFichaMatriz;
 
+
+    @Override
+    public String toString() {
+        return "Parto{" +
+                "idParto=" + idParto +
+                ", dataParto=" + dataParto +
+                ", dataInclusao=" + dataInclusao +
+                ", status='" + status + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", idFichaMatriz=" + idFichaMatriz +
+                '}';
+    }
+
     public Date getDataInclusao() {
         return dataInclusao;
     }
