@@ -33,7 +33,7 @@ public class DesmamaResources {
         }else if ("nomeBovino".equals(tipoBusca)){
             desmamas = desmamaService.buscarPorBovino("%"+busca+"%");
         }else if ("nomeMatriz".equals(tipoBusca)){
-            desmamas = desmamaService.buscarPorMatriz("%"+busca+"%");
+           // desmamas = desmamaService.buscarPorMatriz("%"+busca+"%");
         }else if ("dataDesmama".equals(tipoBusca)){
             SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
             try {

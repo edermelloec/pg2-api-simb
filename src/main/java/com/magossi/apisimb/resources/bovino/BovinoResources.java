@@ -5,6 +5,7 @@ import com.magossi.apisimb.domain.bovino.Bovino;
 import com.magossi.apisimb.domain.bovino.Ecc;
 import com.magossi.apisimb.domain.bovino.Peso;
 import com.magossi.apisimb.domain.matriz.FichaMatriz;
+import com.magossi.apisimb.domain.matriz.Inseminacao;
 import com.magossi.apisimb.service.bovino.BovinoService;
 import com.magossi.apisimb.service.bovino.EccService;
 import com.magossi.apisimb.testes.GestaoRespositoryBanco;
@@ -18,6 +19,7 @@ import java.net.URI;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -102,6 +104,26 @@ public class BovinoResources {
         bovino.setFichaMatriz(fichaMatriz);
         bovino = bovinoService.alterar(bovino);
 
+
+
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}").buildAndExpand(bovino.getIdBovino()).toUri();
+
+        return ResponseEntity.created(uri).build();
+    }
+
+    @RequestMapping(value = "/{id}/inseminacao", method = RequestMethod.POST)
+    public ResponseEntity<Void> salvarInseminacaoFichaMatriz(@PathVariable("id") Long id, @RequestBody Inseminacao inseminacao) {
+
+        Bovino bovino = bovinoService.buscarId(id);
+
+        if (bovino.getFichaMatriz().getInseminacao().isEmpty()) {
+            List<Inseminacao> inseminacaos = new ArrayList<>();
+            bovino.getFichaMatriz().setInseminacao(inseminacaos);
+        }
+        bovino.getFichaMatriz().getInseminacao().add(inseminacao);
+
+        bovino = bovinoService.alterar(bovino);
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(bovino.getIdBovino()).toUri();

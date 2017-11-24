@@ -50,22 +50,22 @@ public class DesmamaService {
         }
         return desmamas;
     }
-    public List<Desmama> buscarPorMatriz(String busca){
-        List<Bovino> bovinos = bovinoRepository.buscarPorMatriz(busca);
-        List<Desmama> desmamas;
-
-        if(bovinos.size()!=0) {
-
-
-            desmamas = desmamaRepository.buscarPorMatriz(bovinos.get(0).getFichaMatriz().getIdFichaMatriz());
-        }else{
-            desmamas = desmamaRepository.findAll();
-        }
-        if(desmamas==null){
-            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
-        }
-        return desmamas;
-    }
+//    public List<Desmama> buscarPorMatriz(String busca){
+//        List<Bovino> bovinos = bovinoRepository.buscarPorMatriz(busca);
+//        List<Desmama> desmamas;
+//
+//        if(bovinos.size()!=0) {
+//
+//
+//            desmamas = desmamaRepository.buscarPorMatriz(bovinos.get(0).getFichaMatriz().getIdFichaMatriz());
+//        }else{
+//            desmamas = desmamaRepository.findAll();
+//        }
+//        if(desmamas==null){
+//            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+//        }
+//        return desmamas;
+//    }
     public List<Desmama> buscarPorData(Date data1,Date data2) {
         List<Desmama> desmamas = desmamaRepository.buscarPorData(data1,data2);
 

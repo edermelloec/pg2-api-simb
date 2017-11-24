@@ -4,9 +4,12 @@ import com.magossi.apisimb.domain.bovino.Bovino;
 import com.magossi.apisimb.domain.bovino.Desmama;
 import com.magossi.apisimb.domain.bovino.Morto;
 import com.magossi.apisimb.domain.matriz.FichaTouro;
+import com.magossi.apisimb.repository.bovino.BovinoRepository;
+import com.magossi.apisimb.repository.matriz.FichaToutroRepository;
 import com.magossi.apisimb.service.exceptions.GestaoException;
 import com.magossi.apisimb.testes.GestaoRespositoryBanco;
 import com.magossi.apisimb.testes.Morte;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,8 +19,10 @@ import java.util.List;
 @Service
 public class GestaoService {
 
-
-
+    @Autowired
+    BovinoRepository bovinoRepository;
+    @Autowired
+    FichaToutroRepository fichaToutroRepository;
 
     GestaoRespositoryBanco grb = new GestaoRespositoryBanco();
 
@@ -46,8 +51,8 @@ public class GestaoService {
     }
 
     public List<Bovino> listarFemea() {
-        List<Bovino> femea = grb.listarFemea();
-
+        //List<Bovino> femea = grb.listarFemea();
+        List<Bovino> femea = bovinoRepository.buscarPorFemea();
         if (femea == null) {
             throw new GestaoException("Lista de Femêa não Encontrada");
         }
@@ -65,6 +70,21 @@ public class GestaoService {
 
     public Long salvarVendido(Long id) {
         Long l;
+
+        Bovino bovino;
+        bovino = bovinoRepository.findOne(id);
+        if(bovino.getFichaMatriz()!=null){
+            bovino.getFichaMatriz().setStatus(false);
+
+            bovinoRepository.save(bovino);
+        }
+        FichaTouro fichaTouro = fichaToutroRepository.buscaTouro(id);
+        if(fichaTouro != null){
+            fichaTouro.setStatus(false);
+            fichaToutroRepository.save(fichaTouro);
+        }
+
+
         l = grb.salvarVendido(id);
         if (l == null) {
             throw new GestaoException("Venda não foi salvo");
@@ -75,6 +95,20 @@ public class GestaoService {
 
     public Long salvarAbatido(Long id) {
         Long l;
+
+        Bovino bovino;
+        bovino = bovinoRepository.findOne(id);
+        if(bovino.getFichaMatriz()!=null){
+            bovino.getFichaMatriz().setStatus(false);
+
+            bovinoRepository.save(bovino);
+        }
+        FichaTouro fichaTouro = fichaToutroRepository.buscaTouro(id);
+        if(fichaTouro != null){
+            fichaTouro.setStatus(false);
+            fichaToutroRepository.save(fichaTouro);
+        }
+
         l = grb.salvarAbatido(id);
         if (l == null) {
             throw new GestaoException("Bovino abatido não foi salvo");
@@ -107,6 +141,19 @@ public class GestaoService {
     }
 
     public Morto salvarMorto(Morto morto) {
+
+        Bovino bovino;
+        bovino = bovinoRepository.findOne(morto.getIdBovino());
+        if(bovino.getFichaMatriz()!=null){
+            bovino.getFichaMatriz().setStatus(false);
+
+            bovinoRepository.save(bovino);
+        }
+        FichaTouro fichaTouro = fichaToutroRepository.buscaTouro(morto.getIdBovino());
+        if(fichaTouro != null){
+            fichaTouro.setStatus(false);
+            fichaToutroRepository.save(fichaTouro);
+        }
         Morto m;
         m = grb.salvarMorte(morto);
         if (m == null) {

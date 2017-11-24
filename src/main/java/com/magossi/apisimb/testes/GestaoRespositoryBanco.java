@@ -607,8 +607,7 @@ public class GestaoRespositoryBanco {
                 System.out.println(result.getFloat(2));
                 System.out.println(result.getFloat(3));
 
-                taxa = (result.getFloat(1) - (result.getFloat(2)));
-                taxa = taxa + result.getFloat(3);
+                taxa = (result.getFloat(2) + (result.getFloat(3)));
                 taxa = taxa / result.getFloat(1);
                 taxa = taxa * 100;
             } else {
@@ -678,13 +677,18 @@ public class GestaoRespositoryBanco {
     }
 
     public Bovino salvarBovino(Bovino bovino) {
-
+        String foto=null;
+        if(bovino.getGenero()){
+            foto = "http://comprerural.com.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/11/20202430/boi_touro_backup_.jpg";
+        }else{
+            foto = "http://www.colonialagropecuaria.com.br/_upload/_original/023c2bc3a26004145cec3db2373e8ca7.jpg";
+        }
 
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
             sql = "insert into bovino(id_bovino,data_inclusao,data_nascimento,genero,mae,nome_bovino,pai,status,tag,url_foto,fazenda_idfazenda,pelagem_idpelagem,proprietario_idproprietario,raca_idraca,situacao) \n" +
-                    "\tvalues (default,'" + bovino.getDataInclusao() + "','" + bovino.getDataNascimento() + "','" + bovino.getGenero() + "','" + bovino.getMae() + "','" + bovino.getNomeBovino() + "','" + bovino.getPai() + "','" + bovino.getStatus() + "','" + bovino.getTag() + "','http://comprerural.com.s3-us-west-2.amazonaws.com/wp-content/uploads/2015/11/20202430/boi_touro_backup_.jpg'" + "," + bovino.getFazenda().getIdFazenda() + "," + bovino.getPelagem().getIdPelagem() + "," + bovino.getProprietario().getIdProprietario() + "," + bovino.getRaca().getIdRaca() + ",'Vivo'" + ")";
+                    "\tvalues (default,'" + bovino.getDataInclusao() + "','" + bovino.getDataNascimento() + "','" + bovino.getGenero() + "','" + bovino.getMae() + "','" + bovino.getNomeBovino() + "','" + bovino.getPai() + "','" + bovino.getStatus() + "','" + bovino.getTag() + "','" + foto+"'," + bovino.getFazenda().getIdFazenda() + "," + bovino.getPelagem().getIdPelagem() + "," + bovino.getProprietario().getIdProprietario() + "," + bovino.getRaca().getIdRaca() + ",'Vivo'" + ")";
 
 
             PreparedStatement ps;
@@ -818,8 +822,8 @@ public class GestaoRespositoryBanco {
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
-            sql = " insert into desmama(id_desmama,data_desmama,status,id_ficha_matriz,id_bovino)\n" +
-                    "\tvalues (default,'" + desmama.getDataDesmama() + "','True','" + desmama.getIdFichaMatriz() + "','" + desmama.getIdBovino() + "')";
+            sql = " insert into desmama(id_desmama,data_desmama,status,id_bovino,peso)\n" +
+                    "\tvalues (default,'" + desmama.getDataDesmama() + "','True','" + desmama.getIdBovino() + "','" + desmama.getPeso() + "')";
 
 
             PreparedStatement ps;
@@ -846,7 +850,7 @@ public class GestaoRespositoryBanco {
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
-            sql = "select ficha_matriz_idfichamatriz,nome_bovino from bovino where ficha_matriz_idfichamatriz <> 0 and status = true order by ficha_matriz_idfichamatriz";
+            sql = "select id_bovino,nome_bovino from bovino where ficha_matriz_idfichamatriz is not null and status = true order by ficha_matriz_idfichamatriz";
 
 
             PreparedStatement ps;
@@ -931,35 +935,35 @@ public class GestaoRespositoryBanco {
 
     }
 
-    public List<Bovino> listarFemea() {
-        List<Bovino> bovinos = new ArrayList<>();
-
-        try {
-            Connection conexao = ConexaoFactory.criarConexao();
-            sql = "select id_bovino,nome_bovino from bovino where genero = false and status = true and ficha_matriz_idfichamatriz is null order by nome_bovino";
-
-
-            PreparedStatement ps;
-
-            ps = conexao.prepareStatement(sql);
-            ResultSet result = ps.executeQuery();
-            Bovino bovino;
-            while (result.next()) {
-                bovino = new Bovino();
-                bovino.setIdBovino(result.getLong(1));
-                bovino.setNomeBovino(result.getString(2));
-                bovinos.add(bovino);
-            }
-
-            conexao.close();
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        return bovinos;
-
-    }
+//    public List<Bovino> listarFemea() {
+//        List<Bovino> bovinos = new ArrayList<>();
+//
+//        try {
+//            Connection conexao = ConexaoFactory.criarConexao();
+//            sql = "select id_bovino,nome_bovino from bovino where genero = false and status = true and ficha_matriz_idfichamatriz is null order by nome_bovino";
+//
+//
+//            PreparedStatement ps;
+//
+//            ps = conexao.prepareStatement(sql);
+//            ResultSet result = ps.executeQuery();
+//            Bovino bovino;
+//            while (result.next()) {
+//                bovino = new Bovino();
+//                bovino.setIdBovino(result.getLong(1));
+//                bovino.setNomeBovino(result.getString(2));
+//                bovinos.add(bovino);
+//            }
+//
+//            conexao.close();
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//
+//        return bovinos;
+//
+//    }
 
 
     public void salvarQtdParto(Integer id) {

@@ -29,6 +29,8 @@ public class InseminacaoResources {
 
     @RequestMapping(method =  RequestMethod.POST)
     public ResponseEntity<Void> salvar(@RequestBody Inseminacao inseminacao){
+
+
         inseminacao = inseminacaoService.salvar(inseminacao);
 
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
@@ -45,7 +47,7 @@ public class InseminacaoResources {
         if("todos".equals(busca)){
             inseminacoes = inseminacaoService.listar();
         }else if ("nomeMatriz".equals(tipoBusca)){
-            inseminacoes = inseminacaoService.buscarPorMatriz("%"+busca+"%");
+            //inseminacoes = inseminacaoService.buscarPorMatriz("%"+busca+"%");
         }else if ("nomeTouro".equals(tipoBusca)){
             inseminacoes = inseminacaoService.buscarPorTouro("%"+busca+"%");
         }else if ("dataInseminacao".equals(tipoBusca)){
@@ -81,7 +83,7 @@ public class InseminacaoResources {
         }else if ("tipo".equals(tipoBusca)){
             inseminacoes = inseminacaoService.buscarPorTipo(busca);
         }else if ("funcionario".equals(tipoBusca)){
-            inseminacoes = inseminacaoService.buscarPorFuncionario(busca);
+           // inseminacoes = inseminacaoService.buscarPorFuncionario(busca);
         }
 
 

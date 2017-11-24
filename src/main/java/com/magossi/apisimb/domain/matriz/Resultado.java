@@ -23,6 +23,7 @@ public class Resultado {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String descricao;
+
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Date dataInclusao = new Date();
 
@@ -31,6 +32,7 @@ public class Resultado {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Date dataResultado;
+
 
     // Getters e Setter
 

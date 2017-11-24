@@ -31,8 +31,7 @@ public class Desmama {
     private Boolean status;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-
-    private Long idFichaMatriz;
+    private Double peso;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
 
@@ -61,12 +60,12 @@ public class Desmama {
         this.dataDesmama = dataDesmama;
     }
 
-    public Long getIdFichaMatriz() {
-        return idFichaMatriz;
+    public Double getPeso() {
+        return peso;
     }
 
-    public void setIdFichaMatriz(Long idFichaMatriz) {
-        this.idFichaMatriz = idFichaMatriz;
+    public void setPeso(Double peso) {
+        this.peso = peso;
     }
 
     public Long getIdBovino() {

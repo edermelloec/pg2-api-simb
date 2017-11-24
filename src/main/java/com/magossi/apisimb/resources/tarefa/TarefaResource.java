@@ -15,6 +15,7 @@ import java.net.URI;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -50,12 +51,21 @@ public class TarefaResource {
     @RequestMapping(value = "/{id}/inseminacao", method = RequestMethod.POST)
     public ResponseEntity<Void> salvarInseminacaoTarefa(@PathVariable("id") Long id, @RequestBody Inseminacao inseminacao) {
         Tarefa tarefa = tarefaService.buscarId(id);
+
+
+
         if (tarefa.getBovinoMatriz().getFichaMatriz().getInseminacao().isEmpty()) {
             List<Inseminacao> inseminacaos = new ArrayList<>();
             tarefa.getBovinoMatriz().getFichaMatriz().setInseminacao(inseminacaos);
         }
+
         tarefa.setStatusDaTarefa(true);
         tarefa.setDataConclusao(new Date());
+        if(inseminacao.getPrevisaoParto()==null){
+            Calendar cal = Calendar.getInstance();
+            cal.add(Calendar.DAY_OF_MONTH, 285);
+            inseminacao.setPrevisaoParto(cal.getTime());
+        }
         tarefa.getBovinoMatriz().getFichaMatriz().getInseminacao().add(inseminacao);
         tarefa = tarefaService.atualizar(tarefa);
 

@@ -34,6 +34,9 @@ public class InseminacaoService {
 
 
     public Inseminacao salvar(Inseminacao inseminacao){
+
+
+
         if(inseminacao.getIdInseminacao() != null){
 
             Inseminacao i = inseminacaoRepository.findOne(inseminacao.getIdInseminacao());
@@ -52,22 +55,22 @@ public class InseminacaoService {
         }
         return inseminacoes;
     }
-    public List<Inseminacao> buscarPorMatriz(String busca){
-        List<Bovino> bovinos = bovinoRepository.buscarPorMatriz(busca);
-        List<Inseminacao> inseminacaos;
-
-        if(bovinos.size()!=0) {
-
-
-            inseminacaos = inseminacaoRepository.buscarPorMatriz(String.valueOf(bovinos.get(0).getFichaMatriz().getIdFichaMatriz()));
-        }else{
-            inseminacaos = inseminacaoRepository.findByStatus(true);
-        }
-        if(inseminacaos==null){
-            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
-        }
-        return inseminacaos;
-    }
+//    public List<Inseminacao> buscarPorMatriz(String busca){
+//        List<Bovino> bovinos = bovinoRepository.buscarPorMatriz(busca);
+//        List<Inseminacao> inseminacaos;
+//
+//        if(bovinos.size()!=0) {
+//
+//
+//            inseminacaos = inseminacaoRepository.buscarPorMatriz(String.valueOf(bovinos.get(0).getFichaMatriz().getIdFichaMatriz()));
+//        }else{
+//            inseminacaos = inseminacaoRepository.findByStatus(true);
+//        }
+//        if(inseminacaos==null){
+//            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+//        }
+//        return inseminacaos;
+//    }
     public List<Inseminacao> buscarPorTouro(String busca){
         List<Inseminacao> inseminacaos;
 
@@ -118,26 +121,26 @@ public class InseminacaoService {
 
         return inseminacaos;
     }
-    public List<Inseminacao> buscarPorFuncionario(String busca){
-        String imei=null;
-        if("Sebastiao".toLowerCase().contains(busca.toLowerCase())){
-            imei = "354983059791193";
-        }if("Joao".toLowerCase().contains(busca.toLowerCase())){
-            imei = "123456789";
-        }
-        List<Inseminacao> inseminacaos;
-
-        if(imei!=null) {
-
-            inseminacaos = inseminacaoRepository.findByImeiContainingAndStatus(imei,true);
-        }else{
-            inseminacaos = inseminacaoRepository.findByStatus(true);
-        }
-        if(inseminacaos==null){
-            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
-        }
-        return inseminacaos;
-    }
+//    public List<Inseminacao> buscarPorFuncionario(String busca){
+//        String imei=null;
+//        if("Sebastiao".toLowerCase().contains(busca.toLowerCase())){
+//            imei = "354983059791193";
+//        }if("Joao".toLowerCase().contains(busca.toLowerCase())){
+//            imei = "123456789";
+//        }
+//        List<Inseminacao> inseminacaos;
+//
+//        if(imei!=null) {
+//
+//            //inseminacaos = inseminacaoRepository.findByImeiContainingAndStatus(imei,true);
+//        }else{
+//            inseminacaos = inseminacaoRepository.findByStatus(true);
+//        }
+//        if(inseminacaos==null){
+//            throw new EccNaoEncontradoException("Lista de Tarefas não Encontrada");
+//        }
+//        return inseminacaos;
+//    }
 
 
 }

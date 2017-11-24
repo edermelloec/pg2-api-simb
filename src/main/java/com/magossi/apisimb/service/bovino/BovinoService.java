@@ -3,6 +3,7 @@ package com.magossi.apisimb.service.bovino;
 import com.magossi.apisimb.domain.bovino.Bovino;
 import com.magossi.apisimb.domain.bovino.Fazenda;
 import com.magossi.apisimb.domain.bovino.Raca;
+import com.magossi.apisimb.domain.matriz.FichaMatriz;
 import com.magossi.apisimb.repository.bovino.*;
 import com.magossi.apisimb.service.exceptions.BovinoExistenteException;
 import com.magossi.apisimb.service.exceptions.BovinoNaoEncontradoException;
@@ -137,6 +138,15 @@ public class BovinoService {
 
     public Bovino buscarId(Long id){
         Bovino bovino = bovinoRepository.findOne(id);
+
+        if(bovino==null){
+            throw new BovinoNaoEncontradoException("Bovino não Encontrado");
+        }
+        return bovino;
+    }
+
+    public Bovino buscarIdMatriz(FichaMatriz fichaMatriz){
+        Bovino bovino = bovinoRepository.buscarPorIdMatriz(fichaMatriz);
 
         if(bovino==null){
             throw new BovinoNaoEncontradoException("Bovino não Encontrado");

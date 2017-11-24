@@ -30,10 +30,12 @@ public class Inseminacao {
     private Date dataDaInseminacao;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String imei;
+    @OneToOne
+    private Parto parto;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String matriz;
+    @OneToOne
+    private Inseminador inseminador;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Date previsaoParto;
@@ -44,20 +46,39 @@ public class Inseminacao {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Boolean status;
 
-    public String getMatriz() {
-        return matriz;
+    public Parto getParto() {
+        return parto;
     }
 
-    public void setMatriz(String matriz) {
-        this.matriz = matriz;
+    public void setParto(Parto parto) {
+        this.parto = parto;
     }
 
-    public String getImei() {
-        return imei;
+    @Override
+    public String toString() {
+        return "Inseminacao{" +
+                "idInseminacao=" + idInseminacao +
+                ", monta=" + monta +
+                ", touro='" + touro + '\'' +
+                ", dataDaInseminacao=" + dataDaInseminacao +
+                ", parto=" + parto +
+                ", inseminador=" + inseminador +
+                ", previsaoParto=" + previsaoParto +
+                ", dataInclusao=" + dataInclusao +
+                ", status=" + status +
+                '}';
     }
 
-    public void setImei(String imei) {
-        this.imei = imei;
+    public Inseminador getInseminador() {
+        return inseminador;
+    }
+
+    public void setInseminador(Inseminador inseminador) {
+        this.inseminador = inseminador;
+    }
+
+    public void setDataInclusao(Date dataInclusao) {
+        this.dataInclusao = dataInclusao;
     }
 
     public Long getIdInseminacao() {

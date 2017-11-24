@@ -13,8 +13,6 @@ public interface DesmamaRepository extends JpaRepository<Desmama, Long> {
     @Query("select d from Desmama d where d.idBovino= ?1  ")
     List<Desmama> buscarPorBovino(Long id);
 
-    @Query("select d from Desmama d where d.idFichaMatriz = ?1  and d.status = true")
-    List<Desmama> buscarPorMatriz(Long id);
 
     @Query("select d from Desmama d where d.dataDesmama between ?1 and ?2  and d.status = true")
     List<Desmama> buscarPorData(Date data1, Date data2);

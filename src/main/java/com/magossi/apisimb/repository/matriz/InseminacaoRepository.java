@@ -14,12 +14,12 @@ public interface InseminacaoRepository extends JpaRepository<Inseminacao, Long> 
 
     List<Inseminacao> findByStatus(Boolean status);
 
-    List<Inseminacao> findByImeiContainingAndStatus(String imei,Boolean status);
+    //List<Inseminacao> findByImeiContainingAndStatus(String imei,Boolean status);
 
     List<Inseminacao> findByMonta(Boolean status);
 
-    @Query("select i from Inseminacao i where i.matriz = ?1  and i.status = true")
-    List<Inseminacao> buscarPorMatriz(String id);
+//    @Query("select i from Inseminacao i where i.matriz = ?1  and i.status = true")
+//    List<Inseminacao> buscarPorMatriz(String id);
 
     @Query("select i from Inseminacao i where upper(i.touro) like upper(?1)  and i.status = true")
     List<Inseminacao> buscarPorTouro(String touro);

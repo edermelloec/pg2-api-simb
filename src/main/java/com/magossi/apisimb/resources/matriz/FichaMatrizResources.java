@@ -38,7 +38,7 @@ public class FichaMatrizResources {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<List<FichaMatriz>> listar(){
+    public ResponseEntity<List<FichaMatriz>> listar() {
 
         List<FichaMatriz> fichaMatrizes = fichaMatrizService.listar();
         return ResponseEntity.status(HttpStatus.OK).body(fichaMatrizes);

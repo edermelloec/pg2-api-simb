@@ -60,8 +60,8 @@ public class GestaoResources {
     @RequestMapping(value = "/listar/touro", method = RequestMethod.GET)
     public ResponseEntity<List<Bovino>> listarTouro() {
 
-        List<Bovino> matriz = gestaoService.listarTouro();
-        return ResponseEntity.status(HttpStatus.OK).body(matriz);
+        List<Bovino> touro = gestaoService.listarTouro();
+        return ResponseEntity.status(HttpStatus.OK).body(touro);
     }
 
 

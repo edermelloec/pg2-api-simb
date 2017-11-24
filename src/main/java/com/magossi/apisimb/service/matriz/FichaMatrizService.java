@@ -40,4 +40,13 @@ public class FichaMatrizService {
         }
         return fichaMatrizs;
     }
+
+    public List<FichaMatriz> buscarMatrizInseminada(){
+        List<FichaMatriz> fichaMatrizs = fichaMatrizRepository.findAll();
+
+        if(fichaMatrizs==null){
+            throw new FazendaNaoEncontradaException("Lista de Fichas da Matriz não Encontrada");
+        }
+        return fichaMatrizs;
+    }
 }
