@@ -34,8 +34,18 @@ public class Desmama {
     private Double peso;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-
     private Long idBovino;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Long idFichaMatriz;
+
+    public Long getIdFichaMatriz() {
+        return idFichaMatriz;
+    }
+
+    public void setIdFichaMatriz(Long idFichaMatriz) {
+        this.idFichaMatriz = idFichaMatriz;
+    }
 
     public Long getIdDesmama() {
         return idDesmama;

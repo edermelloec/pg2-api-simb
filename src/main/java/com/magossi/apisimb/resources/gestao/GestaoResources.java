@@ -4,6 +4,7 @@ import com.magossi.apisimb.domain.bovino.*;
 import com.magossi.apisimb.domain.matriz.FichaTouro;
 import com.magossi.apisimb.repository.bovino.AbatidoRepository;
 import com.magossi.apisimb.repository.bovino.VendaRepository;
+import com.magossi.apisimb.repository.matriz.FichaToutroRepository;
 import com.magossi.apisimb.service.gestao.GestaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -27,6 +29,9 @@ public class GestaoResources {
 
     @Autowired
     AbatidoRepository abatidoRepository;
+
+    @Autowired
+    FichaToutroRepository fichaToutroRepository;
 
     @RequestMapping(value = "/listar/matriz", method = RequestMethod.GET)
     public ResponseEntity<List<Bovino>> listarMatriz() {
@@ -60,8 +65,37 @@ public class GestaoResources {
     @RequestMapping(value = "/listar/touro", method = RequestMethod.GET)
     public ResponseEntity<List<Bovino>> listarTouro() {
 
-        List<Bovino> touro = gestaoService.listarTouro();
-        return ResponseEntity.status(HttpStatus.OK).body(touro);
+        List<Bovino> bovinos = gestaoService.listarTouro();
+
+        List<FichaTouro> touros = fichaToutroRepository.findAll();
+
+
+
+        int aux;
+        if (!(bovinos.size() == touros.size())) {
+            for (int i = 0; i < bovinos.size(); i++) {
+
+                aux = i;
+                for (int j = 0; j < touros.size(); j++) {
+
+                    if (i < bovinos.size()) {
+                        if (bovinos.get(i).getIdBovino() == touros.get(j).getIdBovino()) {
+
+                            bovinos.remove(i);
+                        }
+                    }
+
+                }
+            }
+        }else {
+            bovinos = new ArrayList<>();
+        }
+
+
+
+
+
+        return ResponseEntity.status(HttpStatus.OK).body(bovinos);
     }
 
 

@@ -210,19 +210,29 @@ public class BovinoResources {
     public ResponseEntity<List<Bovino>> buscarBezerro() {
 
         List<Bovino> bovino = bovinoService.buscarBezerro();
-//        List<Desmama> desmama = desmamaRepository.findAll();
-//        int aux = bovino.size();
-//        for(int i=0;i<aux;i++) {
-//            System.out.println(bovino.size() + " - "+desmama.size());
-//            for(int j=0;j<desmama.size();j++) {
-//
-//
-//                    if(bovino.get(i).getIdBovino() == desmama.get(j).getIdBovino()) {
-//                        bovino.remove(i);
-//                    }
-//                    aux = bovino.size();
-//            }
-//        }
+
+
+        List<Desmama> desmama = desmamaRepository.findAll();
+        int aux;
+        if (!(bovino.size() == desmama.size())) {
+            for (int i = 0; i < bovino.size(); i++) {
+
+                aux = i;
+                for (int j = 0; j < desmama.size(); j++) {
+
+                    if (i < bovino.size()) {
+                        if (bovino.get(i).getIdBovino() == desmama.get(j).getIdBovino()) {
+
+                            bovino.remove(i);
+                        }
+                    }
+
+                }
+            }
+        }else {
+            bovino = new ArrayList<>();
+        }
+
 
 
 

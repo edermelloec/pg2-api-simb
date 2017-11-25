@@ -1029,8 +1029,8 @@ public class GestaoRespositoryBanco {
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
-            sql = " insert into desmama(id_desmama,data_desmama,status,id_bovino,peso)\n" +
-                    "\tvalues (default,'" + desmama.getDataDesmama() + "','True','" + desmama.getIdBovino() + "','" + desmama.getPeso() + "')";
+            sql = " insert into desmama(id_desmama,data_desmama,status,id_bovino,id_ficha_matriz,peso)\n" +
+                    "\tvalues (default,'" + desmama.getDataDesmama() + "','True','" + desmama.getIdBovino()+"','"+desmama.getIdFichaMatriz() + "','" + desmama.getPeso() + "')";
 
 
             PreparedStatement ps;
