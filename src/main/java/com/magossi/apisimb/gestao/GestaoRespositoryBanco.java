@@ -4,7 +4,14 @@ package com.magossi.apisimb.gestao;
 import com.magossi.apisimb.domain.bovino.Bovino;
 import com.magossi.apisimb.domain.bovino.Desmama;
 import com.magossi.apisimb.domain.bovino.Morto;
+import com.magossi.apisimb.domain.matriz.FichaMatriz;
 import com.magossi.apisimb.domain.matriz.FichaTouro;
+import com.magossi.apisimb.repository.bovino.BovinoRepository;
+import com.magossi.apisimb.repository.matriz.FichaMatrizRepository;
+import com.magossi.apisimb.repository.matriz.FichaToutroRepository;
+import com.magossi.apisimb.repository.matriz.PartoRepository;
+import com.magossi.apisimb.repository.matriz.ResultadoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,6 +22,8 @@ import java.util.List;
 
 
 public class GestaoRespositoryBanco {
+
+
     Float taxa;
 
     String sql;
@@ -22,6 +31,7 @@ public class GestaoRespositoryBanco {
 
 
     public String prenhezTodos() {
+
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
@@ -99,7 +109,7 @@ public class GestaoRespositoryBanco {
             } else {
                 taxa = 0f;
             }
-            System.out.println(qtdCheia+" - "+qtdNovinlha);
+
             conexao.close();
             json = "[{\"fertilidade\":" + taxa + "}]";
         } catch (SQLException e) {
@@ -280,20 +290,22 @@ public class GestaoRespositoryBanco {
 
             for (int i = 0; i < idMatrizAtivas.size(); i++) {
 
-
                 sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_ficha_matriz";
                 prepareStatement = conexao.prepareStatement(sql);
                 result = prepareStatement.executeQuery();
 
                 if (result.next()) {
-                    qtdNovinlha++;
-
-
                     if ("Vivo".equals(result.getString(2))) {
-
                         qtdVivo++;
                     }
-
+                }
+            }
+            for (int i = 0; i < idMatrizAtivas.size(); i++) {
+                sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
+                prepareStatement = conexao.prepareStatement(sql);
+                result = prepareStatement.executeQuery();
+                if (result.next()) {
+                    qtdNovinlha++;
                 }
             }
 
@@ -346,7 +358,7 @@ public class GestaoRespositoryBanco {
 
                 if (result.next()) {
                     if (result.next()) {
-                        qtdPrimiparas++;
+
 
 
                         if ("Vivo".equals(result.getString(2))) {
@@ -357,7 +369,14 @@ public class GestaoRespositoryBanco {
 
                 }
             }
-
+            for (int i = 0; i < idMatrizAtivas.size(); i++) {
+                sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
+                prepareStatement = conexao.prepareStatement(sql);
+                result = prepareStatement.executeQuery();
+                if (result.next()) {
+                    qtdPrimiparas++;
+                }
+            }
 
             if (qtdPrimiparas != 0) {
                 taxa = (qtdVivo / qtdPrimiparas) * 100;
@@ -407,7 +426,7 @@ public class GestaoRespositoryBanco {
                 if (result.next()) {
                     if (result.next()) {
                         if (result.next()) {
-                            qtdMultiparas++;
+
                             if ("Vivo".equals(result.getString(2))) {
 
                                 qtdVivo++;
@@ -415,6 +434,14 @@ public class GestaoRespositoryBanco {
                         }
                     }
 
+                }
+            }
+            for (int i = 0; i < idMatrizAtivas.size(); i++) {
+                sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
+                prepareStatement = conexao.prepareStatement(sql);
+                result = prepareStatement.executeQuery();
+                if (result.next()) {
+                    qtdMultiparas++;
                 }
             }
 
@@ -454,9 +481,11 @@ public class GestaoRespositoryBanco {
                 qtd++;
                pesoTotal = pesoTotal + result.getFloat(1);
             }
-
-            taxa =pesoTotal/qtd;
-
+            if(qtd!=0f) {
+                taxa = pesoTotal / qtd;
+            }else{
+                taxa = 0f;
+            }
             conexao.close();
             json = "[{\"fertilidade\":" + taxa + "}]";
         } catch (SQLException e) {
@@ -489,7 +518,11 @@ public class GestaoRespositoryBanco {
                 pesoTotal = pesoTotal + result.getFloat(1);
             }
 
-            taxa =pesoTotal/qtd;
+            if(qtd!=0f) {
+                taxa = pesoTotal / qtd;
+            }else{
+                taxa = 0f;
+            }
 
             conexao.close();
             json = "[{\"fertilidade\":" + taxa + "}]";
@@ -810,9 +843,7 @@ public class GestaoRespositoryBanco {
 
             result.next();
             if (result.getFloat(1) != 0) {
-                System.out.println(result.getFloat(1));
-                System.out.println(result.getFloat(2));
-                System.out.println(result.getFloat(3));
+
 
                 taxa = (result.getFloat(2) + (result.getFloat(3)));
                 taxa = taxa / result.getFloat(1);
