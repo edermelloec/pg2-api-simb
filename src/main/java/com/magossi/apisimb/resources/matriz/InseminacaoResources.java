@@ -11,6 +11,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -37,6 +38,16 @@ public class InseminacaoResources {
                 .path("/{id}").buildAndExpand(inseminacao.getIdInseminacao()).toUri();
 
         return ResponseEntity.created(uri).build();
+    }
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public ResponseEntity<List<Inseminacao>> buscarPorId(@PathVariable("id") Long id) {
+
+        List<Inseminacao> bovino = inseminacaoService.buscarPorId(id);
+        if(bovino==null){
+            bovino = new ArrayList<>();
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(bovino);
+
     }
 
     @RequestMapping(value = "/{busca}/{tipoBusca}", method = RequestMethod.GET)

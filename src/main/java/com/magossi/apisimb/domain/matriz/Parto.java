@@ -37,17 +37,15 @@ public class Parto {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private Long idFichaMatriz;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Long idInseminacao;
 
-    @Override
-    public String toString() {
-        return "Parto{" +
-                "idParto=" + idParto +
-                ", dataParto=" + dataParto +
-                ", dataInclusao=" + dataInclusao +
-                ", status='" + status + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", idFichaMatriz=" + idFichaMatriz +
-                '}';
+    public Long getIdInseminacao() {
+        return idInseminacao;
+    }
+
+    public void setIdInseminacao(Long idInseminacao) {
+        this.idInseminacao = idInseminacao;
     }
 
     public Date getDataInclusao() {

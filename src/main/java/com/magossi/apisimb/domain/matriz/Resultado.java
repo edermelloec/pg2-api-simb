@@ -31,11 +31,22 @@ public class Resultado {
     private Long idFichaMatriz;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Long idInseminacao;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Date dataResultado;
 
 
     // Getters e Setter
 
+
+    public Long getIdInseminacao() {
+        return idInseminacao;
+    }
+
+    public void setIdInseminacao(Long idInseminacao) {
+        this.idInseminacao = idInseminacao;
+    }
 
     public Date getDataResultado() {
         return dataResultado;

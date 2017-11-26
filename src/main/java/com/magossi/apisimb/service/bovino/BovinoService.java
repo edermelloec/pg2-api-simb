@@ -135,8 +135,19 @@ public class BovinoService {
 
         return bovino;
     }
+
     public List<Bovino> buscarBezerro(){
         List<Bovino> bovino = bovinoRepository.buscarBezerro();
+
+        if(bovino==null){
+            throw new BovinoNaoExistenteException("Bovino não Existe");
+        }
+
+        return bovino;
+    }
+
+    public List<Bovino> buscarMatrizInseminada(){
+        List<Bovino> bovino = bovinoRepository.buscarMatrizInseminada();
 
         if(bovino==null){
             throw new BovinoNaoExistenteException("Bovino não Existe");

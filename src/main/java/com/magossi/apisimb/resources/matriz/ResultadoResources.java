@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -43,6 +44,15 @@ public class ResultadoResources {
             resultados = resultadoService.buscarPorResultado("%"+busca+"%");
         }
 
+        return ResponseEntity.status(HttpStatus.OK).body(resultados);
+    }
+
+    @RequestMapping(value = "/inseminacao/{id}", method = RequestMethod.GET)
+    public ResponseEntity<List<Resultado>> buscarPorInseminacao(@PathVariable("id") Long id){
+        List<Resultado> resultados=resultadoService.buscarPorInseminacao(id);
+        if(resultados==null  ) {
+            resultados = new ArrayList<>();
+        }
         return ResponseEntity.status(HttpStatus.OK).body(resultados);
     }
 }

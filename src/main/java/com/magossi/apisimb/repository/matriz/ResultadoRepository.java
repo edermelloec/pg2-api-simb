@@ -19,4 +19,6 @@ public interface ResultadoRepository extends JpaRepository<Resultado, Long> {
     @Query("select r from Resultado r where upper(r.resultado) like upper(?1)")
     List<Resultado> buscarPorResultado(String touro);
 
+    @Query("select r from Resultado r where r.idInseminacao = ?1")
+    List<Resultado> buscarPorInseminacao(Long id);
 }

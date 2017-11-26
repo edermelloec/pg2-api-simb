@@ -22,4 +22,7 @@ public interface PartoRepository extends JpaRepository<Parto, Long> {
 
     @Query("select p from Parto p where upper(p.status) like upper(?1)")
     List<Parto> buscarPorStatus(String touro);
+
+    @Query("select p from Parto p where p.idInseminacao = ?1")
+    List<Parto> buscarPorId(Long id);
 }

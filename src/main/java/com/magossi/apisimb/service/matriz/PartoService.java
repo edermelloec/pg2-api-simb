@@ -47,6 +47,14 @@ public class PartoService {
         }
         return partos;
     }
+    public List<Parto> buscarPorId(Long id){
+        List<Parto> parto = partoRepository.buscarPorId(id);
+
+        if(parto==null){
+            throw new FazendaNaoEncontradaException("Lista de Inseminações não Encontrada");
+        }
+        return parto;
+    }
     public List<Parto> buscarPorMatriz(String busca){
         List<Bovino> bovinos = bovinoRepository.buscarPorMatriz(busca);
         List<Parto> partos=null;

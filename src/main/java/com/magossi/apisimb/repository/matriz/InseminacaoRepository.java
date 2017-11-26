@@ -29,4 +29,7 @@ public interface InseminacaoRepository extends JpaRepository<Inseminacao, Long> 
 
     @Query("select i from Inseminacao i where i.previsaoParto between ?1 and ?2  and i.status = true ")
     List<Inseminacao> buscarPorDataPrevisaoParto(Date data1,Date data2);
+
+    @Query("select i from Inseminacao i where i.idInseminacao = ?1 and i.status = true ")
+    List<Inseminacao> buscarPorId(Long id);
 }

@@ -55,6 +55,13 @@ public class InseminacaoService {
         }
         return inseminacoes;
     }
+
+    public List<Inseminacao> buscarPorId(Long id){
+        List<Inseminacao> inseminacoes = inseminacaoRepository.buscarPorId(id);
+
+
+        return inseminacoes;
+    }
 //    public List<Inseminacao> buscarPorMatriz(String busca){
 //        List<Bovino> bovinos = bovinoRepository.buscarPorMatriz(busca);
 //        List<Inseminacao> inseminacaos;

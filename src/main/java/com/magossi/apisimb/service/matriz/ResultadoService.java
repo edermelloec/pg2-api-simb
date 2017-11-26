@@ -71,4 +71,12 @@ public class ResultadoService {
         }
         return resultados;
     }
+    public List<Resultado> buscarPorInseminacao(Long id){
+
+        List<Resultado> resultados = null;
+        resultados = resultadoRepository.buscarPorInseminacao(id);
+
+
+        return resultados;
+    }
 }

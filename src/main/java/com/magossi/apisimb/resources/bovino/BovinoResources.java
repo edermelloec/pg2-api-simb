@@ -108,7 +108,6 @@ public class BovinoResources {
         bovino = bovinoService.alterar(bovino);
 
 
-
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(bovino.getIdBovino()).toUri();
 
@@ -206,6 +205,39 @@ public class BovinoResources {
         return ResponseEntity.status(HttpStatus.OK).body(bovino);
 
     }
+
+
+    @RequestMapping(value = "/inseminada", method = RequestMethod.GET)
+    public ResponseEntity<List<Bovino>> buscarMatrizInseminada() {
+
+        List<Bovino> bovino = bovinoService.buscarMatrizInseminada();
+        List<Bovino> matrizs = new ArrayList<>();
+
+        for (int i = 0; i < bovino.size(); i++) {
+
+            if (bovino.get(i).getFichaMatriz().getInseminacao().size() > 0) {
+
+                matrizs.add(bovino.get(i));
+            }
+
+        }
+        Long maior = 0l;
+        for (int i = 0; i < matrizs.size(); i++) {
+            for (int j = 0; j < matrizs.get(i).getFichaMatriz().getInseminacao().size(); j++) {
+                if (matrizs.get(i).getFichaMatriz().getInseminacao().get(j).getIdInseminacao() > maior) {
+                    maior = matrizs.get(i).getFichaMatriz().getInseminacao().get(j).getIdInseminacao();
+                }
+            }
+            for (int k = 0; k < matrizs.get(i).getFichaMatriz().getInseminacao().size(); k++) {
+                matrizs.get(i).getFichaMatriz().getInseminacao().get(k).setIdInseminacao(maior);
+            }
+            maior = 0l;
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(matrizs);
+
+    }
+
     @RequestMapping(value = "/bezerro", method = RequestMethod.GET)
     public ResponseEntity<List<Bovino>> buscarBezerro() {
 
@@ -213,11 +245,11 @@ public class BovinoResources {
 
 
         List<Desmama> desmama = desmamaRepository.findAll();
-        int aux;
+
         if (!(bovino.size() == desmama.size())) {
             for (int i = 0; i < bovino.size(); i++) {
 
-                aux = i;
+
                 for (int j = 0; j < desmama.size(); j++) {
 
                     if (i < bovino.size()) {
@@ -229,17 +261,14 @@ public class BovinoResources {
 
                 }
             }
-        }else {
+        } else {
             bovino = new ArrayList<>();
         }
-
-
 
 
         return ResponseEntity.status(HttpStatus.OK).body(bovino);
 
     }
-
 
 
 }
