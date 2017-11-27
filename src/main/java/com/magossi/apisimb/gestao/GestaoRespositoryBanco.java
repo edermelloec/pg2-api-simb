@@ -68,7 +68,7 @@ public class GestaoRespositoryBanco {
     }
 
     public String prenhezNovilha() {
-
+        taxa = 0.0f;
 
         try {
             Connection conexao = ConexaoFactory.criarConexao();
@@ -85,7 +85,7 @@ public class GestaoRespositoryBanco {
                 idMatrizAtivas.add(result.getInt(1));
             }
 
-            float qtdNovinlha = 0;
+            float qtdNovilha = 0;
             float qtdCheia = 0;
 
             for (int i = 0; i < idMatrizAtivas.size(); i++) {
@@ -96,16 +96,15 @@ public class GestaoRespositoryBanco {
                 result = prepareStatement.executeQuery();
 
                 if (result.next()) {
-                    qtdNovinlha++;
+                    qtdNovilha++;
                     if ("Cheia".equals(result.getString(2))) {
                         qtdCheia++;
                     }
                 }
             }
 
-
-            if (qtdNovinlha != 0) {
-                taxa = (qtdCheia / qtdNovinlha) * 100;
+            if (qtdNovilha != 0) {
+                taxa = (qtdCheia / qtdNovilha) * 100;
             } else {
                 taxa = 0f;
             }
@@ -121,7 +120,7 @@ public class GestaoRespositoryBanco {
     }
 
     public String prenhezPrimi() {
-
+        taxa = 0.0f;
 
         try {
             Connection conexao = ConexaoFactory.criarConexao();
@@ -158,6 +157,7 @@ public class GestaoRespositoryBanco {
                 }
             }
 
+            System.out.println(qtdCheia + " - "+ qtdPrimiparas);
 
             if (qtdPrimiparas != 0) {
                 taxa = (qtdCheia / qtdPrimiparas) * 100;
@@ -177,7 +177,7 @@ public class GestaoRespositoryBanco {
 
 
     public String prenhezMult() {
-
+        taxa = 0.0f;
         try {
             Connection conexao = ConexaoFactory.criarConexao();
             PreparedStatement prepareStatement;
@@ -215,7 +215,7 @@ public class GestaoRespositoryBanco {
                 }
             }
 
-
+            System.out.println(qtdCheia + " - "+ qtdMultiparas);
             if (qtdMultiparas != 0) {
                 taxa = (qtdCheia / qtdMultiparas) * 100;
             } else {
@@ -234,12 +234,12 @@ public class GestaoRespositoryBanco {
     }
 
     public String natalidadeTodos() {
-
+        taxa = 0.0f;
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select count(*),(select count(*) from parto p where p.status = 'Vivo') from parto";
+            sql = "select count(*),(select count(*) from parto p where p.status = 'Vivo') from resultado";
 
 
             PreparedStatement prepareStatement;
@@ -269,7 +269,7 @@ public class GestaoRespositoryBanco {
     }
 
     public String natalidadeNovilha() {
-
+        taxa = 0.0f;
         try {
             Connection conexao = ConexaoFactory.criarConexao();
             PreparedStatement prepareStatement;
@@ -288,26 +288,32 @@ public class GestaoRespositoryBanco {
             float qtdNovinlha = 0;
             float qtdVivo = 0;
 
-            for (int i = 0; i < idMatrizAtivas.size(); i++) {
 
-                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_ficha_matriz";
-                prepareStatement = conexao.prepareStatement(sql);
-                result = prepareStatement.executeQuery();
-
-                if (result.next()) {
-                    if ("Vivo".equals(result.getString(2))) {
-                        qtdVivo++;
-                    }
-                }
-            }
             for (int i = 0; i < idMatrizAtivas.size(); i++) {
                 sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
                 prepareStatement = conexao.prepareStatement(sql);
                 result = prepareStatement.executeQuery();
                 if (result.next()) {
-                    qtdNovinlha++;
+
+                    if ("Cheia".equals(result.getString(2))) {
+
+                        sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_ficha_matriz";
+
+                        prepareStatement = conexao.prepareStatement(sql);
+                        result = prepareStatement.executeQuery();
+
+                        if (result.next()) {
+                            qtdNovinlha++;
+                            if ("Vivo".equals(result.getString(2))) {
+                                qtdVivo++;
+                            }
+                        }
+
+                    }
                 }
             }
+
+
 
 
             if (qtdNovinlha != 0) {
@@ -329,7 +335,7 @@ public class GestaoRespositoryBanco {
     }
 
     public String natalidadePrimi() {
-
+        taxa = 0.0f;
 
         try {
             Connection conexao = ConexaoFactory.criarConexao();
@@ -350,33 +356,35 @@ public class GestaoRespositoryBanco {
             float qtdVivo = 0;
 
             for (int i = 0; i < idMatrizAtivas.size(); i++) {
-
-
-                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
-                prepareStatement = conexao.prepareStatement(sql);
-                result = prepareStatement.executeQuery();
-
-                if (result.next()) {
-                    if (result.next()) {
-
-
-
-                        if ("Vivo".equals(result.getString(2))) {
-
-                            qtdVivo++;
-                        }
-                    }
-
-                }
-            }
-            for (int i = 0; i < idMatrizAtivas.size(); i++) {
                 sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
                 prepareStatement = conexao.prepareStatement(sql);
                 result = prepareStatement.executeQuery();
                 if (result.next()) {
-                    qtdPrimiparas++;
+                    if (result.next()) {
+
+                        if ("Cheia".equals(result.getString(2))) {
+
+                            sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_ficha_matriz";
+
+                            prepareStatement = conexao.prepareStatement(sql);
+                            result = prepareStatement.executeQuery();
+
+                            if (result.next()) {
+                                if (result.next()) {
+                                    qtdPrimiparas++;
+                                    if ("Vivo".equals(result.getString(2))) {
+                                        qtdVivo++;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
                 }
             }
+
+
+
 
             if (qtdPrimiparas != 0) {
                 taxa = (qtdVivo / qtdPrimiparas) * 100;
@@ -397,7 +405,7 @@ public class GestaoRespositoryBanco {
     }
 
     public String natalidadeMult() {
-
+        taxa = 0.0f;
         try {
             Connection conexao = ConexaoFactory.criarConexao();
             PreparedStatement prepareStatement;
@@ -417,33 +425,40 @@ public class GestaoRespositoryBanco {
             float qtdVivo = 0;
 
             for (int i = 0; i < idMatrizAtivas.size(); i++) {
-
-
-                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
-                prepareStatement = conexao.prepareStatement(sql);
-                result = prepareStatement.executeQuery();
-
-                if (result.next()) {
-                    if (result.next()) {
-                        if (result.next()) {
-
-                            if ("Vivo".equals(result.getString(2))) {
-
-                                qtdVivo++;
-                            }
-                        }
-                    }
-
-                }
-            }
-            for (int i = 0; i < idMatrizAtivas.size(); i++) {
                 sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
                 prepareStatement = conexao.prepareStatement(sql);
                 result = prepareStatement.executeQuery();
                 if (result.next()) {
-                    qtdMultiparas++;
+                    if (result.next()) {
+                        if (result.next()) {
+
+                            if ("Cheia".equals(result.getString(2))) {
+
+                                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_ficha_matriz";
+
+                                prepareStatement = conexao.prepareStatement(sql);
+                                result = prepareStatement.executeQuery();
+
+                                if (result.next()) {
+                                    if (result.next()) {
+                                        if (result.next()) {
+                                            qtdMultiparas++;
+                                            if ("Vivo".equals(result.getString(2))) {
+
+                                                qtdVivo++;
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
                 }
             }
+
+
+
 
 
             if (qtdMultiparas != 0) {
@@ -463,8 +478,9 @@ public class GestaoRespositoryBanco {
 
 
     }
-    public String mediaPesoDesmama() {
 
+    public String mediaPesoDesmama() {
+        taxa = 0.0f;
         try {
             Connection conexao = ConexaoFactory.criarConexao();
             PreparedStatement prepareStatement;
@@ -475,15 +491,15 @@ public class GestaoRespositoryBanco {
             prepareStatement = conexao.prepareStatement(sql);
             ResultSet result = prepareStatement.executeQuery();
 
-            Float qtd=0f;
-            Float pesoTotal=0f;
+            Float qtd = 0f;
+            Float pesoTotal = 0f;
             while (result.next()) {
                 qtd++;
-               pesoTotal = pesoTotal + result.getFloat(1);
+                pesoTotal = pesoTotal + result.getFloat(1);
             }
-            if(qtd!=0f) {
+            if (qtd != 0f) {
                 taxa = pesoTotal / qtd;
-            }else{
+            } else {
                 taxa = 0f;
             }
             conexao.close();
@@ -499,7 +515,7 @@ public class GestaoRespositoryBanco {
     }
 
     public String mediaIdadeDesmama() {
-
+        taxa = 0.0f;
         try {
             Connection conexao = ConexaoFactory.criarConexao();
             PreparedStatement prepareStatement;
@@ -511,16 +527,16 @@ public class GestaoRespositoryBanco {
             prepareStatement = conexao.prepareStatement(sql);
             ResultSet result = prepareStatement.executeQuery();
 
-            Float qtd=0f;
-            Float pesoTotal=0f;
+            Float qtd = 0f;
+            Float pesoTotal = 0f;
             while (result.next()) {
                 qtd++;
                 pesoTotal = pesoTotal + result.getFloat(1);
             }
 
-            if(qtd!=0f) {
+            if (qtd != 0f) {
                 taxa = pesoTotal / qtd;
-            }else{
+            } else {
                 taxa = 0f;
             }
 
@@ -581,9 +597,9 @@ public class GestaoRespositoryBanco {
             ResultSet result = prepareStatement.executeQuery();
 
 
-            if(result.next()) {
+            if (result.next()) {
                 taxa = result.getFloat(1);
-            }else {
+            } else {
                 taxa = 0f;
             }
             conexao.close();
@@ -1061,7 +1077,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
             sql = " insert into desmama(id_desmama,data_desmama,status,id_bovino,id_ficha_matriz,peso)\n" +
-                    "\tvalues (default,'" + desmama.getDataDesmama() + "','True','" + desmama.getIdBovino()+"','"+desmama.getIdFichaMatriz() + "','" + desmama.getPeso() + "')";
+                    "\tvalues (default,'" + desmama.getDataDesmama() + "','True','" + desmama.getIdBovino() + "','" + desmama.getIdFichaMatriz() + "','" + desmama.getPeso() + "')";
 
 
             PreparedStatement ps;
@@ -1277,8 +1293,6 @@ public class GestaoRespositoryBanco {
 
         return touro;
     }
-
-
 
 
 }
