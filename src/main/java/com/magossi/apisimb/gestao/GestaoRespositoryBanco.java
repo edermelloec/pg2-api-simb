@@ -632,6 +632,7 @@ public class GestaoRespositoryBanco {
             if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
+                taxa = ((taxa / result.getFloat(2)) * 100);
             } else {
                 taxa = 0.0f;
             }
@@ -783,7 +784,7 @@ public class GestaoRespositoryBanco {
         try {
             Connection conexao = ConexaoFactory.criarConexao();
 
-            sql = "select (select count(*) from desmama),count(*) from ficha_matriz where status = true";
+            sql = "select (select count(*) from desmama),count(*) from resultado";
             PreparedStatement prepareStatement;
 
             prepareStatement = conexao.prepareStatement(sql);
