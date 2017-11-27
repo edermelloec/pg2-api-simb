@@ -103,6 +103,7 @@ public class GestaoRespositoryBanco {
                 }
             }
 
+
             if (qtdNovilha != 0) {
                 taxa = (qtdCheia / qtdNovilha) * 100;
             } else {
@@ -157,7 +158,7 @@ public class GestaoRespositoryBanco {
                 }
             }
 
-            System.out.println(qtdCheia + " - "+ qtdPrimiparas);
+
 
             if (qtdPrimiparas != 0) {
                 taxa = (qtdCheia / qtdPrimiparas) * 100;
@@ -215,7 +216,7 @@ public class GestaoRespositoryBanco {
                 }
             }
 
-            System.out.println(qtdCheia + " - "+ qtdMultiparas);
+
             if (qtdMultiparas != 0) {
                 taxa = (qtdCheia / qtdMultiparas) * 100;
             } else {
@@ -239,7 +240,7 @@ public class GestaoRespositoryBanco {
             Connection conexao = ConexaoFactory.criarConexao();
 
 
-            sql = "select count(*),(select count(*) from parto p where p.status = 'Vivo') from resultado";
+            sql = "select count(*),(select count(*) from parto p where p.status = 'Vivo') from parto";
 
 
             PreparedStatement prepareStatement;
@@ -285,7 +286,7 @@ public class GestaoRespositoryBanco {
                 idMatrizAtivas.add(result.getInt(1));
             }
 
-            float qtdNovinlha = 0;
+            float novilha = 0;
             float qtdVivo = 0;
 
 
@@ -303,7 +304,7 @@ public class GestaoRespositoryBanco {
                         result = prepareStatement.executeQuery();
 
                         if (result.next()) {
-                            qtdNovinlha++;
+                            novilha++;
                             if ("Vivo".equals(result.getString(2))) {
                                 qtdVivo++;
                             }
@@ -314,10 +315,10 @@ public class GestaoRespositoryBanco {
             }
 
 
+            System.out.println("nov"+qtdVivo + " - "+ novilha);
 
-
-            if (qtdNovinlha != 0) {
-                taxa = (qtdVivo / qtdNovinlha) * 100;
+            if (novilha != 0) {
+                taxa = (qtdVivo / novilha) * 100;
             } else {
                 taxa = 0f;
             }
@@ -384,7 +385,7 @@ public class GestaoRespositoryBanco {
             }
 
 
-
+            System.out.println("primi"+qtdVivo + " - "+ qtdPrimiparas);
 
             if (qtdPrimiparas != 0) {
                 taxa = (qtdVivo / qtdPrimiparas) * 100;
@@ -459,7 +460,7 @@ public class GestaoRespositoryBanco {
 
 
 
-
+            System.out.println("mult"+qtdVivo + " - "+ qtdMultiparas);
 
             if (qtdMultiparas != 0) {
                 taxa = (qtdVivo / qtdMultiparas) * 100;
