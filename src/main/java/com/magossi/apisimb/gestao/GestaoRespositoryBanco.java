@@ -298,7 +298,7 @@ public class GestaoRespositoryBanco {
 
                     if ("Cheia".equals(result.getString(2))) {
 
-                        sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_ficha_matriz";
+                        sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
 
                         prepareStatement = conexao.prepareStatement(sql);
                         result = prepareStatement.executeQuery();
@@ -315,7 +315,7 @@ public class GestaoRespositoryBanco {
             }
 
 
-            System.out.println("nov"+qtdVivo + " - "+ novilha);
+            System.out.println(qtdVivo+" - "+ novilha);
 
             if (novilha != 0) {
                 taxa = (qtdVivo / novilha) * 100;
@@ -365,7 +365,7 @@ public class GestaoRespositoryBanco {
 
                         if ("Cheia".equals(result.getString(2))) {
 
-                            sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_ficha_matriz";
+                            sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
 
                             prepareStatement = conexao.prepareStatement(sql);
                             result = prepareStatement.executeQuery();
@@ -385,7 +385,7 @@ public class GestaoRespositoryBanco {
             }
 
 
-            System.out.println("primi"+qtdVivo + " - "+ qtdPrimiparas);
+
 
             if (qtdPrimiparas != 0) {
                 taxa = (qtdVivo / qtdPrimiparas) * 100;
@@ -435,8 +435,8 @@ public class GestaoRespositoryBanco {
 
                             if ("Cheia".equals(result.getString(2))) {
 
-                                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_ficha_matriz";
-
+                                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
+                                System.out.println(sql);
                                 prepareStatement = conexao.prepareStatement(sql);
                                 result = prepareStatement.executeQuery();
 
@@ -445,8 +445,8 @@ public class GestaoRespositoryBanco {
                                         if (result.next()) {
                                             qtdMultiparas++;
                                             if ("Vivo".equals(result.getString(2))) {
-
                                                 qtdVivo++;
+
                                             }
                                         }
                                     }
@@ -460,7 +460,7 @@ public class GestaoRespositoryBanco {
 
 
 
-            System.out.println("mult"+qtdVivo + " - "+ qtdMultiparas);
+
 
             if (qtdMultiparas != 0) {
                 taxa = (qtdVivo / qtdMultiparas) * 100;

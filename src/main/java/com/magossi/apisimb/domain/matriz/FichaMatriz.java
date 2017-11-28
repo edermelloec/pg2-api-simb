@@ -39,7 +39,7 @@ public class FichaMatriz {
 
 
 
-    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Date dataInclusao = new Date();
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
