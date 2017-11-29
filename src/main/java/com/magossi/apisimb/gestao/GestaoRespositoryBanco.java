@@ -142,21 +142,31 @@ public class GestaoRespositoryBanco {
             float qtdCheia = 0;
 
             for (int i = 0; i < idMatrizAtivas.size(); i++) {
-
-
-                sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
+                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
                 prepareStatement = conexao.prepareStatement(sql);
                 result = prepareStatement.executeQuery();
 
+
                 if (result.next()) {
+
+                    sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
+                    prepareStatement = conexao.prepareStatement(sql);
+                    result = prepareStatement.executeQuery();
+
+
                     if (result.next()) {
-                        qtdPrimiparas++;
                         if ("Cheia".equals(result.getString(2))) {
-                            qtdCheia++;
+                            if (result.next()) {
+                                qtdPrimiparas++;
+                                if ("Cheia".equals(result.getString(2))) {
+                                    qtdCheia++;
+                                }
+                            }
                         }
                     }
                 }
             }
+
 
 
 
@@ -198,18 +208,29 @@ public class GestaoRespositoryBanco {
             float qtdCheia = 0;
 
             for (int i = 0; i < idMatrizAtivas.size(); i++) {
-
-
-                sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
+                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
                 prepareStatement = conexao.prepareStatement(sql);
                 result = prepareStatement.executeQuery();
 
+
                 if (result.next()) {
                     if (result.next()) {
+                        sql = "select id_ficha_matriz,resultado from resultado where id_ficha_matriz = " + idMatrizAtivas.get(i) + " order by id_resultado";
+                        prepareStatement = conexao.prepareStatement(sql);
+                        result = prepareStatement.executeQuery();
+
                         if (result.next()) {
-                            qtdMultiparas++;
                             if ("Cheia".equals(result.getString(2))) {
-                                qtdCheia++;
+                                if (result.next()) {
+                                    if ("Cheia".equals(result.getString(2))) {
+                                        if (result.next()) {
+                                            qtdMultiparas++;
+                                            if ("Cheia".equals(result.getString(2))) {
+                                                qtdCheia++;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -295,7 +316,7 @@ public class GestaoRespositoryBanco {
                 prepareStatement = conexao.prepareStatement(sql);
                 result = prepareStatement.executeQuery();
                 if (result.next()) {
-
+                    novilha++;
                     if ("Cheia".equals(result.getString(2))) {
 
                         sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
@@ -304,7 +325,7 @@ public class GestaoRespositoryBanco {
                         result = prepareStatement.executeQuery();
 
                         if (result.next()) {
-                            novilha++;
+
                             if ("Vivo".equals(result.getString(2))) {
                                 qtdVivo++;
                             }
@@ -314,8 +335,6 @@ public class GestaoRespositoryBanco {
                 }
             }
 
-
-            System.out.println(qtdVivo+" - "+ novilha);
 
             if (novilha != 0) {
                 taxa = (qtdVivo / novilha) * 100;
@@ -361,30 +380,30 @@ public class GestaoRespositoryBanco {
                 prepareStatement = conexao.prepareStatement(sql);
                 result = prepareStatement.executeQuery();
                 if (result.next()) {
-                    if (result.next()) {
+                    if ("Cheia".equals(result.getString(2))) {
+                        qtdPrimiparas++;
+                        if (result.next()) {
+                            if ("Cheia".equals(result.getString(2))) {
 
-                        if ("Cheia".equals(result.getString(2))) {
+                                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
 
-                            sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
+                                prepareStatement = conexao.prepareStatement(sql);
+                                result = prepareStatement.executeQuery();
 
-                            prepareStatement = conexao.prepareStatement(sql);
-                            result = prepareStatement.executeQuery();
-
-                            if (result.next()) {
                                 if (result.next()) {
-                                    qtdPrimiparas++;
-                                    if ("Vivo".equals(result.getString(2))) {
-                                        qtdVivo++;
+                                    if (result.next()) {
+
+                                        if ("Vivo".equals(result.getString(2))) {
+                                            qtdVivo++;
+                                        }
                                     }
                                 }
-                            }
 
+                            }
                         }
                     }
                 }
             }
-
-
 
 
             if (qtdPrimiparas != 0) {
@@ -430,36 +449,37 @@ public class GestaoRespositoryBanco {
                 prepareStatement = conexao.prepareStatement(sql);
                 result = prepareStatement.executeQuery();
                 if (result.next()) {
-                    if (result.next()) {
+                    if ("Cheia".equals(result.getString(2))) {
                         if (result.next()) {
-
                             if ("Cheia".equals(result.getString(2))) {
-
-                                sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
-                                System.out.println(sql);
-                                prepareStatement = conexao.prepareStatement(sql);
-                                result = prepareStatement.executeQuery();
-
+                                qtdMultiparas++;
                                 if (result.next()) {
-                                    if (result.next()) {
-                                        if (result.next()) {
-                                            qtdMultiparas++;
-                                            if ("Vivo".equals(result.getString(2))) {
-                                                qtdVivo++;
+                                    if ("Cheia".equals(result.getString(2))) {
 
+                                        sql = "select id_ficha_matriz,status from parto where id_ficha_matriz = " + idMatrizAtivas.get(i) + "order by id_parto";
+
+                                        prepareStatement = conexao.prepareStatement(sql);
+                                        result = prepareStatement.executeQuery();
+
+                                        if (result.next()) {
+                                            if (result.next()) {
+                                                if (result.next()) {
+
+                                                    if ("Vivo".equals(result.getString(2))) {
+                                                        qtdVivo++;
+
+                                                    }
+                                                }
                                             }
                                         }
+
                                     }
                                 }
-
                             }
                         }
                     }
                 }
             }
-
-
-
 
 
             if (qtdMultiparas != 0) {
@@ -560,7 +580,8 @@ public class GestaoRespositoryBanco {
 
             sql = "SELECT min((DATE(p.data_parto)-DATE(b.data_nascimento))/30) AS DIASDECORRIDOS FROM bovino b\n" +
                     "\t\tinner join parto p on p.id_ficha_matriz=b.ficha_matriz_idfichamatriz\n" +
-                    "\t\twhere b.nome_bovino = " + "'" + bovino + "'";
+                    "\t\twhere upper(b.nome_bovino) like upper(" + "'%" + bovino + "')";
+
             PreparedStatement prepareStatement;
 
             prepareStatement = conexao.prepareStatement(sql);
@@ -590,7 +611,8 @@ public class GestaoRespositoryBanco {
 
             sql = "select ((DATE(d.data_desmama)-DATE(b.data_nascimento))/30) from desmama d\n" +
                     "\t\t\tinner join bovino b on b.id_bovino=d.id_bovino\n" +
-                    "\t\t\twhere b.nome_bovino =" + "'" + bovino + "'";
+                    "\t\t\twhere upper(b.nome_bovino) like upper(" + "'%" + bovino + "')";
+            //upper(b.nome_bovino) like upper('%12')
 
             PreparedStatement prepareStatement;
 
@@ -632,7 +654,7 @@ public class GestaoRespositoryBanco {
             if (result.getFloat(2) != 0) {
                 taxa = result.getFloat(1);
                 taxa = ((taxa / result.getFloat(2)) * 100);
-                taxa = ((taxa / result.getFloat(2)) * 100);
+
             } else {
                 taxa = 0.0f;
             }

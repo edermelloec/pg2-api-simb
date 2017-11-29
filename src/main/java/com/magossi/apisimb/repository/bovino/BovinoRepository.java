@@ -27,10 +27,10 @@ public interface BovinoRepository extends JpaRepository<Bovino, Long>{
         @Query("select b from Bovino b where upper(b.nomeBovino) like upper(?1)")
         List<Bovino> buscaComLike(String bovino);
 
-        @Query("select b from Bovino b where b.raca = ?1 ")
+        @Query("select b from Bovino b where b.raca = ?1 and b.status = true")
         List<Bovino> buscaPorRaca(Raca raca);
 
-        @Query("select b from Bovino b where b.fazenda = ?1")
+        @Query("select b from Bovino b where b.fazenda = ?1 and b.status=true")
         List<Bovino> buscarPorFazenda(Fazenda fazenda);
 
         @Query("select b from Bovino b where  (b.dataNascimento) = ?1 ")
